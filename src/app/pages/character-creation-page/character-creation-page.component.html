@@ -1,0 +1,25 @@
+<form class="size-full" [formGroup]="this.form" (ngSubmit)="onSubmit()">
+
+    <div class="w-[400px] h-[600px] ml-3 mt-3 bg-[#111111] flex flex-col items-center justify-center">
+        <h1 class="text-[#CDC9C6] text-2xl mb-5">Select your Character Class</h1>
+    
+        <div class="grid gap-2.5 grid-cols-1">
+            <app-button *ngFor="let characterClass of characterClasses" [type]="'default'" [content]="characterClass.className" (buttonClick)="selectClass($event)"></app-button>
+        </div>
+    </div>
+
+    {{ this.formField("characterClass")?.value?.className }}
+
+    <div>
+        <label>
+            Nickname *
+            <input formControlName="characterName"
+                type="text"
+                placeholder="Nickname"
+                maxlength="75"
+                autocomplete="inline"
+                [value]="this.formField('characterName')?.value" />
+        </label>
+    </div>
+
+</form>
