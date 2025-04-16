@@ -1,7 +1,3 @@
-import { Area, GameController } from "../game-controller"
-import { Mercenary } from "../player/mercenary"
-import { Character } from "../player/player"
-
 type Slot = 
     |"inv" 
     |"quick_bar" 
@@ -40,3 +36,6 @@ export class Equipment extends Item {
         this.isIdentified = isIdentified
     }
 }
+
+// https://dropcalc.silospen.com/
+// https://diablo-archive.fandom.com/wiki/Items_(Diablo_II)

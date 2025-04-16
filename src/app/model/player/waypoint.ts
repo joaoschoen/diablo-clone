@@ -1,4 +1,4 @@
-import { ACT, Act, DIFFICULTY, Difficulty } from "./dificulty"
+import { ACT, Act, DIFFICULTY, DifficultyType } from "./dificulty"
 
 export class WaypointList {
     act1: ActWaypoint
@@ -21,7 +21,7 @@ export class WaypointList {
         this.act5 = act5
     }
 
-    unlockWaypoint(difficulty: Difficulty, act: Act, area_id: string) {
+    unlockWaypoint(difficulty: DifficultyType, act: Act, area_id: string) {
         switch (act) {
             case ACT.ACT1:
                 this.act1.unlockWaypoint(difficulty,area_id)
@@ -55,7 +55,7 @@ class ActWaypoint {
         this.waypointsList = waypointsList
     }
 
-    unlockWaypoint(difficulty: Difficulty, area_id: string) {
+    unlockWaypoint(difficulty: DifficultyType, area_id: string) {
         let waypoint = this.waypointsList.find(waypoint => waypoint.area_id === area_id)
         if (waypoint === undefined) {
             alert(`Error while trying to unlock waypoint, difficulty: ${difficulty} area id:${area_id}`)

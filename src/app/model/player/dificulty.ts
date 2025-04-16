@@ -8,7 +8,7 @@ export enum ACT {
     ACT5 = "act5",
 }
 
-export type Difficulty =
+export type DifficultyType =
     | "normal"
     | "nightmare"
     | "hell"
@@ -17,4 +17,20 @@ export enum DIFFICULTY {
     NORMAL = "normal",
     NIGHTMARE = "nightmare",
     HELL = "hell",
+}
+
+export class Difficulty{
+    normal: boolean
+    nightmare: boolean
+    hell: boolean
+    
+    constructor(
+        normal: boolean = false,
+        nightmare: boolean = false,
+        hell: boolean = false
+    ){
+        this.normal = normal
+        this.nightmare = nightmare
+        this.hell = hell
+    }
 }
