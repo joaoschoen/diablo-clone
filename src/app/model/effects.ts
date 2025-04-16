@@ -9,7 +9,7 @@ export class Effect{
 
     constructor(
         name: string,
-        attribute:
+        attribute: any,
         duration: number,
         duration_additive: boolean,
         duration_set: boolean,
