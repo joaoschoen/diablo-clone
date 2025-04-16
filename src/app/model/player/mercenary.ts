@@ -1,4 +1,4 @@
-import { calcCharacterLevel, LevelEXP } from "./level"
+import { LevelEXP, calcCharacterLevel } from "./level"
 import { Resistances } from "./player"
 
 export class Mercenary {
@@ -13,26 +13,26 @@ export class Mercenary {
         mercenaryClass: MercenaryClass
     ) {
         this.name = name
-        let lvl = calcCharacterLevel(this.exp,true)
+        let lvl = calcCharacterLevel(this.exp, true)
         this.lvl = lvl[0]
         this.nextLvl = lvl[1]
         this.mercenaryClass = mercenaryClass
         this.resistances = new Resistances(0, 0, 0, 0, 0, 0)
     }
 
-    addExp(characterExp: number, valueToAdd:number){
+    addExp(characterExp: number, valueToAdd: number) {
         // Mercenaries can never level up past the character level
         this.exp += valueToAdd
-        if (this.exp > characterExp){
+        if (this.exp > characterExp) {
             this.exp = characterExp
         }
-        if(this.exp > this.nextLvl.exp){
+        if (this.exp > this.nextLvl.exp) {
             this.levelUp()
         }
     }
 
-    levelUp(){
-        let lvl = calcCharacterLevel(this.exp,true)
+    levelUp() {
+        let lvl = calcCharacterLevel(this.exp, true)
         this.lvl = lvl[0]
         this.nextLvl = lvl[1]
     }

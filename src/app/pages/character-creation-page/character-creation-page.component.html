@@ -1,10 +1,12 @@
-<form class="size-full p-5 overflow-hidden flex gap-[50px] bg-gray-800 flex-col items-center justify-between min-w-[1100px] select-none"
+<form
+    class="size-full p-5 overflow-hidden flex gap-[50px] bg-gray-800 flex-col items-center justify-between min-w-[1100px] select-none"
     [formGroup]="this.form" (ngSubmit)="onSubmit()">
 
     <div class="h-[100px] w-[800px] flex flex-col items-center justify-center text-[#C78B42]">
         <h1 class="text-[30px] mb-5 font-semibold">Select Hero Class</h1>
 
-        <p class="text-[20px]">{{ this.formField('characterClass')?.value ? this.formField('characterClass')?.value?.definition : '&nbsp;' }}</p>
+        <p class="text-[20px]">{{ this.formField('characterClass')?.value ?
+            this.formField('characterClass')?.value?.definition : '&nbsp;' }}</p>
     </div>
 
     <div class="grid gap-[20px] grid-cols-7">
@@ -15,8 +17,8 @@
             (click)="selectClass(characterClass.className)">
 
             <img [src]="characterClass.classImage" [alt]="characterClass.className" [title]="characterClass.className"
-            class="w-[150px] object-contain overflow-hidden"
-            [ngClass]="characterClass.className == 'Paladin' ? 'h-[150px]' : 'h-[200px]'" />
+                class="w-[150px] object-contain overflow-hidden"
+                [ngClass]="characterClass.className == 'Paladin' ? 'h-[150px]' : 'h-[200px]'" />
             <p class="text-[#C78B42]">{{ characterClass.className }}</p>
         </button>
     </div>

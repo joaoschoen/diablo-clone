@@ -11,19 +11,19 @@ export class Necromancer extends Class {
     }
 }
 
-class NecromancerSkills extends Skills{
-    public constructor(){
+class NecromancerSkills extends Skills {
+    public constructor() {
         let Skills1: Skill[] = []
-        let Tree1 = new SkillTree("",Skills1)
+        let Tree1 = new SkillTree("", Skills1)
 
         let Skills2: Skill[] = []
-        let Tree2 = new SkillTree("",Skills2)
+        let Tree2 = new SkillTree("", Skills2)
 
         let Skills3: Skill[] = []
-        let Tree3 = new SkillTree("",Skills3)
+        let Tree3 = new SkillTree("", Skills3)
 
         super(
-            Tree1,Tree2,Tree3
+            Tree1, Tree2, Tree3
         )
     }
 }

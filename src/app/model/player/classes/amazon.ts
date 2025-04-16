@@ -10,19 +10,19 @@ export class Amazon extends Class {
         super("Amazon", "./assets/classes/Amazon.webp", AMAZON_DEFINITION, att, gain, new AmazonSkills())
     }
 }
-class AmazonSkills extends Skills{
-    public constructor(){
+class AmazonSkills extends Skills {
+    public constructor() {
         let Skills1: Skill[] = []
-        let Tree1 = new SkillTree("",Skills1)
+        let Tree1 = new SkillTree("", Skills1)
 
         let Skills2: Skill[] = []
-        let Tree2 = new SkillTree("",Skills2)
+        let Tree2 = new SkillTree("", Skills2)
 
         let Skills3: Skill[] = []
-        let Tree3 = new SkillTree("",Skills3)
+        let Tree3 = new SkillTree("", Skills3)
 
         super(
-            Tree1,Tree2,Tree3
+            Tree1, Tree2, Tree3
         )
     }
 }

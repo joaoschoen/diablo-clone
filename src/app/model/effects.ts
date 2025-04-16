@@ -1,4 +1,4 @@
-export class Effect{
+export class Effect {
     name: string
     duration: number
     duration_additive: boolean
@@ -16,7 +16,7 @@ export class Effect{
         amount: number,
         amount_additive: boolean,
         amount_set: boolean,
-    ){
+    ) {
         this.name = name
         this.duration = duration
         this.duration_additive = duration_additive
