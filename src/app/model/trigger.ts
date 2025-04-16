@@ -1,12 +1,13 @@
+import { ACT_ENUM } from "./areas/act"
 import { QuestStage } from "./player/quests"
 
 export class QuestTrigger {
-    act_id: string
+    act_id: ACT_ENUM
     npc_id: string
     target_id: string
     stage: QuestStage
     constructor(
-        act_id: string,
+        act_id: ACT_ENUM,
         npc_id: string,
         target_id: string,
         stage: QuestStage,
@@ -19,11 +20,11 @@ export class QuestTrigger {
 }
 
 export class DialogueTrigger {
-    act_id: string
+    act_id: ACT_ENUM
     npc_id: string
     target_id: string
     constructor(
-        act_id: string,
+        act_id: ACT_ENUM,
         npc_id: string,
         target_id: string,
     ) {

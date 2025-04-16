@@ -18,11 +18,3 @@ export const rogue_encampment_area_level = new AreaLevel(1,36,67)
 export const rogue_encampment_npcs: NPC[] = [
     Akara
 ]
-
-export const rogue_encampment = new Town(
-    rogue_encampment_id,
-    rogue_encampment_name,
-    rogue_encampment_area_level,
-    rogue_encampment_exits,
-    rogue_encampment_npcs
-)

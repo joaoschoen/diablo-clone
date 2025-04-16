@@ -1,4 +1,5 @@
-import { Difficulty } from "./dificulty"
+import { DenOfEvil } from "../npcs/act1/akara/akara"
+import { Difficulty } from "./difficulty"
 
 export class Quests{
     act1: ActQuests
@@ -8,11 +9,11 @@ export class Quests{
     act5: ActQuests
 
     constructor(
-        act1: ActQuests,
-        act2: ActQuests,
-        act3: ActQuests,
-        act4: ActQuests,
-        act5: ActQuests,
+        act1: ActQuests = new ActQuests(),
+        act2: ActQuests = new ActQuests(),
+        act3: ActQuests = new ActQuests(),
+        act4: ActQuests = new ActQuests(),
+        act5: ActQuests = new ActQuests(),
     ){
 
         this.act1 = act1
@@ -78,19 +79,19 @@ class ActQuests{
     quest6: Quest
 
     constructor(
-        quest1: Quest,
-        quest2: Quest,
-        quest3: Quest,
-        quest4: Quest,
-        quest5: Quest,
-        quest6: Quest,
+        // quest1: Quest|undefined,
+        // quest2: Quest|undefined,
+        // quest3: Quest|undefined,
+        // quest4: Quest|undefined,
+        // quest5: Quest|undefined,
+        // quest6: Quest|undefined,
     ){
-        this.quest1 = quest1
-        this.quest2 = quest2
-        this.quest3 = quest3
-        this.quest4 = quest4
-        this.quest5 = quest5
-        this.quest6 = quest6
+        this.quest1 = DenOfEvil
+        this.quest2 = DenOfEvil
+        this.quest3 = DenOfEvil
+        this.quest4 = DenOfEvil
+        this.quest5 = DenOfEvil
+        this.quest6 = DenOfEvil
     }
 }
 
@@ -107,12 +108,12 @@ export class Quest{
     constructor(
         name:string,
         id:string,
-        initiation: Difficulty,
-        after_initiation: Difficulty,
-        early_return: Difficulty,
-        upon_completion: Difficulty,
-        unlocked: Difficulty,
-        complete: Difficulty,
+        initiation: Difficulty = new Difficulty(),
+        after_initiation: Difficulty = new Difficulty(),
+        early_return: Difficulty = new Difficulty(),
+        upon_completion: Difficulty = new Difficulty(),
+        unlocked: Difficulty = new Difficulty(),
+        complete: Difficulty = new Difficulty(),
     ){
         this.name = name
         this.id = id

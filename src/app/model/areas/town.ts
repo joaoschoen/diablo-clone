@@ -1,11 +1,14 @@
 import { NPC } from "../npcs/npc";
+import { DIFFICULTY_ENUM } from "../player/difficulty";
 import { Area, AreaLevel } from "./area";
 
 export class Town extends Area{
+    town_portal: string = ""
 
     constructor(id:string,
         name:string,
         level:AreaLevel,
+        difficulty: DIFFICULTY_ENUM,
         exits:string[],
         npcs: NPC[],
     ){
@@ -13,9 +16,13 @@ export class Town extends Area{
             id,
             name,
             level,
-            true, // All towns have waypoints
+            difficulty,
             exits,
             npcs,
         )
+    }
+
+    openTownPortal(target: string){
+        this.town_portal = target
     }
 }

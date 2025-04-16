@@ -1,8 +1,35 @@
+import { NPC } from "../npcs/npc";
+import { DIFFICULTY_ENUM } from "../player/difficulty";
 import { Area, AreaLevel } from "./area";
 
 export class Dungeon extends Area{
+    hasTownPortal: boolean = false
+    has_waypoint: boolean;
 
-    constructor(id:string,name:string,level:AreaLevel,has_waypoint:boolean,exits:string[]){
-        super(id,name,level,has_waypoint,exits)
+    constructor(id:string,
+        name:string,
+        level:AreaLevel,
+        difficulty: DIFFICULTY_ENUM,
+        has_waypoint:boolean,
+        exits:string[],
+        npcs: NPC[],
+    ){
+        super(
+            id,
+            name,
+            level,
+            difficulty,
+            exits,
+            npcs,
+        )
+        this.has_waypoint = has_waypoint
+    }
+
+    openTownPortal(){
+        this.hasTownPortal = true
+    }
+
+    closeTownPortal(){
+        this.hasTownPortal = false
     }
 }

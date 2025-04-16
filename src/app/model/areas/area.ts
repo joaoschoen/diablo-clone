@@ -1,10 +1,11 @@
 import { NPC } from "../npcs/npc"
+import { DIFFICULTY_ENUM } from "../player/difficulty"
 
 export class Area{
     id: string
     name: string
     area_level: AreaLevel
-    has_waypoint: boolean
+    difficulty: DIFFICULTY_ENUM
     exits: string[]
     npcs: NPC[]
 
@@ -12,14 +13,14 @@ export class Area{
         id: string,
         name: string,
         area_level: AreaLevel,
-        has_waypoint: boolean,
+        difficulty: DIFFICULTY_ENUM,
         exits: string[],
         npcs: NPC[],
     ){
         this.id = id
         this.name = name
         this.area_level = area_level
-        this.has_waypoint = has_waypoint
+        this.difficulty = difficulty
         this.exits = exits
         this.npcs = npcs
     }
