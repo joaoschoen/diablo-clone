@@ -4,6 +4,7 @@ import { attrPointsFromLvl, calcCharacterLevel, LevelEXP, skillPointsFromLvl } f
 import { Mercenary } from "./mercenary"
 import { Quests } from "./quests"
 import { Effect } from "../effects"
+import { WaypointList } from "./waypoint"
 
 export class Character {
     name: string
@@ -20,6 +21,7 @@ export class Character {
     resistances: Resistances
     mercenary: Mercenary
     quests: Quests
+    waypoints: WaypointList
 
     constructor(
         name: string,
@@ -27,8 +29,9 @@ export class Character {
         distributedAttributes: Attributes,
         gearAttributeBonus: Attributes,
         mercenary: Mercenary,
-        quests: Quests
-        ){
+        quests: Quests,
+        waypoints: WaypointList,
+    ){
         this.name = name
         let lvl = calcCharacterLevel(this.exp,
              false)
@@ -42,6 +45,7 @@ export class Character {
         this.resistances = new Resistances(0, 0, 0, 0, 0, 0)
         this.mercenary = mercenary
         this.quests = quests
+        this.waypoints = waypoints
         this.freeAttributePoints = this.calcFreeAttributePoints()
         this.freeSkillPoints = this.calcFreeAttributePoints()
     }

@@ -1,18 +1,21 @@
 export class Area{
     id: string
     name: string
-    lvl: AreaLevel
+    area_level: AreaLevel
+    has_waypoint: boolean
     exits: string[]
 
     constructor(
         id: string,
         name: string,
-        lvl: AreaLevel,
+        area_level: AreaLevel,
+        has_waypoint: boolean,
         exits: string[],
     ){
         this.id = id
         this.name = name
-        this.lvl = lvl
+        this.area_level = area_level
+        this.has_waypoint = has_waypoint
         this.exits = exits
     }
 }
