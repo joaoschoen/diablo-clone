@@ -9,7 +9,7 @@ export class Effect{
 
     constructor(
         name: string,
-        attribute:
+        // attribute:
         duration: number,
         duration_additive: boolean,
         duration_set: boolean,
@@ -26,3 +26,7 @@ export class Effect{
         this.amount_set = amount_set
     }
 }
+// https://www.purediablo.com/forums/threads/so-how-does-potions-really-work.128455/
+// https://diablo2.wiki.fextralife.com/Defense+Potions
+// https://diablo-archive.fandom.com/wiki/Potions_(Diablo_II)
+// https://diablo.fandom.com/wiki/Open_Wounds

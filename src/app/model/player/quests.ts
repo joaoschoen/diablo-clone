@@ -1,16 +1,18 @@
+import { Difficulty } from "./dificulty"
+
 export class Quests{
-    act1: Act
-    act2: Act
-    act3: Act
-    act4: Act
-    act5: Act
+    act1: ActQuests
+    act2: ActQuests
+    act3: ActQuests
+    act4: ActQuests
+    act5: ActQuests
 
     constructor(
-        act1: Act,
-        act2: Act,
-        act3: Act,
-        act4: Act,
-        act5: Act,
+        act1: ActQuests,
+        act2: ActQuests,
+        act3: ActQuests,
+        act4: ActQuests,
+        act5: ActQuests,
     ){
 
         this.act1 = act1
@@ -22,13 +24,13 @@ export class Quests{
 
     attrPointsFromQuests(){
         let points = 0
-        if(this.act3.quest4.normal){
+        if(this.act3.quest4.complete.normal){
             points += 5
         }
-        if(this.act3.quest4.nightmare){
+        if(this.act3.quest4.complete.nightmare){
             points += 5
         }
-        if(this.act3.quest4.hell){
+        if(this.act3.quest4.complete.hell){
             points += 5
         }
         return points
@@ -36,52 +38,52 @@ export class Quests{
 
     skillPointsFromQuests(){
         let points = 0
-        if(this.act1.quest1.normal){
+        if(this.act1.quest1.complete.normal){
             points += 1
         }
-        if(this.act1.quest1.nightmare){
+        if(this.act1.quest1.complete.nightmare){
             points += 1
         }
-        if(this.act1.quest1.hell){
+        if(this.act1.quest1.complete.hell){
             points += 1
         }
-        if(this.act2.quest1.normal){
+        if(this.act2.quest1.complete.normal){
             points += 1
         }
-        if(this.act2.quest1.nightmare){
+        if(this.act2.quest1.complete.nightmare){
             points += 1
         }
-        if(this.act2.quest1.hell){
+        if(this.act2.quest1.complete.hell){
             points += 1
         }
-        if(this.act4.quest1.normal){
+        if(this.act4.quest1.complete.normal){
             points += 2
         }
-        if(this.act4.quest1.nightmare){
+        if(this.act4.quest1.complete.nightmare){
             points += 2
         }
-        if(this.act4.quest1.hell){
+        if(this.act4.quest1.complete.hell){
             points += 2
         }
         return points
     }
 }
 
-class Act{
-    quest1: QuestCompletion
-    quest2: QuestCompletion
-    quest3: QuestCompletion
-    quest4: QuestCompletion
-    quest5: QuestCompletion
-    quest6: QuestCompletion
+class ActQuests{
+    quest1: Quest
+    quest2: Quest
+    quest3: Quest
+    quest4: Quest
+    quest5: Quest
+    quest6: Quest
 
     constructor(
-        quest1: QuestCompletion,
-        quest2: QuestCompletion,
-        quest3: QuestCompletion,
-        quest4: QuestCompletion,
-        quest5: QuestCompletion,
-        quest6: QuestCompletion,
+        quest1: Quest,
+        quest2: Quest,
+        quest3: Quest,
+        quest4: Quest,
+        quest5: Quest,
+        quest6: Quest,
     ){
         this.quest1 = quest1
         this.quest2 = quest2
@@ -92,14 +94,41 @@ class Act{
     }
 }
 
-class QuestCompletion{
-    normal: boolean
-    nightmare: boolean
-    hell: boolean
+export class Quest{
+    name:string
+    id:string
+    initiation: Difficulty
+    after_initiation: Difficulty
+    early_return: Difficulty
+    upon_completion: Difficulty
+    unlocked: Difficulty
+    complete: Difficulty
 
-    constructor(normal: boolean,nightmare: boolean,hell: boolean){
-        this.normal = normal
-        this.nightmare = nightmare
-        this.hell = hell
+    constructor(
+        name:string,
+        id:string,
+        initiation: Difficulty,
+        after_initiation: Difficulty,
+        early_return: Difficulty,
+        upon_completion: Difficulty,
+        unlocked: Difficulty,
+        complete: Difficulty,
+    ){
+        this.name = name
+        this.id = id
+        this.initiation = initiation
+        this.after_initiation = after_initiation
+        this.early_return = early_return
+        this.upon_completion = upon_completion
+        this.unlocked = unlocked
+        this.complete = complete
     }
 }
+
+export type QuestStage = 
+    |"initiation"
+    |"after_initiation"
+    |"early_return"
+    |"upon_completion"
+
+// https://classic.battle.net/diablo2exp/quests/rewards.shtml
