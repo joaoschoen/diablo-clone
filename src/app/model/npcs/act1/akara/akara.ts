@@ -1,4 +1,5 @@
-import { ACT, Difficulty } from "../../../player/dificulty";
+import { ACT_ENUM } from "../../../areas/act";
+import { Difficulty } from "../../../player/difficulty";
 import { Quest } from "../../../player/quests";
 import { Shop } from "../../../shop/shop";
 import { DialogueTrigger, QuestTrigger } from "../../../trigger";
@@ -8,7 +9,7 @@ import { NPC } from "../../npc";
 const AkaraId: string = "akara"
 const AkaraShop: Shop = new Shop(false)
 
-const DenOfEvil: Quest = {
+export const DenOfEvil: Quest = {
     name: "Den of Evil",
     id: "den_of_evil",
     initiation: new Difficulty(),
@@ -24,20 +25,20 @@ const AkaraQuests: Quest[] = [
 ]
 
 const AkaraIntroductionTrigger: QuestTrigger = {
-    act_id: ACT.ACT1,
+    act_id: ACT_ENUM.ACT1,
     npc_id: AkaraId,
     target_id: DenOfEvil.id,
     stage: "initiation",
 }
 
 const DenOfEvilInitiationTrigger: DialogueTrigger = {
-    act_id: ACT.ACT1,
+    act_id: ACT_ENUM.ACT1,
     npc_id: AkaraId,
     target_id: DenOfEvil.id,
 }
 
 const DenOfEvilAfterInitializationTrigger: QuestTrigger = {
-    act_id: ACT.ACT1,
+    act_id: ACT_ENUM.ACT1,
     npc_id: AkaraId,
     target_id: DenOfEvil.id,
     stage:"after_initiation",

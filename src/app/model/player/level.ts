@@ -126,8 +126,11 @@ export function calcCharacterLevel(exp: number, mercenary: boolean):LevelEXP[]{
             level = nextLevel
             break
         }
-        if(exp >= level.exp){
+        if(exp >= nextLevel.exp){
             continue
+        }
+        if(exp < nextLevel.exp){
+            break
         }
     }
     return [level,nextLevel]

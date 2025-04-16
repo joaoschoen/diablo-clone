@@ -5,6 +5,7 @@ import { Mercenary } from "./mercenary"
 import { Quests } from "./quests"
 import { Effect } from "../effects"
 import { WaypointList } from "./waypoint"
+import { Inventory } from "./inventory"
 
 export class Character {
     name: string
@@ -19,18 +20,20 @@ export class Character {
     freeAttributePoints: number
     freeSkillPoints: number
     resistances: Resistances
-    mercenary: Mercenary
+    mercenary: Mercenary|undefined
     quests: Quests
     waypoints: WaypointList
+    inventory:Inventory
 
     constructor(
         name: string,
         char_class: Class,
         distributedAttributes: Attributes,
-        gearAttributeBonus: Attributes,
-        mercenary: Mercenary,
+        gearAttributeBonus: Attributes = new Attributes(),
+        mercenary: Mercenary|undefined = undefined,
         quests: Quests,
         waypoints: WaypointList,
+        inventory: Inventory,
     ){
         this.name = name
         let lvl = calcCharacterLevel(this.exp,
@@ -48,6 +51,7 @@ export class Character {
         this.waypoints = waypoints
         this.freeAttributePoints = this.calcFreeAttributePoints()
         this.freeSkillPoints = this.calcFreeAttributePoints()
+        this.inventory = inventory
     }
 
     addExp(expToAdd: number) {
@@ -122,13 +126,13 @@ export class Attributes {
     mp: number
 
     constructor(
-        strength: number,
-        dexterity: number,
-        vitality: number,
-        energy: number,
-        hp: number,
-        stamina: number,
-        mp: number,
+        strength: number = 0,
+        dexterity: number = 0,
+        vitality: number = 0,
+        energy: number = 0,
+        hp: number = 0,
+        stamina: number = 0,
+        mp: number = 0,
     ) {
         this.strength = strength
         this.dexterity = dexterity
