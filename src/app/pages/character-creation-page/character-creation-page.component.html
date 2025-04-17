@@ -17,7 +17,7 @@
             <img [src]="characterClass.classImage" [alt]="characterClass.className" [title]="characterClass.className"
             class="w-[150px] object-contain overflow-hidden"
             [ngClass]="characterClass.className == 'Paladin' ? 'h-[150px]' : 'h-[200px]'" />
-             {{ characterClass.className }}
+            <p class="text-[#C78B42]">{{ characterClass.className }}</p>
         </button>
     </div>
 
@@ -36,6 +36,6 @@
 
     <div class="w-full flex justify-between">
         <app-button [style]="'default'" [content]="'Back'" (buttonClick)="handleBackToHome()" />
-        <app-button [style]="'default'" [content]="'Create'" (buttonClick)="onSubmit()" />
+        <app-button [style]="'default'" [content]="'Create'" [type]="'submit'" (buttonClick)="onSubmit()"></app-button>
     </div>
 </form>

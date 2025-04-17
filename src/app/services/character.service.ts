@@ -10,11 +10,7 @@ export class CharacterService {
   public constructor() { }
 
   public addCharacter(character: Character) {
-    const current = this.charactersSource.value;
+    const current = this.charactersSource.getValue();
     this.charactersSource.next([...current, character]);
-  }
-
-  public getCharacters(): Character[] {
-    return this.charactersSource.value;
   }
 }
