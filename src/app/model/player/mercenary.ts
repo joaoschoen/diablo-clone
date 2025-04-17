@@ -1,4 +1,4 @@
-import { calcCharacterLevel, LevelEXP } from "./level"
+import { LevelEXP, calcCharacterLevel } from "./level"
 import { Resistances } from "./player"
 
 export class Mercenary {
