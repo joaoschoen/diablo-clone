@@ -12,6 +12,10 @@ import { Druid } from '../../model/player/classes/druid';
 import { Necromancer } from '../../model/player/classes/necromancer';
 import { Paladin } from '../../model/player/classes/paladin';
 import { Sorcerer } from '../../model/player/classes/sorcerer';
+import { Inventory } from '../../model/player/inventory';
+import { Attributes, Character } from '../../model/player/player';
+import { Quests } from '../../model/player/quests';
+import { WaypointList } from '../../model/player/waypoint';
 import { CharacterService } from '../../services/character.service';
 import { ButtonComponent } from '../../ui/button/button.component';
 
@@ -52,7 +56,6 @@ export class CharacterCreationPageComponent implements OnInit {
 
   public selectClass(characterClassName: string) {
     const selectedClass = this.characterClasses.find(characterClass => characterClass.constructor.name === characterClassName);
-    console.log(characterClassName)
     if (selectedClass) {
       this.formField("characterClass")?.patchValue(selectedClass, { emitEvent: false });
     }
@@ -67,6 +70,19 @@ export class CharacterCreationPageComponent implements OnInit {
       const selectedClass: Class = this.form.value.characterClass;
       const characterName: string = this.form.value.characterName;
   
+      const character: Character = new Character(
+        characterName,
+        selectedClass,
+        selectedClass.startingAttributes,
+        new Attributes(),
+        undefined,
+        new Quests(),
+        new WaypointList(),
+        new Inventory(10, 4),
+      )
+
+      this.characterService.addCharacter(character);
+      
       this.router.navigate(['/']);
     }
   }

@@ -8,11 +8,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ButtonComponent {
 
-  @Input() type: string = 'default';
+  @Input() style: string = 'default';
   @Input() content: any;
+  @Input() type: string = 'button';
   @Output() buttonClick = new EventEmitter<any>(false);
 
-  public onClick() {
+  public onClick(event: Event) {
+    event.preventDefault();
     this.buttonClick.emit(true);
   }
 }
