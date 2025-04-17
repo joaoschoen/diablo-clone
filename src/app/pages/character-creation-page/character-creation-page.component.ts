@@ -55,6 +55,7 @@ export class CharacterCreationPageComponent implements OnInit {
 
   public selectClass(characterClassName: string) {
     const selectedClass = this.characterClasses.find(characterClass => characterClass.constructor.name === characterClassName);
+    console.log(characterClassName)
     if (selectedClass) {
       this.formField("characterClass")?.patchValue(selectedClass, { emitEvent: false });
     }
