@@ -1,9 +1,8 @@
-import { effect } from "@angular/core"
+import { Effect } from "../effects"
 import { Class } from "./classes/class"
 import { attrPointsFromLvl, calcCharacterLevel, LevelEXP, skillPointsFromLvl } from "./level"
 import { Mercenary } from "./mercenary"
 import { Quests } from "./quests"
-import { Effect } from "../effects"
 
 export class Character {
     name: string
@@ -30,8 +29,7 @@ export class Character {
         quests: Quests
         ){
         this.name = name
-        let lvl = calcCharacterLevel(this.exp,
-             false)
+        let lvl = calcCharacterLevel(this.exp, false)
         this.lvl = lvl[0]
         this.nextLvl = lvl[1]
         this.class = char_class

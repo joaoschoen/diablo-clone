@@ -10,9 +10,9 @@ export class ButtonComponent {
 
   @Input() type: string = 'default';
   @Input() content: any;
-  @Output() buttonClick = new EventEmitter<any>();
+  @Output() buttonClick = new EventEmitter<any>(false);
 
   public onClick() {
-    this.buttonClick.emit(this.content);
+    this.buttonClick.emit(true);
   }
 }
