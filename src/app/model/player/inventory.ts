@@ -168,4 +168,3 @@ export class ItemLocation {
         this.location = location
     }
 }
-
