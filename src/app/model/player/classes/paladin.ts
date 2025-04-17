@@ -1,3 +1,4 @@
+import { PALADIN_DEFINITION } from "../../constants"
 import { Attributes, StatusGained } from "../player"
 import { Skill, Skills, SkillTree } from "../skills"
 import { Class } from "./class"
@@ -6,7 +7,7 @@ export class Paladin extends Class {
     public constructor() {
         let att = new Attributes(25, 20, 25, 15, 55, 89, 15)
         let gain = new StatusGained(2, 1.5, 1, 3, 1.5, 1)
-        super("Paladin", "", att, gain, new PaladinSkills())
+        super("Paladin", "./assets/classes/Paladin.webp", PALADIN_DEFINITION, att, gain, new PaladinSkills())
     }
 }
 

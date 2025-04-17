@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Character } from './model/player/player';
 import { HeaderComponent } from './ui/header/header.component';
 
 @Component({
@@ -9,5 +10,6 @@ import { HeaderComponent } from './ui/header/header.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'diablo-clone';
+  public title = 'diablo-clone';
+  public characters: Character[] = [];
 }
