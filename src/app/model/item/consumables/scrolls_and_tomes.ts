@@ -1,14 +1,16 @@
 import { Area } from "../../areas/area"
 import { Dungeon } from "../../areas/dungeon"
+import { Vector2D } from "../../geometry"
 import { addCharges, Consumable, CONSUMABLE_TARGET_TYPE, Stackable } from "../consumable"
 import { Equipment, Item } from "../item"
 
+const POTION_IMAGE = "items/Minorhealing.webp"
 export class ScrollIdentify extends Item implements Consumable {
     charges: number
     target: CONSUMABLE_TARGET_TYPE = "equipment"
 
     constructor() {
-        super("Scroll of identify", [1, 1], ["inv", "quick_bar"])
+        super("Scroll of identify",POTION_IMAGE, new Vector2D(1, 1), ["inv", "quick_bar"])
         this.charges = 1
     }
     
@@ -24,7 +26,7 @@ export class TomeIdentify extends Item implements Consumable, Stackable {
     receivesFrom = [TomeIdentify, ScrollIdentify]
 
     constructor(charges: number) {
-        super("Tome of Identify", [1, 2], ["inv"])
+        super("Tome of Identify",POTION_IMAGE, new Vector2D(1, 2), ["inv"])
         this.charges = charges
         this.maxCharges = 20
     }
@@ -43,7 +45,7 @@ export class ScrollTownPortal extends Item implements Consumable {
     target: CONSUMABLE_TARGET_TYPE = "area"
 
     constructor() {
-        super("Scroll of town portal", [1, 1], ["inv", "quick_bar"])
+        super("Scroll of town portal",POTION_IMAGE, new Vector2D(1, 1), ["inv", "quick_bar"])
         this.charges = 1
     }
 
@@ -59,7 +61,7 @@ export class TomeTownPortal extends Item implements Consumable, Stackable {
     receivesFrom = [TomeIdentify, ScrollIdentify]
 
     constructor(charges: number) {
-        super("Tome of Identify", [1, 2], ["inv"])
+        super("Tome of Identify",POTION_IMAGE, new Vector2D(1, 2), ["inv"])
         this.charges = charges
         this.maxCharges = 20
     }

@@ -1,6 +1,7 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { Inventory } from '../../../../../model/player/inventory';
 import { CommonModule } from '@angular/common';
+import { GameController } from '../../../../../model/game-controller';
 
 @Component({
   selector: 'app-inventory',
@@ -9,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './inventory.component.css'
 })
 export class InventoryComponent {
-  inventory = input.required<Inventory>()
+  gameController = input.required<GameController>()
 }
