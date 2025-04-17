@@ -1,0 +1,1596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{D2C5172F-2473-4D78-A927-9FACE0B4543E}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>D2Editor</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)d2ce\thirdparty\jsoncpp\include;$(SolutionDir)d2ce\thirdparty\rapidcsv\include;$(SolutionDir)d2ce\thirdparty\utf8\include;$(SolutionDir)d2ce\thirdparty\StormLib\src;$(SolutionDir)d2ce</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)d2ce\thirdparty\jsoncpp\include;$(SolutionDir)d2ce\thirdparty\rapidcsv\include;$(SolutionDir)d2ce\thirdparty\utf8\include;$(SolutionDir)d2ce\thirdparty\StormLib\src;$(SolutionDir)d2ce</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)d2ce\thirdparty\jsoncpp\include;$(SolutionDir)d2ce\thirdparty\rapidcsv\include;$(SolutionDir)d2ce\thirdparty\utf8\include;$(SolutionDir)d2ce\thirdparty\StormLib\src;$(SolutionDir)d2ce</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Manifest>
+      <OutputManifestFile>$(IntDir)$(TargetName)$(TargetExt).embed.manifest</OutputManifestFile>
+    </Manifest>
+    <ManifestResourceCompile>
+      <ResourceOutputFileName>$(IntDir)$(TargetName)$(TargetExt).embed.manifest.res</ResourceOutputFileName>
+    </ManifestResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)d2ce\thirdparty\jsoncpp\include;$(SolutionDir)d2ce\thirdparty\rapidcsv\include;$(SolutionDir)d2ce\thirdparty\utf8\include;$(SolutionDir)d2ce\thirdparty\StormLib\src;$(SolutionDir)d2ce</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Manifest>
+      <OutputManifestFile>$(IntDir)$(TargetName)$(TargetExt).embed.manifest</OutputManifestFile>
+    </Manifest>
+    <ManifestResourceCompile>
+      <ResourceOutputFileName>$(IntDir)$(TargetName)$(TargetExt).embed.manifest.res</ResourceOutputFileName>
+    </ManifestResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="D2AddGemsForm.h" />
+    <ClInclude Include="d2ce\ActsInfo.h" />
+    <ClInclude Include="d2ce\bitmask.hpp" />
+    <ClInclude Include="d2ce\Character.h" />
+    <ClInclude Include="d2ce\CharacterConstants.h" />
+    <ClInclude Include="d2ce\CharacterStats.h" />
+    <ClInclude Include="d2ce\CharacterStatsConstants.h" />
+    <ClInclude Include="d2ce\Constants.h" />
+    <ClInclude Include="d2ce\helpers\DefaultTxtReader.h" />
+    <ClInclude Include="d2ce\helpers\ItemHelpers.h" />
+    <ClInclude Include="d2ce\Mercenary.h" />
+    <ClInclude Include="d2ce\MercenaryConstants.h" />
+    <ClInclude Include="d2ce\SharedStash.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\allocator.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\assertions.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\config.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\forwards.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\historic_map.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\json.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\json_features.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\reader.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\value.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\version.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\include\json\writer.h" />
+    <ClInclude Include="d2ce\thirdparty\jsoncpp\src\lib_json\json_tool.h" />
+    <ClInclude Include="d2ce\thirdparty\rapidcsv\include\rapidcsv\rapidcsv.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\adpcm\adpcm.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\bzip2\bzlib.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\bzip2\bzlib_private.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\FileStream.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\huffman\huff.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\jenkins\lookup.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\lzma\C\LzFind.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\lzma\C\LzFindMt.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\lzma\C\LzHash.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\lzma\C\LzmaDec.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\lzma\C\LzmaEnc.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\lzma\C\Threads.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\lzma\C\Types.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\pklib\pklib.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\sparse\sparse.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\StormCommon.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\StormLib.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\crc32.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\deflate.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\gzguts.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\inffast.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\inffixed.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\inflate.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\inftrees.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\trees.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\zconf.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\zlib.h" />
+    <ClInclude Include="d2ce\thirdparty\StormLib\src\zlib\zutil.h" />
+    <ClInclude Include="d2ce\thirdparty\utf8\include\utf8\utf8.h" />
+    <ClInclude Include="d2ce\thirdparty\utf8\include\utf8\utf8\checked.h" />
+    <ClInclude Include="d2ce\thirdparty\utf8\include\utf8\utf8\core.h" />
+    <ClInclude Include="d2ce\thirdparty\utf8\include\utf8\utf8\cpp17.h" />
+    <ClInclude Include="d2ce\thirdparty\utf8\include\utf8\utf8\unchecked.h" />
+    <ClInclude Include="D2EarAttributesForm.h" />
+    <ClInclude Include="D2Editor.h" />
+    <ClInclude Include="D2GemsForm.h" />
+    <ClInclude Include="D2ItemsForm.h" />
+    <ClInclude Include="D2ItemToolTipCtrl.h" />
+    <ClInclude Include="D2LevelInfoForm.h" />
+    <ClInclude Include="D2MagicalAffixesForm.h" />
+    <ClInclude Include="D2MagicalPropsRandomizer.h" />
+    <ClInclude Include="D2MainForm.h" />
+    <ClInclude Include="D2MercenaryForm.h" />
+    <ClInclude Include="D2NewItemForm.h" />
+    <ClInclude Include="D2QuestsForm.h" />
+    <ClInclude Include="D2RareAffixesForm.h" />
+    <ClInclude Include="D2RunewordForm.h" />
+    <ClInclude Include="D2SharedStashForm.h" />
+    <ClInclude Include="D2SkillTreeForm.h" />
+    <ClInclude Include="D2TreeCtrl.h" />
+    <ClInclude Include="D2WaypointsForm.h" />
+    <ClInclude Include="d2ce\DataTypes.h" />
+    <ClInclude Include="d2ce\ExperienceConstants.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="d2ce\Item.h" />
+    <ClInclude Include="d2ce\ItemConstants.h" />
+    <ClInclude Include="D2MainFormConstants.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="d2ce\SkillConstants.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="d2ce\WaypointConstants.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D2AddGemsForm.cpp" />
+    <ClCompile Include="d2ce\ActsInfo.cpp" />
+    <ClCompile Include="d2ce\Character.cpp" />
+    <ClCompile Include="d2ce\CharacterStats.cpp" />
+    <ClCompile Include="d2ce\helpers\ArmorTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\LayoutJson.cpp" />
+    <ClCompile Include="d2ce\helpers\BeltsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\BodyLocsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\CharStatsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\CraftItemsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\DefaultTxtReader.cpp" />
+    <ClCompile Include="d2ce\helpers\ExperienceTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\GemsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\GridDimensionsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\HirelingTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemGemsJson.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemHelpers.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemModifiersJson.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemNameAffixesJson.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemNamesJson.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemRunesJson.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemsCode.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemStatCostTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\ItemTypesTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\LevelsJson.cpp" />
+    <ClCompile Include="d2ce\helpers\MagicPrefixTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\MagicSuffixTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\MercenariesJson.cpp" />
+    <ClCompile Include="d2ce\helpers\MercInventoryTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\MiscTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\MonStatsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\MonstersJson.cpp" />
+    <ClCompile Include="d2ce\helpers\MonTypeTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\NPCsJson.cpp" />
+    <ClCompile Include="d2ce\helpers\PlayerClassTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\PropertiesTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\QualityItemsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\QuestsJson.cpp" />
+    <ClCompile Include="d2ce\helpers\RarePrefixTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\RareSuffixTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\RunesTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\SetItemsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\SetsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\SkillDescTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\SkillsJson.cpp" />
+    <ClCompile Include="d2ce\helpers\SkillsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\UIJson.cpp" />
+    <ClCompile Include="d2ce\helpers\UniqueItemsTxt.cpp" />
+    <ClCompile Include="d2ce\helpers\WeaponsTxt.cpp" />
+    <ClCompile Include="d2ce\Mercenary.cpp" />
+    <ClCompile Include="d2ce\SharedStash.cpp" />
+    <ClCompile Include="d2ce\thirdparty\jsoncpp\src\lib_json\json_reader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\jsoncpp\src\lib_json\json_value.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\jsoncpp\src\lib_json\json_writer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\adpcm\adpcm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\bzip2\blocksort.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\bzip2\bzlib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4127;4100;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4127;4100;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4127;4100;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4127;4100;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\bzip2\compress.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\bzip2\crctable.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\bzip2\decompress.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\bzip2\huffman.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\bzip2\randtable.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\FileStream.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\huffman\huff.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\jenkins\lookup3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4005;4127;4101;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4005;4127;4101;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4005;4127;4101;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4005;4127;4101;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\LibTomCrypt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4244;4245;4459;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4244;4245;4459;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4244;4245;4459;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4244;4245;4459;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\LibTomMath.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4702;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4702;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4702;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4702;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\LibTomMathDesc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\lzma\C\LzFind.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\lzma\C\LzFindMt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\lzma\C\LzmaDec.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4457;4456;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4457;4456;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4457;4456;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4457;4456;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\lzma\C\LzmaEnc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4456;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4456;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4456;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4456;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\lzma\C\Threads.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\pklib\explode.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\pklib\implode.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4424;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4424;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4424;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4424;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">__STORMLIB_SELF__;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">__STORMLIB_SELF__;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SBaseCommon.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4005;4603;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4005;4603;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4005;4603;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4005;4603;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SBaseFileTable.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SBaseSubTypes.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SCompression.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileAddFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileAttributes.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileCompactArchive.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileCreateArchive.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileExtractFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileFindFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileGetFileInfo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileListFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileOpenArchive.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileOpenFileEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFilePatchArchives.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileReadFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\SFileVerify.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\sparse\sparse.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\adler32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\compress_zlib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\crc32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\deflate.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;4127;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\inffast.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\inflate.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\inftrees.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\trees.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="d2ce\thirdparty\StormLib\src\zlib\zutil.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4131;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="D2EarAttributesForm.cpp" />
+    <ClCompile Include="D2Editor.cpp" />
+    <ClCompile Include="D2GemsForm.cpp" />
+    <ClCompile Include="D2ItemsForm.cpp" />
+    <ClCompile Include="D2ItemToolTipCtrl.cpp" />
+    <ClCompile Include="D2LevelInfoForm.cpp" />
+    <ClCompile Include="D2MagicalAffixesForm.cpp" />
+    <ClCompile Include="D2MagicalPropsRandomizer.cpp" />
+    <ClCompile Include="D2MainForm.cpp" />
+    <ClCompile Include="D2MercenaryForm.cpp" />
+    <ClCompile Include="D2NewItemForm.cpp" />
+    <ClCompile Include="D2QuestsForm.cpp" />
+    <ClCompile Include="D2RareAffixesForm.cpp" />
+    <ClCompile Include="D2RunewordForm.cpp" />
+    <ClCompile Include="D2SharedStashForm.cpp" />
+    <ClCompile Include="D2SkillTreeForm.cpp" />
+    <ClCompile Include="D2TreeCtrl.cpp" />
+    <ClCompile Include="D2WaypointsForm.cpp" />
+    <ClCompile Include="d2ce\Item.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D2Editor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="d2ce\thirdparty\jsoncpp\LICENSE" />
+    <None Include="d2ce\thirdparty\jsoncpp\src\lib_json\json_valueiterator.inl" />
+    <None Include="d2ce\thirdparty\rapidcsv\LICENSE" />
+    <None Include="d2ce\thirdparty\StormLib\LICENSE" />
+    <None Include="d2ce\thirdparty\utf8\include\utf8\LICENSE" />
+    <None Include="res\trash.cur" />
+    <None Include="res\D2Editor.rc2" />
+    <None Include="res\TXT\global\ui\layouts\bankexpansionlayouthd.json" />
+    <None Include="res\TXT\global\ui\layouts\hirelinginventorypanelhd.json" />
+    <None Include="res\TXT\global\ui\layouts\horadriccubelayouthd.json" />
+    <None Include="res\TXT\global\ui\layouts\playerinventoryexpansionlayouthd.json" />
+    <None Include="res\TXT\local\lng\strings\item-gems.json" />
+    <None Include="res\TXT\local\lng\strings\item-modifiers.json" />
+    <None Include="res\TXT\local\lng\strings\item-nameaffixes.json" />
+    <None Include="res\TXT\local\lng\strings\item-names.json" />
+    <None Include="res\TXT\local\lng\strings\item-runes.json" />
+    <None Include="res\TXT\local\lng\strings\levels.json" />
+    <None Include="res\TXT\local\lng\strings\mercenaries.json" />
+    <None Include="res\TXT\local\lng\strings\monsters.json" />
+    <None Include="res\TXT\local\lng\strings\npcs.json" />
+    <None Include="res\TXT\local\lng\strings\quests.json" />
+    <None Include="res\TXT\local\lng\strings\skills.json" />
+    <None Include="res\TXT\local\lng\strings\ui.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Armor\001 Quilted Armor.bmp" />
+    <Image Include="res\Armor\002 Leather Armor.bmp" />
+    <Image Include="res\Armor\003 Hard Leather Armor.bmp" />
+    <Image Include="res\Armor\004 Studded Leather.bmp" />
+    <Image Include="res\Armor\005 Ring Mail.bmp" />
+    <Image Include="res\Armor\006 Scale Mail.bmp" />
+    <Image Include="res\Armor\007 Chain Mail.bmp" />
+    <Image Include="res\Armor\008 Breast Plate.bmp" />
+    <Image Include="res\Armor\009 Splint Mail.bmp" />
+    <Image Include="res\Armor\010 Plate Mail.bmp" />
+    <Image Include="res\Armor\011 Field Mail.bmp" />
+    <Image Include="res\Armor\012 Gothic Plate.bmp" />
+    <Image Include="res\Armor\013 Full Plate Mail.bmp" />
+    <Image Include="res\Armor\014 Ancient Armor.bmp" />
+    <Image Include="res\Armor\015 Light Plate.bmp" />
+    <Image Include="res\Belt\01 Sash.bmp" />
+    <Image Include="res\Belt\02 Light Belt.bmp" />
+    <Image Include="res\Belt\03 Belt.bmp" />
+    <Image Include="res\Belt\04 Heavy Belt.bmp" />
+    <Image Include="res\Belt\05 Plated Belt.bmp" />
+    <Image Include="res\Boots\01 Boots.bmp" />
+    <Image Include="res\Boots\02 Heavy Boots.bmp" />
+    <Image Include="res\Boots\03 Chain Boots.bmp" />
+    <Image Include="res\Boots\04 Light Plated Boots.bmp" />
+    <Image Include="res\Boots\05 Greaves.bmp" />
+    <Image Include="res\CharStats.bmp" />
+    <Image Include="res\D2Editor.ico" />
+    <Image Include="res\exit.bmp" />
+    <Image Include="res\Gloves\01 Leather Gloves.bmp" />
+    <Image Include="res\Gloves\02 Heavy Gloves.bmp" />
+    <Image Include="res\Gloves\03 Chain Gloves.bmp" />
+    <Image Include="res\Gloves\04 Light Gauntlets.bmp" />
+    <Image Include="res\Gloves\05 Gauntlets.bmp" />
+    <Image Include="res\Helm\01 Cap.bmp" />
+    <Image Include="res\Helm\02 Skull Cap.bmp" />
+    <Image Include="res\Helm\03 Helm.bmp" />
+    <Image Include="res\Helm\04 Full Helm.bmp" />
+    <Image Include="res\Helm\05 Great Helm.bmp" />
+    <Image Include="res\Helm\06 Crown.bmp" />
+    <Image Include="res\Helm\07 Mask.bmp" />
+    <Image Include="res\Helm\08 Grim Helm.bmp" />
+    <Image Include="res\Helm\Barbarian\21 Jawbone Cap.bmp" />
+    <Image Include="res\Helm\Barbarian\22 Fanged Helm.bmp" />
+    <Image Include="res\Helm\Barbarian\23 Horned Helm.bmp" />
+    <Image Include="res\Helm\Barbarian\24 Assault Helmet.bmp" />
+    <Image Include="res\Helm\Barbarian\25 Avenger Guard.bmp" />
+    <Image Include="res\Helm\Circlet\09 Circlet.bmp" />
+    <Image Include="res\Helm\Circlet\10 Coronet.bmp" />
+    <Image Include="res\Helm\Circlet\11 Tiara.bmp" />
+    <Image Include="res\Helm\Circlet\12 Diadem.bmp" />
+    <Image Include="res\Helm\Druid\16 Wolf Head.bmp" />
+    <Image Include="res\Helm\Druid\17 Hawk Helm.bmp" />
+    <Image Include="res\Helm\Druid\18 Antlers.bmp" />
+    <Image Include="res\Helm\Druid\19 Spirit Mask.bmp" />
+    <Image Include="res\Helm\Druid\20 Falcon Mask.bmp" />
+    <Image Include="res\INVEMPTY.bmp" />
+    <Image Include="res\inv_armor.bmp" />
+    <Image Include="res\inv_belt.bmp" />
+    <Image Include="res\inv_boots.bmp" />
+    <Image Include="res\inv_helm_glove__0__0.bmp" />
+    <Image Include="res\inv_helm_glove__0__1.bmp" />
+    <Image Include="res\inv_ring_amulet__0__0.bmp" />
+    <Image Include="res\inv_ring_amulet__0__1.bmp" />
+    <Image Include="res\inv_weapons.bmp" />
+    <Image Include="res\maxStats.bmp" />
+    <Image Include="res\Misc\a Jade Figuring.bmp" />
+    <Image Include="res\Misc\Amethyst.bmp" />
+    <Image Include="res\Misc\Amn Rune.bmp" />
+    <Image Include="res\Misc\Amulet 2.bmp" />
+    <Image Include="res\Misc\Amulet 3.bmp" />
+    <Image Include="res\Misc\Amulet.bmp" />
+    <Image Include="res\Misc\Antidote Potion.bmp" />
+    <Image Include="res\Misc\Arrows.bmp" />
+    <Image Include="res\Misc\Ber Rune.bmp" />
+    <Image Include="res\Misc\Bolts.bmp" />
+    <Image Include="res\Misc\Book of Skill.bmp" />
+    <Image Include="res\Misc\Bpl.bmp" />
+    <Image Include="res\Misc\Bps.bmp" />
+    <Image Include="res\Misc\Cham Rune.bmp" />
+    <Image Include="res\Misc\Chipped Amethyst.bmp" />
+    <Image Include="res\Misc\Chipped Diamond.bmp" />
+    <Image Include="res\Misc\Chipped Emerald.bmp" />
+    <Image Include="res\Misc\Chipped Ruby.bmp" />
+    <Image Include="res\Misc\Chipped Sapphire.bmp" />
+    <Image Include="res\Misc\Chipped Skull.bmp" />
+    <Image Include="res\Misc\Chipped Topaz.bmp" />
+    <Image Include="res\Misc\Diamond.bmp" />
+    <Image Include="res\Misc\Dol Rune.bmp" />
+    <Image Include="res\Misc\El Rune.bmp" />
+    <Image Include="res\Misc\Eld Rune.bmp" />
+    <Image Include="res\Misc\Elixir.bmp" />
+    <Image Include="res\Misc\Emerald.bmp" />
+    <Image Include="res\Misc\Eth Rune.bmp" />
+    <Image Include="res\Misc\Fal Rune.bmp" />
+    <Image Include="res\Misc\Flawed Amethyst.bmp" />
+    <Image Include="res\Misc\Flawed Diamond.bmp" />
+    <Image Include="res\Misc\Flawed Emerald.bmp" />
+    <Image Include="res\Misc\Flawed Saphire.bmp" />
+    <Image Include="res\Misc\Flawed Skull.bmp" />
+    <Image Include="res\Misc\Flawed Topaz.bmp" />
+    <Image Include="res\Misc\Flawled Ruby.bmp" />
+    <Image Include="res\Misc\Flawless Amethyst.bmp" />
+    <Image Include="res\Misc\Flawless Diamond.bmp" />
+    <Image Include="res\Misc\Flawless Emerald.bmp" />
+    <Image Include="res\Misc\Flawless Ruby.bmp" />
+    <Image Include="res\Misc\Flawless Sapphire.bmp" />
+    <Image Include="res\Misc\Flawless Skull.bmp" />
+    <Image Include="res\Misc\Flawless Topaz.bmp" />
+    <Image Include="res\Misc\Full Reiuvenation Potion.bmp" />
+    <Image Include="res\Misc\Full Rejuvenation Potion.bmp" />
+    <Image Include="res\Misc\gemsocket.bmp" />
+    <Image Include="res\Misc\Gold.bmp" />
+    <Image Include="res\Misc\Grand Charm 2.bmp" />
+    <Image Include="res\Misc\Grand Charm 3.bmp" />
+    <Image Include="res\Misc\Grand Charm.bmp" />
+    <Image Include="res\Misc\Greater Healing Potion.bmp" />
+    <Image Include="res\Misc\Greater Mana Potion.bmp" />
+    <Image Include="res\Misc\Gul Rune.bmp" />
+    <Image Include="res\Misc\Healing Potion.bmp" />
+    <Image Include="res\Misc\Hel Rune.bmp" />
+    <Image Include="res\Misc\Herb.bmp" />
+    <Image Include="res\Misc\Horadric Cube.bmp" />
+    <Image Include="res\Misc\Horadric Scroll.bmp" />
+    <Image Include="res\Misc\Io Rune.bmp" />
+    <Image Include="res\Misc\Ist Rune.bmp" />
+    <Image Include="res\Misc\Ith Rune.bmp" />
+    <Image Include="res\Misc\Jah Rune.bmp" />
+    <Image Include="res\Misc\Jewel 2.bmp" />
+    <Image Include="res\Misc\Jewel 3.bmp" />
+    <Image Include="res\Misc\Jewel 4.bmp" />
+    <Image Include="res\Misc\Jewel 5.bmp" />
+    <Image Include="res\Misc\Jewel 6.bmp" />
+    <Image Include="res\Misc\Jewel.bmp" />
+    <Image Include="res\Misc\Key to the Cairn Stones.bmp" />
+    <Image Include="res\Misc\Key.bmp" />
+    <Image Include="res\Misc\Khalim%27s Brain.bmp" />
+    <Image Include="res\Misc\Khalim%27s Ear.bmp" />
+    <Image Include="res\Misc\Khalim%27s Eye.bmp" />
+    <Image Include="res\Misc\Khalim%27s Heart.bmp" />
+    <Image Include="res\Misc\Ko Rune.bmp" />
+    <Image Include="res\Misc\Lam Esen%27s Tome.bmp" />
+    <Image Include="res\Misc\Large Charm 2.bmp" />
+    <Image Include="res\Misc\Large Charm 3.bmp" />
+    <Image Include="res\Misc\Large Charm.bmp" />
+    <Image Include="res\Misc\Lem Rune.bmp" />
+    <Image Include="res\Misc\Light Healing Potion.bmp" />
+    <Image Include="res\Misc\Light Mana Potion.bmp" />
+    <Image Include="res\Misc\Lo Rune.bmp" />
+    <Image Include="res\Misc\Lum Rune.bmp" />
+    <Image Include="res\Misc\Mal Rune.bmp" />
+    <Image Include="res\Misc\Malah%27s Potion.bmp" />
+    <Image Include="res\Misc\Mana Potion.bmp" />
+    <Image Include="res\Misc\Mephisto%27s Soulstone.bmp" />
+    <Image Include="res\Misc\Minor Healing Potion.bmp" />
+    <Image Include="res\Misc\Minor Mana Potion.bmp" />
+    <Image Include="res\Misc\Mpf.bmp" />
+    <Image Include="res\Misc\Nef Rune.bmp" />
+    <Image Include="res\Misc\Ohm Rune.bmp" />
+    <Image Include="res\Misc\Ort Rune.bmp" />
+    <Image Include="res\Misc\Perfect Amethyst.bmp" />
+    <Image Include="res\Misc\Perfect Diamond.bmp" />
+    <Image Include="res\Misc\Perfect Emerald.bmp" />
+    <Image Include="res\Misc\Perfect Ruby.bmp" />
+    <Image Include="res\Misc\Perfect Sapphire.bmp" />
+    <Image Include="res\Misc\Perfect Skull.bmp" />
+    <Image Include="res\Misc\Perfect Topaz.bmp" />
+    <Image Include="res\Misc\Player%27s Ear.bmp" />
+    <Image Include="res\Misc\Potion of Life.bmp" />
+    <Image Include="res\Misc\Pul Rune.bmp" />
+    <Image Include="res\Misc\Ral Rune.bmp" />
+    <Image Include="res\Misc\Reiuvenation Potion.bmp" />
+    <Image Include="res\Misc\Rejuvenation Potion.bmp" />
+    <Image Include="res\Misc\Ring 2.bmp" />
+    <Image Include="res\Misc\Ring 3.bmp" />
+    <Image Include="res\Misc\Ring 4.bmp" />
+    <Image Include="res\Misc\Ring 5.bmp" />
+    <Image Include="res\Misc\Ring.bmp" />
+    <Image Include="res\Misc\Rpl.bmp" />
+    <Image Include="res\Misc\Ruby.bmp" />
+    <Image Include="res\Misc\Sapphire.bmp" />
+    <Image Include="res\Misc\Scroll of Identify.bmp" />
+    <Image Include="res\Misc\Scroll of Inifuss.bmp" />
+    <Image Include="res\Misc\Scroll of Jnifuss.bmp" />
+    <Image Include="res\Misc\Scroll of Knowledge.bmp" />
+    <Image Include="res\Misc\Scroll of Resistance.bmp" />
+    <Image Include="res\Misc\Scroll of Town Portal.bmp" />
+    <Image Include="res\Misc\Shael Rune.bmp" />
+    <Image Include="res\Misc\Skeleton Brain.bmp" />
+    <Image Include="res\Misc\Skeleton Eye.bmp" />
+    <Image Include="res\Misc\Skeleton Fang.bmp" />
+    <Image Include="res\Misc\Skeleton Flag.bmp" />
+    <Image Include="res\Misc\Skeleton Heart.bmp" />
+    <Image Include="res\Misc\Skeleton Horn.bmp" />
+    <Image Include="res\Misc\Skeleton Jaw.bmp" />
+    <Image Include="res\Misc\Skeleton Quill.bmp" />
+    <Image Include="res\Misc\Skeleton Soul.bmp" />
+    <Image Include="res\Misc\Skeleton Spleen.bmp" />
+    <Image Include="res\Misc\Skeleton Tail.bmp" />
+    <Image Include="res\Misc\Skull.bmp" />
+    <Image Include="res\Misc\Small Charm 2.bmp" />
+    <Image Include="res\Misc\Small Charm 3.bmp" />
+    <Image Include="res\Misc\Small Charm.bmp" />
+    <Image Include="res\Misc\Sol Rune.bmp" />
+    <Image Include="res\Misc\Stamina Potion.bmp" />
+    <Image Include="res\Misc\Super Healing Potion.bmp" />
+    <Image Include="res\Misc\Super Mana Potion.bmp" />
+    <Image Include="res\Misc\Sur Rune.bmp" />
+    <Image Include="res\Misc\Tal Rune.bmp" />
+    <Image Include="res\Misc\Thawing Potion.bmp" />
+    <Image Include="res\Misc\the Black Tower Key.bmp" />
+    <Image Include="res\Misc\the Golden Bird.bmp" />
+    <Image Include="res\Misc\Thul Rune.bmp" />
+    <Image Include="res\Misc\Tir Rune.bmp" />
+    <Image Include="res\Misc\Token of Absolution.bmp" />
+    <Image Include="res\Misc\Tome of Identify.bmp" />
+    <Image Include="res\Misc\Tome of Town Portal.bmp" />
+    <Image Include="res\Misc\Top of the Horadric Staff.bmp" />
+    <Image Include="res\Misc\Topaz.bmp" />
+    <Image Include="res\Misc\Torch.bmp" />
+    <Image Include="res\Misc\Twisted Essence of Destruction.bmp" />
+    <Image Include="res\Misc\Twisted Essence of Hatred.bmp" />
+    <Image Include="res\Misc\Twisted Essence of Suffering.bmp" />
+    <Image Include="res\Misc\Twisted Essence of Terror.bmp" />
+    <Image Include="res\Misc\Um Rune.bmp" />
+    <Image Include="res\Misc\Vex Rune.bmp" />
+    <Image Include="res\Misc\Zod Rune.bmp" />
+    <Image Include="res\quest.bmp" />
+    <Image Include="res\Shield\01 Buckler.bmp" />
+    <Image Include="res\Shield\02 Small Shield.bmp" />
+    <Image Include="res\Shield\03 Large Shield.bmp" />
+    <Image Include="res\Shield\04 Kite Shield.bmp" />
+    <Image Include="res\Shield\06 Tower Shield.bmp" />
+    <Image Include="res\Shield\07 Gothic Shield.bmp" />
+    <Image Include="res\Shield\08 Bone Shield.bmp" />
+    <Image Include="res\Shield\09 Spiked Shield.bmp" />
+    <Image Include="res\Shield\Necromancer\01 Preserved Head.bmp" />
+    <Image Include="res\Shield\Necromancer\02 Zombie Head.bmp" />
+    <Image Include="res\Shield\Necromancer\03 Unraveller Head.bmp" />
+    <Image Include="res\Shield\Necromancer\04 Gargoyle Head.bmp" />
+    <Image Include="res\Shield\Necromancer\05 Demon Head.bmp" />
+    <Image Include="res\Shield\Paladin\10 Targe.bmp" />
+    <Image Include="res\Shield\Paladin\11 Rondache.bmp" />
+    <Image Include="res\Shield\Paladin\12 Heraldic Shield.bmp" />
+    <Image Include="res\Shield\Paladin\13 Aerin Shield.bmp" />
+    <Image Include="res\Shield\Paladin\14 Crown Shield.bmp" />
+    <Image Include="res\skill.bmp" />
+    <Image Include="res\Skills\AMA00.bmp" />
+    <Image Include="res\Skills\AMA02.bmp" />
+    <Image Include="res\Skills\AMA04.bmp" />
+    <Image Include="res\Skills\AMA06.bmp" />
+    <Image Include="res\Skills\AMA08.bmp" />
+    <Image Include="res\Skills\AMA10.bmp" />
+    <Image Include="res\Skills\AMA12.bmp" />
+    <Image Include="res\Skills\AMA14.bmp" />
+    <Image Include="res\Skills\AMA16.bmp" />
+    <Image Include="res\Skills\AMA18.bmp" />
+    <Image Include="res\Skills\AMA20.bmp" />
+    <Image Include="res\Skills\AMA22.bmp" />
+    <Image Include="res\Skills\AMA24.bmp" />
+    <Image Include="res\Skills\AMA26.bmp" />
+    <Image Include="res\Skills\AMA28.bmp" />
+    <Image Include="res\Skills\AMA30.bmp" />
+    <Image Include="res\Skills\AMA32.bmp" />
+    <Image Include="res\Skills\AMA34.bmp" />
+    <Image Include="res\Skills\AMA36.bmp" />
+    <Image Include="res\Skills\AMA38.bmp" />
+    <Image Include="res\Skills\AMA40.bmp" />
+    <Image Include="res\Skills\AMA42.bmp" />
+    <Image Include="res\Skills\AMA44.bmp" />
+    <Image Include="res\Skills\AMA46.bmp" />
+    <Image Include="res\Skills\AMA48.bmp" />
+    <Image Include="res\Skills\AMA50.bmp" />
+    <Image Include="res\Skills\AMA52.bmp" />
+    <Image Include="res\Skills\AMA54.bmp" />
+    <Image Include="res\Skills\AMA56.bmp" />
+    <Image Include="res\Skills\AMA58.bmp" />
+    <Image Include="res\Skills\ASS00.bmp" />
+    <Image Include="res\Skills\ASS02.bmp" />
+    <Image Include="res\Skills\ASS04.bmp" />
+    <Image Include="res\Skills\ASS06.bmp" />
+    <Image Include="res\Skills\ASS08.bmp" />
+    <Image Include="res\Skills\ASS10.bmp" />
+    <Image Include="res\Skills\ASS12.bmp" />
+    <Image Include="res\Skills\ASS14.bmp" />
+    <Image Include="res\Skills\ASS16.bmp" />
+    <Image Include="res\Skills\ASS18.bmp" />
+    <Image Include="res\Skills\ASS20.bmp" />
+    <Image Include="res\Skills\ASS22.bmp" />
+    <Image Include="res\Skills\ASS24.bmp" />
+    <Image Include="res\Skills\ASS26.bmp" />
+    <Image Include="res\Skills\ASS28.bmp" />
+    <Image Include="res\Skills\ASS30.bmp" />
+    <Image Include="res\Skills\ASS32.bmp" />
+    <Image Include="res\Skills\ASS34.bmp" />
+    <Image Include="res\Skills\ASS36.bmp" />
+    <Image Include="res\Skills\ASS38.bmp" />
+    <Image Include="res\Skills\ASS40.bmp" />
+    <Image Include="res\Skills\ASS42.bmp" />
+    <Image Include="res\Skills\ASS44.bmp" />
+    <Image Include="res\Skills\ASS46.bmp" />
+    <Image Include="res\Skills\ASS48.bmp" />
+    <Image Include="res\Skills\ASS50.bmp" />
+    <Image Include="res\Skills\ASS52.bmp" />
+    <Image Include="res\Skills\ASS54.bmp" />
+    <Image Include="res\Skills\ASS56.bmp" />
+    <Image Include="res\Skills\ASS58.bmp" />
+    <Image Include="res\Skills\BAR00.bmp" />
+    <Image Include="res\Skills\BAR02.bmp" />
+    <Image Include="res\Skills\BAR04.bmp" />
+    <Image Include="res\Skills\BAR06.bmp" />
+    <Image Include="res\Skills\BAR08.bmp" />
+    <Image Include="res\Skills\BAR10.bmp" />
+    <Image Include="res\Skills\BAR12.bmp" />
+    <Image Include="res\Skills\BAR14.bmp" />
+    <Image Include="res\Skills\BAR16.bmp" />
+    <Image Include="res\Skills\BAR18.bmp" />
+    <Image Include="res\Skills\BAR20.bmp" />
+    <Image Include="res\Skills\BAR22.bmp" />
+    <Image Include="res\Skills\BAR24.bmp" />
+    <Image Include="res\Skills\BAR26.bmp" />
+    <Image Include="res\Skills\BAR28.bmp" />
+    <Image Include="res\Skills\BAR30.bmp" />
+    <Image Include="res\Skills\BAR32.bmp" />
+    <Image Include="res\Skills\BAR34.bmp" />
+    <Image Include="res\Skills\BAR36.bmp" />
+    <Image Include="res\Skills\BAR38.bmp" />
+    <Image Include="res\Skills\BAR40.bmp" />
+    <Image Include="res\Skills\BAR42.bmp" />
+    <Image Include="res\Skills\BAR44.bmp" />
+    <Image Include="res\Skills\BAR46.bmp" />
+    <Image Include="res\Skills\BAR48.bmp" />
+    <Image Include="res\Skills\BAR50.bmp" />
+    <Image Include="res\Skills\BAR52.bmp" />
+    <Image Include="res\Skills\BAR54.bmp" />
+    <Image Include="res\Skills\BAR56.bmp" />
+    <Image Include="res\Skills\BAR58.bmp" />
+    <Image Include="res\Skills\DRU00.bmp" />
+    <Image Include="res\Skills\DRU02.bmp" />
+    <Image Include="res\Skills\DRU04.bmp" />
+    <Image Include="res\Skills\DRU06.bmp" />
+    <Image Include="res\Skills\DRU08.bmp" />
+    <Image Include="res\Skills\DRU10.bmp" />
+    <Image Include="res\Skills\DRU12.bmp" />
+    <Image Include="res\Skills\DRU14.bmp" />
+    <Image Include="res\Skills\DRU16.bmp" />
+    <Image Include="res\Skills\DRU18.bmp" />
+    <Image Include="res\Skills\DRU20.bmp" />
+    <Image Include="res\Skills\DRU22.bmp" />
+    <Image Include="res\Skills\DRU24.bmp" />
+    <Image Include="res\Skills\DRU26.bmp" />
+    <Image Include="res\Skills\DRU28.bmp" />
+    <Image Include="res\Skills\DRU30.bmp" />
+    <Image Include="res\Skills\DRU32.bmp" />
+    <Image Include="res\Skills\DRU34.bmp" />
+    <Image Include="res\Skills\DRU36.bmp" />
+    <Image Include="res\Skills\DRU38.bmp" />
+    <Image Include="res\Skills\DRU40.bmp" />
+    <Image Include="res\Skills\DRU42.bmp" />
+    <Image Include="res\Skills\DRU44.bmp" />
+    <Image Include="res\Skills\DRU46.bmp" />
+    <Image Include="res\Skills\DRU48.bmp" />
+    <Image Include="res\Skills\DRU50.bmp" />
+    <Image Include="res\Skills\DRU52.bmp" />
+    <Image Include="res\Skills\DRU54.bmp" />
+    <Image Include="res\Skills\DRU56.bmp" />
+    <Image Include="res\Skills\DRU58.bmp" />
+    <Image Include="res\Skills\NEC00.bmp" />
+    <Image Include="res\Skills\NEC02.bmp" />
+    <Image Include="res\Skills\NEC04.bmp" />
+    <Image Include="res\Skills\NEC06.bmp" />
+    <Image Include="res\Skills\NEC08.bmp" />
+    <Image Include="res\Skills\NEC10.bmp" />
+    <Image Include="res\Skills\NEC12.bmp" />
+    <Image Include="res\Skills\NEC14.bmp" />
+    <Image Include="res\Skills\NEC16.bmp" />
+    <Image Include="res\Skills\NEC18.bmp" />
+    <Image Include="res\Skills\NEC20.bmp" />
+    <Image Include="res\Skills\NEC22.bmp" />
+    <Image Include="res\Skills\NEC24.bmp" />
+    <Image Include="res\Skills\NEC26.bmp" />
+    <Image Include="res\Skills\NEC28.bmp" />
+    <Image Include="res\Skills\NEC30.bmp" />
+    <Image Include="res\Skills\NEC32.bmp" />
+    <Image Include="res\Skills\NEC34.bmp" />
+    <Image Include="res\Skills\NEC36.bmp" />
+    <Image Include="res\Skills\NEC38.bmp" />
+    <Image Include="res\Skills\NEC40.bmp" />
+    <Image Include="res\Skills\NEC42.bmp" />
+    <Image Include="res\Skills\NEC44.bmp" />
+    <Image Include="res\Skills\NEC46.bmp" />
+    <Image Include="res\Skills\NEC48.bmp" />
+    <Image Include="res\Skills\NEC50.bmp" />
+    <Image Include="res\Skills\NEC52.bmp" />
+    <Image Include="res\Skills\NEC54.bmp" />
+    <Image Include="res\Skills\NEC56.bmp" />
+    <Image Include="res\Skills\NEC58.bmp" />
+    <Image Include="res\Skills\PAL00.bmp" />
+    <Image Include="res\Skills\PAL02.bmp" />
+    <Image Include="res\Skills\PAL04.bmp" />
+    <Image Include="res\Skills\PAL06.bmp" />
+    <Image Include="res\Skills\PAL08.bmp" />
+    <Image Include="res\Skills\PAL10.bmp" />
+    <Image Include="res\Skills\PAL12.bmp" />
+    <Image Include="res\Skills\PAL14.bmp" />
+    <Image Include="res\Skills\PAL16.bmp" />
+    <Image Include="res\Skills\PAL18.bmp" />
+    <Image Include="res\Skills\PAL20.bmp" />
+    <Image Include="res\Skills\PAL22.bmp" />
+    <Image Include="res\Skills\PAL24.bmp" />
+    <Image Include="res\Skills\PAL26.bmp" />
+    <Image Include="res\Skills\PAL28.bmp" />
+    <Image Include="res\Skills\PAL30.bmp" />
+    <Image Include="res\Skills\PAL32.bmp" />
+    <Image Include="res\Skills\PAL34.bmp" />
+    <Image Include="res\Skills\PAL36.bmp" />
+    <Image Include="res\Skills\PAL38.bmp" />
+    <Image Include="res\Skills\PAL40.bmp" />
+    <Image Include="res\Skills\PAL42.bmp" />
+    <Image Include="res\Skills\PAL44.bmp" />
+    <Image Include="res\Skills\PAL46.bmp" />
+    <Image Include="res\Skills\PAL48.bmp" />
+    <Image Include="res\Skills\PAL50.bmp" />
+    <Image Include="res\Skills\PAL52.bmp" />
+    <Image Include="res\Skills\PAL54.bmp" />
+    <Image Include="res\Skills\PAL56.bmp" />
+    <Image Include="res\Skills\PAL58.bmp" />
+    <Image Include="res\Skills\SOR00.bmp" />
+    <Image Include="res\Skills\SOR02.bmp" />
+    <Image Include="res\Skills\SOR04.bmp" />
+    <Image Include="res\Skills\SOR06.bmp" />
+    <Image Include="res\Skills\SOR08.bmp" />
+    <Image Include="res\Skills\SOR10.bmp" />
+    <Image Include="res\Skills\SOR12.bmp" />
+    <Image Include="res\Skills\SOR14.bmp" />
+    <Image Include="res\Skills\SOR16.bmp" />
+    <Image Include="res\Skills\SOR18.bmp" />
+    <Image Include="res\Skills\SOR20.bmp" />
+    <Image Include="res\Skills\SOR22.bmp" />
+    <Image Include="res\Skills\SOR24.bmp" />
+    <Image Include="res\Skills\SOR26.bmp" />
+    <Image Include="res\Skills\SOR28.bmp" />
+    <Image Include="res\Skills\SOR30.bmp" />
+    <Image Include="res\Skills\SOR32.bmp" />
+    <Image Include="res\Skills\SOR34.bmp" />
+    <Image Include="res\Skills\SOR36.bmp" />
+    <Image Include="res\Skills\SOR38.bmp" />
+    <Image Include="res\Skills\SOR40.bmp" />
+    <Image Include="res\Skills\SOR42.bmp" />
+    <Image Include="res\Skills\SOR44.bmp" />
+    <Image Include="res\Skills\SOR46.bmp" />
+    <Image Include="res\Skills\SOR48.bmp" />
+    <Image Include="res\Skills\SOR50.bmp" />
+    <Image Include="res\Skills\SOR52.bmp" />
+    <Image Include="res\Skills\SOR54.bmp" />
+    <Image Include="res\Skills\SOR56.bmp" />
+    <Image Include="res\Skills\SOR58.bmp" />
+    <Image Include="res\Skills\UNK.bmp" />
+    <Image Include="res\stasLeft.bmp" />
+    <Image Include="res\waypoint.bmp" />
+    <Image Include="res\Weapons\Amazon\1 Stag Bow.bmp" />
+    <Image Include="res\Weapons\Amazon\2 Reflex Bow.bmp" />
+    <Image Include="res\Weapons\Amazon\3 Maiden Spear.bmp" />
+    <Image Include="res\Weapons\Amazon\4 Maiden Pike.bmp" />
+    <Image Include="res\Weapons\Amazon\5 Maiden Javelin.bmp" />
+    <Image Include="res\Weapons\Assassin\01 Katar.bmp" />
+    <Image Include="res\Weapons\Assassin\02 Hatchet Hands.bmp" />
+    <Image Include="res\Weapons\Assassin\03 Claws.bmp" />
+    <Image Include="res\Weapons\Assassin\04 Scissors Katar.bmp" />
+    <Image Include="res\Weapons\Axe\01 Hand Axe.bmp" />
+    <Image Include="res\Weapons\Axe\02 Axe.bmp" />
+    <Image Include="res\Weapons\Axe\03 Double Axe.bmp" />
+    <Image Include="res\Weapons\Axe\04 Military Pick.bmp" />
+    <Image Include="res\Weapons\Axe\05 War Axe.bmp" />
+    <Image Include="res\Weapons\Axe\06 Large Axe.bmp" />
+    <Image Include="res\Weapons\Axe\07 Broad Axe.bmp" />
+    <Image Include="res\Weapons\Axe\08 Battle Axe.bmp" />
+    <Image Include="res\Weapons\Axe\09 Great Axe.bmp" />
+    <Image Include="res\Weapons\Axe\10 Gaint Axe.bmp" />
+    <Image Include="res\Weapons\Bow\01 Short Bow.bmp" />
+    <Image Include="res\Weapons\Bow\02 Hunter%27s Bow.bmp" />
+    <Image Include="res\Weapons\Bow\03 Long Bow.bmp" />
+    <Image Include="res\Weapons\Bow\04 Composite Bow.bmp" />
+    <Image Include="res\Weapons\Bow\05 Short Battle Bow.bmp" />
+    <Image Include="res\Weapons\Bow\06 Long Battle Bow.bmp" />
+    <Image Include="res\Weapons\Bow\07 Short War Bow.bmp" />
+    <Image Include="res\Weapons\Bow\08 Long War Bow.bmp" />
+    <Image Include="res\Weapons\Bow\09 Light Crossbow.bmp" />
+    <Image Include="res\Weapons\Bow\10 Crossbow.bmp" />
+    <Image Include="res\Weapons\Bow\11 Heavy Crossbow.bmp" />
+    <Image Include="res\Weapons\Bow\12 Repeating Crossbow.bmp" />
+    <Image Include="res\Weapons\Club\01 Club.bmp" />
+    <Image Include="res\Weapons\Club\02 Spiked Club.bmp" />
+    <Image Include="res\Weapons\Club\03 Mace.bmp" />
+    <Image Include="res\Weapons\Club\04 Morning Star.bmp" />
+    <Image Include="res\Weapons\Club\05 Flail.bmp" />
+    <Image Include="res\Weapons\Club\06 War Hammer.bmp" />
+    <Image Include="res\Weapons\Club\07 Maul.bmp" />
+    <Image Include="res\Weapons\Club\08 Great Maul.bmp" />
+    <Image Include="res\Weapons\Javelin\1 Javelin.bmp" />
+    <Image Include="res\Weapons\Javelin\2 Pilum.bmp" />
+    <Image Include="res\Weapons\Javelin\3 Short Spear.bmp" />
+    <Image Include="res\Weapons\Javelin\4 Glaive.bmp" />
+    <Image Include="res\Weapons\Javelin\5 Throwing Spear.bmp" />
+    <Image Include="res\Weapons\Necromancer\01 Wand.bmp" />
+    <Image Include="res\Weapons\Necromancer\02 Yew Wand.bmp" />
+    <Image Include="res\Weapons\Necromancer\03 Bone Wand.bmp" />
+    <Image Include="res\Weapons\Necromancer\04 Grim Wand.bmp" />
+    <Image Include="res\Weapons\Orb\1 Eagle Orb.bmp" />
+    <Image Include="res\Weapons\Orb\2 Sacred Globe.bmp" />
+    <Image Include="res\Weapons\Orb\3 Smoked Sphere.bmp" />
+    <Image Include="res\Weapons\Orb\4 Clasped Orb.bmp" />
+    <Image Include="res\Weapons\Orb\5 Jared%27s Stone.bmp" />
+    <Image Include="res\Weapons\Paladin\01 Scepter.bmp" />
+    <Image Include="res\Weapons\Paladin\02 Grand Scepter.bmp" />
+    <Image Include="res\Weapons\Paladin\03 War Scepter.bmp" />
+    <Image Include="res\Weapons\Potion\01 Rancid Gas Potion.bmp" />
+    <Image Include="res\Weapons\Potion\02 Oil Potion.bmp" />
+    <Image Include="res\Weapons\Potion\03 Choking Gas Potion.bmp" />
+    <Image Include="res\Weapons\Potion\04 Exploding Potion.bmp" />
+    <Image Include="res\Weapons\Potion\05 Strangling Gas Potion.bmp" />
+    <Image Include="res\Weapons\Potion\06 Fulminating Potion.bmp" />
+    <Image Include="res\Weapons\Quest\01 Decoy Gidbinn.bmp" />
+    <Image Include="res\Weapons\Quest\02 The Gidbinn.bmp" />
+    <Image Include="res\Weapons\Quest\03 Wirt%27s Leg.bmp" />
+    <Image Include="res\Weapons\Quest\04 Horadric Malus.bmp" />
+    <Image Include="res\Weapons\Quest\05 Hell Forge Hammer.bmp" />
+    <Image Include="res\Weapons\Quest\06 Horadric Staff.bmp" />
+    <Image Include="res\Weapons\Quest\07 Staff Of Kings.bmp" />
+    <Image Include="res\Weapons\Quest\08 Khalim%27s Flail.bmp" />
+    <Image Include="res\Weapons\Quest\09 Khalim%27s Will.bmp" />
+    <Image Include="res\Weapons\Spear\01 Spear.bmp" />
+    <Image Include="res\Weapons\Spear\02 Trident.bmp" />
+    <Image Include="res\Weapons\Spear\03 Brandistock.bmp" />
+    <Image Include="res\Weapons\Spear\04 Spetum.bmp" />
+    <Image Include="res\Weapons\Spear\05 Pike.bmp" />
+    <Image Include="res\Weapons\Spear\06 Bardiche.bmp" />
+    <Image Include="res\Weapons\Spear\07 Voulge.bmp" />
+    <Image Include="res\Weapons\Spear\08 Scythe.bmp" />
+    <Image Include="res\Weapons\Spear\09 Poleaxe.bmp" />
+    <Image Include="res\Weapons\Spear\10 Halberd.bmp" />
+    <Image Include="res\Weapons\Spear\11 War Scythe.bmp" />
+    <Image Include="res\Weapons\Staff\01 Short Staff.bmp" />
+    <Image Include="res\Weapons\Staff\02 Long Staff.bmp" />
+    <Image Include="res\Weapons\Staff\03 Ganrled Staff.bmp" />
+    <Image Include="res\Weapons\Staff\04 Battle Staff.bmp" />
+    <Image Include="res\Weapons\Staff\05 War Staff.bmp" />
+    <Image Include="res\Weapons\Sword\01 Short Sword.bmp" />
+    <Image Include="res\Weapons\Sword\02 Scimitar.bmp" />
+    <Image Include="res\Weapons\Sword\03 Sabre.bmp" />
+    <Image Include="res\Weapons\Sword\04 Falchion.bmp" />
+    <Image Include="res\Weapons\Sword\05 Crystal Sword.bmp" />
+    <Image Include="res\Weapons\Sword\06 Broad Sword.bmp" />
+    <Image Include="res\Weapons\Sword\07 Long Sword.bmp" />
+    <Image Include="res\Weapons\Sword\08 War Sword.bmp" />
+    <Image Include="res\Weapons\Sword\09 Tow Handed Sword.bmp" />
+    <Image Include="res\Weapons\Sword\10 Claymore.bmp" />
+    <Image Include="res\Weapons\Sword\11 Giant Sword.bmp" />
+    <Image Include="res\Weapons\Sword\12 Bastard Sword.bmp" />
+    <Image Include="res\Weapons\Sword\13 Flamberge.bmp" />
+    <Image Include="res\Weapons\Sword\14 Great Sword.bmp" />
+    <Image Include="res\Weapons\Sword\15 Dagger.bmp" />
+    <Image Include="res\Weapons\Sword\16 Dirk.bmp" />
+    <Image Include="res\Weapons\Sword\17 Kris.bmp" />
+    <Image Include="res\Weapons\Sword\18 Blade.bmp" />
+    <Image Include="res\Weapons\Throwing\1 Throwing Knife.bmp" />
+    <Image Include="res\Weapons\Throwing\2 Throwing Axe.bmp" />
+    <Image Include="res\Weapons\Throwing\3 Balanced Knife.bmp" />
+    <Image Include="res\Weapons\Throwing\4 Balanced Axe.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="d2ce\thirdparty\StormLib\doc\History.txt" />
+    <Text Include="d2ce\thirdparty\StormLib\doc\The MoPaQ File Format 0.9.txt" />
+    <Text Include="d2ce\thirdparty\StormLib\doc\The MoPaQ File Format 1.0.txt" />
+    <Text Include="res\TXT\global\excel\armor.txt" />
+    <Text Include="res\TXT\global\excel\belts.txt" />
+    <Text Include="res\TXT\global\excel\bodylocs.txt" />
+    <Text Include="res\TXT\global\excel\charstats.txt" />
+    <Text Include="res\TXT\global\excel\CraftItems.txt" />
+    <Text Include="res\TXT\global\excel\difficultylevels.txt" />
+    <Text Include="res\TXT\global\excel\experience.txt" />
+    <Text Include="res\TXT\global\excel\gems.txt" />
+    <Text Include="res\TXT\global\excel\hireling.txt" />
+    <Text Include="res\TXT\global\excel\itemstatcost.txt" />
+    <Text Include="res\TXT\global\excel\itemtypes.txt" />
+    <Text Include="res\TXT\global\excel\lowqualityitems.txt" />
+    <Text Include="res\TXT\global\excel\magicprefix.txt" />
+    <Text Include="res\TXT\global\excel\magicsuffix.txt" />
+    <Text Include="res\TXT\global\excel\misc.txt" />
+    <Text Include="res\TXT\global\excel\monstats.txt" />
+    <Text Include="res\TXT\global\excel\montype.txt" />
+    <Text Include="res\TXT\global\excel\playerclass.txt" />
+    <Text Include="res\TXT\global\excel\properties.txt" />
+    <Text Include="res\TXT\global\excel\qualityitems.txt" />
+    <Text Include="res\TXT\global\excel\rareprefix.txt" />
+    <Text Include="res\TXT\global\excel\raresuffix.txt" />
+    <Text Include="res\TXT\global\excel\runes.txt" />
+    <Text Include="res\TXT\global\excel\setitems.txt" />
+    <Text Include="res\TXT\global\excel\sets.txt" />
+    <Text Include="res\TXT\global\excel\skilldesc.txt" />
+    <Text Include="res\TXT\global\excel\skills.txt" />
+    <Text Include="res\TXT\global\excel\uniqueitems.txt" />
+    <Text Include="res\TXT\global\excel\weapons.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

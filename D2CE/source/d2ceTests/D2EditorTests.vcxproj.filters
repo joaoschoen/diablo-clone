@@ -1,0 +1,1089 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\d2ce">
+      <UniqueIdentifier>{7b1af52d-8826-4a4b-bc49-56d093b69080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\d2ce">
+      <UniqueIdentifier>{2906c093-06d9-4c85-9606-bc86cad93813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples">
+      <UniqueIdentifier>{8e4fdd13-8ce9-48f3-8e6e-35ecfd08397b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char">
+      <UniqueIdentifier>{0d798dc2-3a50-40e1-a088-98509b54299e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char\96">
+      <UniqueIdentifier>{6d05878d-8c44-456d-a600-4fefa910805f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char\97">
+      <UniqueIdentifier>{77c067de-5b9a-477b-bf9e-b11dc153c4b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char\87">
+      <UniqueIdentifier>{0e4435bc-b6b6-49d4-ad9e-b8eddf021df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char\89">
+      <UniqueIdentifier>{1a7d4c28-c7db-40d6-9017-bb9736485c65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char\92">
+      <UniqueIdentifier>{bc28abbe-cbc3-4a4c-a07e-47052e8ca9d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jsoncpp">
+      <UniqueIdentifier>{cdd78fbb-75bb-4f80-b4c8-a93fc13abe0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jsoncpp">
+      <UniqueIdentifier>{b08d97ef-02a3-4b4f-b8a2-c4f1f8e82b3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\rapidcsv">
+      <UniqueIdentifier>{0998a2a1-21f9-494f-973c-eef65f8ecd3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char\71">
+      <UniqueIdentifier>{de6613e1-4101-4787-a1e4-dc75b26f4e09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utf8">
+      <UniqueIdentifier>{feedc9fd-9051-4a7e-adc7-36805e865a30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\d2ce\Helpers">
+      <UniqueIdentifier>{751d65d6-f40a-4dce-bfe9-194ef8b95b18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\d2ce\Helpers">
+      <UniqueIdentifier>{42ec4500-75b4-4963-8c26-0e6372cfe0be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char\98">
+      <UniqueIdentifier>{446f5d98-5c54-48d9-bce1-89130273e74c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\char\99">
+      <UniqueIdentifier>{9037db8b-164d-4e1a-b5af-c84e6b90e5d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib">
+      <UniqueIdentifier>{29fbba60-e4f9-460f-b161-e32b40342e8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib">
+      <UniqueIdentifier>{1d939171-a968-47a2-a5cb-bd743c80ee08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib\adpcm">
+      <UniqueIdentifier>{821e2065-6b91-4fe3-bc1e-84383e66ce7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib\zlib">
+      <UniqueIdentifier>{cdb0b68c-62d4-4db9-8bce-05187286d709}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib\sparse">
+      <UniqueIdentifier>{e206ab1b-ea0a-4404-8c32-59513ea7b227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib\pklib">
+      <UniqueIdentifier>{968c34eb-3c0e-443b-a956-a39290a87034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib\lzma">
+      <UniqueIdentifier>{121f5b3a-cdd7-4790-9a1b-7a90a57fb001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib\jenkins">
+      <UniqueIdentifier>{9d4f3309-61d2-477e-9f7e-4127aa1d78cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib\huffman">
+      <UniqueIdentifier>{0a8a0a39-5eb1-4b26-b8d8-a31fa4ddf047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StormLib\bzip2">
+      <UniqueIdentifier>{31be4647-86b5-426b-9956-763e7e1842ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\adpcm">
+      <UniqueIdentifier>{734ad123-d1ba-45cc-b94e-9bbccf59a60c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\bzip2">
+      <UniqueIdentifier>{196122d7-1603-48f7-b349-45eb396c574d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\huffman">
+      <UniqueIdentifier>{8a3abf1a-b3f9-455e-afa0-fbe9da53b423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\jenkins">
+      <UniqueIdentifier>{8f3811a0-766f-46f3-83fd-bc9adf883b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\lzma">
+      <UniqueIdentifier>{7fa85383-d39c-4cee-84dd-cc7b5264e1af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\zlib">
+      <UniqueIdentifier>{d0093fa3-8d0b-44e5-9fa4-b0a5f536af2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\sparse">
+      <UniqueIdentifier>{7fa3d8c5-5607-4eeb-8b77-7e47a5c2cab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\pklib">
+      <UniqueIdentifier>{2f8e94ba-0929-4de3-9014-eaa7d82af726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StormLib\Doc Files">
+      <UniqueIdentifier>{4d3fc10d-69da-4917-9834-29a7598a3fd2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D2EditorTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\ActsInfo.cpp">
+      <Filter>Source Files\d2ce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\Character.cpp">
+      <Filter>Source Files\d2ce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\CharacterStats.cpp">
+      <Filter>Source Files\d2ce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\Item.cpp">
+      <Filter>Source Files\d2ce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\Mercenary.cpp">
+      <Filter>Source Files\d2ce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\jsoncpp\src\lib_json\json_reader.cpp">
+      <Filter>Source Files\jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\jsoncpp\src\lib_json\json_value.cpp">
+      <Filter>Source Files\jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\jsoncpp\src\lib_json\json_writer.cpp">
+      <Filter>Source Files\jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\SharedStash.cpp">
+      <Filter>Source Files\d2ce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\DefaultTxtReader.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemHelpers.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemGemsJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemNameAffixesJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemNamesJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemRunesJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\MercenariesJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\MonstersJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\QuestsJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\SkillsJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\UIJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemModifiersJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\CharStatsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\PlayerClassTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ExperienceTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\HirelingTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemStatCostTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemTypesTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\PropertiesTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\GemsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\BeltsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ArmorTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\WeaponsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\MiscTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\MagicPrefixTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\MagicSuffixTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\RarePrefixTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\RareSuffixTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\UniqueItemsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\SetsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\SetItemsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\RunesTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\SkillsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\SkillDescTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\LevelsJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\MonStatsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\QualityItemsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\CraftItemsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\FileStream.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\LibTomCrypt.c">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\LibTomMath.c">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\LibTomMathDesc.c">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SBaseCommon.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SBaseFileTable.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SBaseSubTypes.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SCompression.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileAddFile.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileAttributes.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileCompactArchive.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileCreateArchive.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileExtractFile.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileFindFile.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileGetFileInfo.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileListFile.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileOpenArchive.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileOpenFileEx.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFilePatchArchives.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileReadFile.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\SFileVerify.cpp">
+      <Filter>Source Files\StormLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\adpcm\adpcm.cpp">
+      <Filter>Source Files\StormLib\adpcm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\bzip2\blocksort.c">
+      <Filter>Source Files\StormLib\bzip2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\bzip2\bzlib.c">
+      <Filter>Source Files\StormLib\bzip2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\bzip2\compress.c">
+      <Filter>Source Files\StormLib\bzip2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\bzip2\crctable.c">
+      <Filter>Source Files\StormLib\bzip2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\bzip2\decompress.c">
+      <Filter>Source Files\StormLib\bzip2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\bzip2\huffman.c">
+      <Filter>Source Files\StormLib\bzip2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\bzip2\randtable.c">
+      <Filter>Source Files\StormLib\bzip2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\huffman\huff.cpp">
+      <Filter>Source Files\StormLib\huffman</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\jenkins\lookup3.c">
+      <Filter>Source Files\StormLib\jenkins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzFind.c">
+      <Filter>Source Files\StormLib\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzFindMt.c">
+      <Filter>Source Files\StormLib\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzmaDec.c">
+      <Filter>Source Files\StormLib\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzmaEnc.c">
+      <Filter>Source Files\StormLib\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\lzma\C\Threads.c">
+      <Filter>Source Files\StormLib\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\pklib\explode.c">
+      <Filter>Source Files\StormLib\pklib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\pklib\implode.c">
+      <Filter>Source Files\StormLib\pklib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\sparse\sparse.cpp">
+      <Filter>Source Files\StormLib\sparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\adler32.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\compress_zlib.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\crc32.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\deflate.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\inffast.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\inflate.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\inftrees.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\trees.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\thirdparty\StormLib\src\zlib\zutil.c">
+      <Filter>Source Files\StormLib\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\BodyLocsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\MonTypeTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\NPCsJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\ItemsCode.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\LayoutJson.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\GridDimensionsTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\d2ce\helpers\MercInventoryTxt.cpp">
+      <Filter>Source Files\d2ce\Helpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\ActsInfo.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\bitmask.hpp">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\Character.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\CharacterConstants.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\CharacterStats.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\CharacterStatsConstants.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\Constants.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\DataTypes.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\ExperienceConstants.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\Item.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\ItemConstants.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\SkillConstants.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\WaypointConstants.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\Mercenary.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\MercenaryConstants.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\allocator.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\assertions.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\config.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\forwards.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\json.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\json_features.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\reader.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\value.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\version.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\writer.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\src\lib_json\json_tool.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\jsoncpp\include\json\historic_map.h">
+      <Filter>Header Files\jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\rapidcsv\include\rapidcsv\rapidcsv.h">
+      <Filter>Header Files\rapidcsv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\SharedStash.h">
+      <Filter>Header Files\d2ce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\utf8\include\utf8\utf8.h">
+      <Filter>Header Files\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\utf8\include\utf8\utf8\checked.h">
+      <Filter>Header Files\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\utf8\include\utf8\utf8\core.h">
+      <Filter>Header Files\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\utf8\include\utf8\utf8\cpp17.h">
+      <Filter>Header Files\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\utf8\include\utf8\utf8\unchecked.h">
+      <Filter>Header Files\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\helpers\DefaultTxtReader.h">
+      <Filter>Header Files\d2ce\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\helpers\ItemHelpers.h">
+      <Filter>Header Files\d2ce\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\FileStream.h">
+      <Filter>Header Files\StormLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\StormCommon.h">
+      <Filter>Header Files\StormLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\StormLib.h">
+      <Filter>Header Files\StormLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\adpcm\adpcm.h">
+      <Filter>Header Files\StormLib\adpcm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\bzip2\bzlib.h">
+      <Filter>Header Files\StormLib\bzip2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\bzip2\bzlib_private.h">
+      <Filter>Header Files\StormLib\bzip2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\huffman\huff.h">
+      <Filter>Header Files\StormLib\huffman</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\jenkins\lookup.h">
+      <Filter>Header Files\StormLib\jenkins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzFind.h">
+      <Filter>Header Files\StormLib\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzFindMt.h">
+      <Filter>Header Files\StormLib\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzHash.h">
+      <Filter>Header Files\StormLib\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzmaDec.h">
+      <Filter>Header Files\StormLib\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\lzma\C\LzmaEnc.h">
+      <Filter>Header Files\StormLib\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\lzma\C\Threads.h">
+      <Filter>Header Files\StormLib\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\lzma\C\Types.h">
+      <Filter>Header Files\StormLib\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\pklib\pklib.h">
+      <Filter>Header Files\StormLib\pklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\sparse\sparse.h">
+      <Filter>Header Files\StormLib\sparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\crc32.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\deflate.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\gzguts.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\inffast.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\inffixed.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\inflate.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\inftrees.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\trees.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\zconf.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\zutil.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\d2ce\thirdparty\StormLib\src\zlib\zlib.h">
+      <Filter>Header Files\StormLib\zlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\examples\chars\96\Merlina.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Merlina.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Walter.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Walter.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\WhirlWind.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\WhirlWind.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Merlina_Two.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Merlina_Two.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Scroll_Test.d2s">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Scroll_Test.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\87\testtt.d2s">
+      <Filter>examples\char\87</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\87\testtt.json">
+      <Filter>examples\char\87</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\89\fddfss.d2s">
+      <Filter>examples\char\89</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\89\fddfss.json">
+      <Filter>examples\char\89</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\92\afa.d2s">
+      <Filter>examples\char\92</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\92\afa.json">
+      <Filter>examples\char\92</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\92\sdfsf.d2s">
+      <Filter>examples\char\92</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\92\sdfsf.json">
+      <Filter>examples\char\92</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\MfBowzon.d2s">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\MfBowzon.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\test.d2s">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\test.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\WhirlWind_serialized.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\test_serialized.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\NokkaSorc.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Complex.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\DannyIsGreatII.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\DannyIsGreat.d2s">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\DannyIsGreat_serialized.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\DannyIsGreatIII.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\DannyIsGreatIV.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\DannyIsGreatV.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Fist_YoU.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Fist_YoU.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\FukK_U.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\FukK_U.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Walter.d2s">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Walter_gem.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazon.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazon.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Barbarian.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Barbarian.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Bow.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Bow.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Necromancer.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Necromancer.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Paladin.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Paladin.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Sorceress.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Sorceress.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Spartacus.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Spartacus.d2s">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Spartacus_II.d2s">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Spartacus_II.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Loradiel.d2s">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\97\Loradiel.json">
+      <Filter>examples\char\97</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazona.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazona.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazonb.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazonb.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazonc.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazonc.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazond.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazond.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazone.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazone.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazonf.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazonf.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazong.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Amazong.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Barbariana.d2s">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\71\Barbariana.json">
+      <Filter>examples\char\71</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Amazon.d2s">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Amazon.json">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Drui.d2s">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Drui.json">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Nicro.d2s">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Nicro.json">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Rose.d2s">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Rose.json">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Rui.d2s">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Rui.json">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Walter.d2s">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\Walter.json">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\任务完成信.d2s">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\98\任务完成信.json">
+      <Filter>examples\char\98</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Blizzard.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Blizzard.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\BowAma.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\BowAma.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Element.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Element.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Traps.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Traps.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\TollWut.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\TollWut.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Summon.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Summon.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Smiter.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Smiter.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Poison.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Poison.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Orb.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Orb.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Lightning.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Lightning.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\JavaZone.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\JavaZone.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Hammer.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Hammer.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Frenzy.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Frenzy.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\FireClaw.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\FireClaw.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Fire.json">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\96\Fire.d2s">
+      <Filter>examples\char\96</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Walter.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\immun_charm.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\immun_charm.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Konan.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Konan.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Blizzard.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Blizzard.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Fire.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Fire.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\JavaZone.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\JavaZone.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Loradiel.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Loradiel.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Rui.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Rui.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Spartacus.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Spartacus.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Charming.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Charming.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\HCharming.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\HCharming.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Markell.d2s">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Markell.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\examples\chars\99\Walter.json">
+      <Filter>examples\char\99</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\d2ce\thirdparty\jsoncpp\src\lib_json\json_valueiterator.inl">
+      <Filter>Source Files\jsoncpp</Filter>
+    </None>
+    <None Include="..\d2ce\thirdparty\jsoncpp\LICENSE">
+      <Filter>Header Files\jsoncpp</Filter>
+    </None>
+    <None Include="d2ce\thirdparty\rapidcsv\LICENSE">
+      <Filter>Header Files\rapidcsv</Filter>
+    </None>
+    <None Include="..\d2ce\thirdparty\utf8\include\utf8\LICENSE">
+      <Filter>Header Files\utf8</Filter>
+    </None>
+    <None Include="..\d2ce\thirdparty\StormLib\LICENSE">
+      <Filter>Header Files\StormLib</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\d2ce\thirdparty\StormLib\doc\History.txt">
+      <Filter>Header Files\StormLib\Doc Files</Filter>
+    </Text>
+    <Text Include="..\d2ce\thirdparty\StormLib\doc\The MoPaQ File Format 0.9.txt">
+      <Filter>Header Files\StormLib\Doc Files</Filter>
+    </Text>
+    <Text Include="..\d2ce\thirdparty\StormLib\doc\The MoPaQ File Format 1.0.txt">
+      <Filter>Header Files\StormLib\Doc Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
