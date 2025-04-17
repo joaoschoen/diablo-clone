@@ -1,6 +1,4 @@
-import { Area, GameController } from "../game-controller"
-import { Mercenary } from "../player/mercenary"
-import { Character } from "../player/player"
+import { v4 as uuid } from "uuid"
 
 type Slot = 
     |"inv" 
@@ -18,25 +16,35 @@ type Slot =
 
 export class Item {
     name: string
+    id: string
+    size: number[]
     slots: Slot[]
     constructor(
         name: string,
+        size: number[],
         slots: Slot[],
     ) {
         this.name = name
+        this.size = size
+        this.id = uuid()
         this.slots = slots
     }
 }
+
 
 export class Equipment extends Item {
     isIdentified: boolean
 
     constructor(
         name: string,
-        isIdentified: boolean,
         slots: Slot[],
+        size: number[],
+        isIdentified: boolean,
     ) {
-        super(name,slots)
+        super(name,size,slots)
         this.isIdentified = isIdentified
     }
 }
+
+// https://dropcalc.silospen.com/
+// https://diablo-archive.fandom.com/wiki/Items_(Diablo_II)

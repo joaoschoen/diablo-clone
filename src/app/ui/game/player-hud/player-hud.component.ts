@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { GameController } from '../../../model/game-controller';
 
 @Component({
   selector: 'app-player-hud',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './player-hud.component.css'
 })
 export class PlayerHudComponent {
-  
+  gameController = input.required<GameController>()
 }
