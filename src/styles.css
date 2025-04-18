@@ -1,3 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'ExocetReaper';
+    src: url('/assets/fonts/ExocetReaper-Medium.otf');
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vdw;
+    min-width: 390px;
+    height: 100vdh;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    font-family: 'ExocetReaper', sans-serif;
+    font-size: 14px;
+    background-image: url('/assets/backgrounds/stone_background.webp')
+}
