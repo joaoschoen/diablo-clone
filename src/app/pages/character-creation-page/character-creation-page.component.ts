@@ -28,6 +28,7 @@ import { ButtonComponent } from '../../ui/button/button.component';
 export class CharacterCreationPageComponent implements OnInit {
 
   public characterClasses: Class[] = [ new Amazon(), new Assassin(), new Barbarian(), new Druid(), new Necromancer(), new Paladin(), new Sorcerer() ];
+  public currentClass: string = 'none';
   public form: FormGroup;
   public destroy$ = new Subject<boolean>();
   
@@ -58,7 +59,8 @@ export class CharacterCreationPageComponent implements OnInit {
     const selectedClass = this.characterClasses.find(characterClass => characterClass.constructor.name === characterClassName);
     if (selectedClass) {
       this.formField("characterClass")?.patchValue(selectedClass, { emitEvent: false });
-    }
+      this.currentClass = this.formField('characterClass')?.value?.className;
+    } else this.currentClass = 'none';
   }
 
   public handleBackToHome() {

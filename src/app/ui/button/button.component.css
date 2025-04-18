@@ -1,0 +1,25 @@
+.enabled, .disabled {
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    color: #CDC9C6;
+    background: #282421;
+    border-radius: 10px;
+    border: 2px solid #757172;
+
+    &:hover {
+        border-color: #E9C964;
+        color: #E9C964;
+        background: #651A04;
+    }
+}
+
+.disabled {
+    cursor: not-allowed;
+
+    &:hover {
+        border-color: #D4D0C5;
+        color: #D4D0C5;
+        background: #757172;
+    }
+}
