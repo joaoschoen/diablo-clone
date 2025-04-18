@@ -1,43 +1,41 @@
-<form
-    class="size-full p-5 overflow-hidden flex gap-[50px] bg-gray-800 flex-col items-center justify-between min-w-[1100px] select-none"
-    [formGroup]="this.form" (ngSubmit)="onSubmit()">
+<form class="page" [formGroup]="this.form">
+    <h1 class="title">Select Hero Class</h1>
 
-    <div class="h-[100px] w-[800px] flex flex-col items-center justify-center text-[#C78B42]">
-        <h1 class="text-[30px] mb-5 font-semibold">Select Hero Class</h1>
+    <div class="class-image">
+        <img [src]="`./assets/backgrounds/${this.currentClass.toLowerCase()}_background.png`" />
 
-        <p class="text-[20px]">{{ this.formField('characterClass')?.value ?
-            this.formField('characterClass')?.value?.definition : '&nbsp;' }}</p>
-    </div>
+        <div class="hero-class-container">
+            <button *ngFor="let characterClass of characterClasses" class="hero-class"
+                (click)="selectClass(characterClass.className)"
+                [ngClass]="characterClass.className == 'Paladin' ? 'paladin-height' : 'class-height'">
 
-    <div class="grid gap-[20px] grid-cols-7">
-        <button *ngFor="let characterClass of characterClasses"
-            class="cursor-pointer transition duration-300 ease-in-out hover:grayscale-0 hover:brightness-100 hover:opacity-100 flex flex-col justify-end"
-            [ngClass]="this.formField('characterClass')?.value?.className === characterClass.className
-                ? 'grayscale-0 brightness-100 opacity-100' : 'grayscale brightness-50 opacity-60'"
-            (click)="selectClass(characterClass.className)">
+                <img [src]="characterClass.classImage" [alt]="characterClass.className"
+                    [title]="characterClass.className" />
+            </button>
+        </div>
 
-            <img [src]="characterClass.classImage" [alt]="characterClass.className" [title]="characterClass.className"
-                class="w-[150px] object-contain overflow-hidden"
-                [ngClass]="characterClass.className == 'Paladin' ? 'h-[150px]' : 'h-[200px]'" />
-            <p class="text-[#C78B42]">{{ characterClass.className }}</p>
-        </button>
-    </div>
+        <div class="class-name" *ngIf="this.formField('characterClass')?.value">
+            <p>{{ this.currentClass }}</p>
+            <p class="description">{{ this.formField('characterClass')?.value?.description }}</p>
+        </div>
 
-    <div class="flex flex-col items-center gap-2">
-        <label for="characterName" class="text-[#CDC9C6] text-[18px]">Character Name</label>
+        <div class="character-name" *ngIf="this.formField('characterClass')?.value">
+            <label for="characterName">
+                <p>Character Name</p>
 
-        <div class="w-[250px] h-[45px] bg-[#62635E] rounded-[5px] flex items-center justify-center">
-            <div class="w-[240px] h-[35px] bg-[#41413F] flex items-center justify-center rounded-[5px]">
-                <input id="characterName" formControlName="characterName" type="text" maxlength="15"
-                    autocomplete="inline"
-                    class="w-[235px] h-[30px] p-[5px] bg-[#111111] outline-none text-[#CDC9C6] rounded-[3px] text-center"
-                    [value]="this.formField('characterName')?.value" />
-            </div>
+                <div>
+                    <div>
+                        <input id="characterName" formControlName="characterName" type="text" maxlength="15"
+                            autocomplete="inline" [value]="this.formField('characterName')?.value" />
+                    </div>
+                </div>
+            </label>
         </div>
     </div>
 
-    <div class="w-full flex justify-between">
-        <app-button [style]="'default'" [content]="'Back'" (buttonClick)="handleBackToHome()" />
-        <app-button [style]="'default'" [content]="'Create'" [type]="'submit'" (buttonClick)="onSubmit()"></app-button>
+    <div class="footer-buttons">
+        <app-button [content]="'Back'" (buttonClick)="handleBackToHome()" />
+        <app-button [content]="'Create'" [type]="'submit'" [disabled]="this.form.invalid"
+            (buttonClick)="onSubmit()"></app-button>
     </div>
 </form>
