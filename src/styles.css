@@ -21,5 +21,7 @@ body {
     overscroll-behavior: none;
     font-family: 'ExocetReaper', sans-serif;
     font-size: 14px;
-    background-image: url('/assets/backgrounds/stone_background.webp')
+    background-image: url('/assets/backgrounds/stone_background.webp');
+    scrollbar-width: thin;
+    scrollbar-color: #E9C964 transparent;
 }
