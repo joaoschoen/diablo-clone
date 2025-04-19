@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,10 +7,14 @@ import { Router } from '@angular/router';
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent {
-  constructor(private router: Router) {}
+export class HomePageComponent implements OnInit {
+    
+  public constructor(private router: Router) { }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
-  handlePlayButton() {
+  public handlePlayButton() {
     this.router.navigate(['/game']);
   }
 }
