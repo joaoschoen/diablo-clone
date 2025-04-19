@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Router, RouterModule } from '@angular/router';
@@ -24,7 +24,7 @@ import { ButtonComponent } from '../../ui/button/button.component';
   templateUrl: './character-creation-page.component.html',
   styleUrl: './character-creation-page.component.css'
 })
-export class CharacterCreationPageComponent implements OnInit {
+export class CharacterCreationPageComponent implements OnInit, OnDestroy {
 
   public characterClasses: Class[] = [new Amazon(), new Assassin(), new Barbarian(), new Druid(), new Necromancer(), new Paladin(), new Sorcerer()];
   public currentClass: string = 'none';
@@ -43,6 +43,11 @@ export class CharacterCreationPageComponent implements OnInit {
 
   public ngOnInit(): void {
     this.handleChanges();
+  }
+
+  public ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 
   public formField(fieldName: string): AbstractControl | null {

@@ -5,3 +5,5 @@ export const DRUID_DEFINITION = 'Commanding the forces of nature. He summons wil
 export const NECROMANCER_DEFINITION = 'Summoning undead minions and cursing his enemies are his specialties.';
 export const PALADIN_DEFINITION = 'He is a natural party leader, holy man, and blessed warrior.';
 export const SORCERESS_DEFINITION = 'She has mastered the elemental magicks -- Fire, lightning, and ice.';
+
+export const LOCALSTORAGE_CHARACTERS = 'characters';
