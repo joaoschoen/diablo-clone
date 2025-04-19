@@ -56,5 +56,6 @@ export class CharacterSelectionPageComponent implements OnInit, OnDestroy {
     if (!this.currentCharacter) return;
     this.characters = this.characterService.deleteCharacter(this.currentCharacter);
     this.currentCharacter = null;
+    this.currentClass = 'none';
   }
 }
