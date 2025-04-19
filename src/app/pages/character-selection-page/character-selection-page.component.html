@@ -1,0 +1,31 @@
+<form class="page">
+    <h1 class="title">Select Your Character</h1>
+
+    <div class="class-image">
+        <img [src]="`./assets/backgrounds/${this.currentClass.toLowerCase()}_background.png`" />
+
+        <div class="hero-class-container">
+            <button *ngFor="let character of characters" (click)="selectCharacter($event, character)"
+                [ngClass]="character.class.className == 'Paladin' ? 'paladin-height' : 'class-height'">>
+        
+                <img [src]="character.class.classImage" [alt]="character.class.className" [title]="character.class.className" />
+
+                <div>
+                    <p>{{ character.name }}</p>
+                    <p class="description">{{character.class.className + ' - ' + character.lvl.lvl }}</p>
+                </div>
+            </button>
+        </div>
+
+        <div class="character-data" *ngIf="this.currentCharacter">
+            <p>{{ this.currentCharacter.name }}</p>
+            <p class="description">{{ this.currentCharacter.class.className + ' - Level: ' + this.currentCharacter.lvl.lvl }}</p>
+        </div>
+    </div>
+
+    <div class="footer-buttons">
+        <app-button [content]="'Back'" (buttonClick)="handleBackToHome()" />
+        <app-button [content]="'Delete Character'" [disabled]="!this.currentCharacter" (buttonClick)="deleteCharacter()" />
+        <app-button [content]="'Start Game'" [disabled]="!this.currentCharacter" />
+    </div>
+</form>

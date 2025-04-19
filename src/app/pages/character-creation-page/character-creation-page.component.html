@@ -5,7 +5,7 @@
         <img [src]="`./assets/backgrounds/${this.currentClass.toLowerCase()}_background.png`" />
 
         <div class="hero-class-container">
-            <button *ngFor="let characterClass of characterClasses" class="hero-class" (click)="selectClass(characterClass.className)"
+            <button *ngFor="let characterClass of characterClasses" (click)="selectClass(characterClass.className)"
                 [ngClass]="characterClass.className == 'Paladin' ? 'paladin-height' : 'class-height'">
         
                 <img [src]="characterClass.classImage" [alt]="characterClass.className" [title]="characterClass.className" />
@@ -17,7 +17,7 @@
             <p class="description">{{ this.formField('characterClass')?.value?.description }}</p>
         </div>
 
-        <div class="character-name" *ngIf="this.formField('characterClass')?.value">
+        <div class="character-data" *ngIf="this.formField('characterClass')?.value">
             <label for="characterName">
                 <p>Character Name</p>
     
@@ -34,6 +34,6 @@
 
     <div class="footer-buttons">
         <app-button [content]="'Back'" (buttonClick)="handleBackToHome()" />
-        <app-button [content]="'Create'" [type]="'submit'" [disabled]="this.form.invalid" (buttonClick)="onSubmit()"></app-button>
+        <app-button [content]="'Create'" [type]="'submit'" [disabled]="this.form.invalid" (buttonClick)="onSubmit()" />
     </div>
 </form>
