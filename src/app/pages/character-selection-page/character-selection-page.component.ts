@@ -32,7 +32,6 @@ export class CharacterSelectionPageComponent implements OnInit, OnDestroy {
         this.characters = characters;
       });
   }
-  
 
   public ngOnDestroy(): void {
     this.destroy$.next(true);
@@ -57,5 +56,9 @@ export class CharacterSelectionPageComponent implements OnInit, OnDestroy {
     this.characters = this.characterService.deleteCharacter(this.currentCharacter);
     this.currentCharacter = null;
     this.currentClass = 'none';
+  }
+
+  public startTheGame() {
+    if (this.currentCharacter) this.router.navigate(['/game']);
   }
 }

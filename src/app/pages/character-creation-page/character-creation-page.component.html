@@ -9,6 +9,10 @@
                 [ngClass]="characterClass.className == 'Paladin' ? 'paladin-height' : 'class-height'">
         
                 <img [src]="characterClass.classImage" [alt]="characterClass.className" [title]="characterClass.className" />
+
+                <div>
+                    <p>{{ characterClass.className }}</p>
+                </div>
             </button>
         </div>
 
