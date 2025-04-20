@@ -1,48 +1,39 @@
-import { v4 as uuid } from "uuid"
-
-type Slot = 
-    |"inv" 
-    |"quick_bar" 
-    |"1h" 
-    |"2h" 
-    |"offhand" 
-    |"helmet" 
-    |"armor" 
-    |"belt"
-    |"gloves"
-    |"boots"
-    |"ring"
-    |"amulet"
+import { v4 as uuid } from "uuid";
+import { ItemQuality } from "../../shared/enum/item-quality.enum";
+import { ItemType } from "../../shared/enum/item-type.enum";
+import { Terminology } from "../../shared/enum/terminology.enum";
+import { Slot } from "../../shared/types/slot.type";
 
 export class Item {
-    name: string
-    id: string
-    size: number[]
-    slots: Slot[]
-    constructor(
-        name: string,
-        size: number[],
-        slots: Slot[],
-    ) {
-        this.name = name
-        this.size = size
-        this.id = uuid()
-        this.slots = slots
+    public name: string;
+    public id: string;
+    public size: number[];
+    public slots: Slot[];
+
+    public type: ItemType;
+    public quality: ItemQuality;
+    public terminology: Terminology;
+
+    public constructor(name: string, size: number[], slots: Slot[], type: ItemType, quality: ItemQuality, terminology: Terminology) {
+        this.name = name;
+        this.size = size;
+        this.id = uuid();
+        this.slots = slots;
+        
+        this.type = type;
+        this.quality = quality;
+        this.terminology = terminology;
     }
 }
 
-
 export class Equipment extends Item {
-    isIdentified: boolean
+    public level: number;
+    public isIdentified: boolean;
 
-    constructor(
-        name: string,
-        slots: Slot[],
-        size: number[],
-        isIdentified: boolean,
-    ) {
-        super(name,size,slots)
-        this.isIdentified = isIdentified
+    public constructor(name: string, size: number[], slots: Slot[], type: ItemType, quality: ItemQuality, terminology: Terminology, level: number, isIdentified: boolean) {
+        super(name, size, slots, type, quality, terminology);
+        this.level = level;
+        this.isIdentified = isIdentified;
     }
 }
 
