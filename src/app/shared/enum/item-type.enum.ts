@@ -1,0 +1,48 @@
+export enum ItemType {
+    Axe = 'Axe',
+    Sword = 'Sword',
+    Mace = 'Mace',
+    Polearm = 'Polearm',
+    Bow = 'Bow',
+    Crossbow = 'Crossbow',
+    Dagger = 'Dagger',
+    Staff = 'Staff',
+    Scepter = 'Scepter',
+    Wand = 'Wand',
+    Gem = 'Gem',
+    Rune = 'Rune',
+    Charm = 'Charm',
+    Jewel = 'Jewel',
+    Scroll = 'Scroll',
+    Tome = 'Tome',
+    Arrow = 'Arrow',
+    Bolt = 'Bolt',
+    Potion = 'Potion',
+    Key = 'Key',
+    QuestItem = 'QuestItem'
+}
+
+export const ItemTypeDescription: Record<ItemType, string> = {
+    [ItemType.Axe]: 'Bladed melee weapons, often heavy, used to deal high physical damage.',
+    [ItemType.Sword]: 'Balanced melee weapons with moderate speed and damage.',
+    [ItemType.Mace]: 'Blunt melee weapons effective against undead enemies.',
+    [ItemType.Polearm]: 'Long melee weapons with extended range, used with both hands.',
+    [ItemType.Bow]: 'Ranged weapons that fire arrows from a distance.',
+    [ItemType.Crossbow]: 'Ranged weapons that fire bolts with slower speed but higher damage.',
+    [ItemType.Dagger]: 'Small, fast melee weapons suitable for quick attacks.',
+    [ItemType.Staff]: 'Magical two-handed weapons often used by Sorceresses.',
+    [ItemType.Scepter]: 'One-handed blunt weapons with bonuses to Paladin skills.',
+    [ItemType.Wand]: 'One-handed magical weapons that often boost Necromancer skills.',
+    [ItemType.Gem]: 'Precious stones that provide bonuses when socketed into weapons or armor.',
+    [ItemType.Rune]: 'Powerful stones that can form runewords when inserted into socketed items.',
+    [ItemType.Charm]: 'Items that grant bonuses when kept in inventory.',
+    [ItemType.Jewel]: 'Magical items that can be socketed into weapons, armor, or helms.',
+    [ItemType.Scroll]: 'Consumables used to identify items or open town portals.',
+    [ItemType.Tome]: 'Containers that store multiple scrolls.',
+    [ItemType.Arrow]: 'Ammunition for bows.',
+    [ItemType.Bolt]: 'Ammunition for crossbows.',
+    [ItemType.Potion]: 'Consumables that restore Life, Mana, Stamina, or provide resistances.',
+    [ItemType.Key]: 'Used to open locked chests.',
+    [ItemType.QuestItem]: 'Special items required for completing quests.'
+  };
+  
