@@ -2,7 +2,7 @@ import { v4 as uuid } from "uuid";
 import { ItemQuality } from "../../shared/enum/item-quality.enum";
 import { ItemType } from "../../shared/enum/item-type.enum";
 import { Terminology } from "../../shared/enum/terminology.enum";
-import { Slot } from "../../shared/types/slot.type";
+import { INV_SLOT_ENUM } from "../../shared/types/slot.type";
 import { Vector2D } from "../geometry";
 
 export class Item {
@@ -10,7 +10,7 @@ export class Item {
     public image: string
     public id: string;
     public size: Vector2D;
-    public slots: Slot[];
+    public slots: INV_SLOT_ENUM[];
 
     public type: ItemType;
     public quality: ItemQuality;
@@ -20,7 +20,7 @@ export class Item {
         name: string,
         image: string,
         size: Vector2D,
-        slots: Slot[],
+        slots: INV_SLOT_ENUM[],
         type: ItemType,
         quality: ItemQuality,
         terminology: Terminology
@@ -52,13 +52,15 @@ export class Equipment extends Item {
         level: number,
         isIdentified: boolean
     ) {
-        super(name,
+        super(
+            name,
             image,
             size,
             slots,
             type,
             quality,
-            terminology);
+            terminology
+        );
         this.level = level;
         this.isIdentified = isIdentified;
     }

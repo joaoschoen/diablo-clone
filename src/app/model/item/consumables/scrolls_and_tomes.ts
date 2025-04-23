@@ -1,3 +1,4 @@
+import { INV_SLOT_ENUM } from "src/app/shared/types/slot.type"
 import { ItemQuality } from "../../../shared/enum/item-quality.enum"
 import { ItemType } from "../../../shared/enum/item-type.enum"
 import { Terminology } from "../../../shared/enum/terminology.enum"
@@ -15,13 +16,13 @@ export class ScrollIdentify extends Item implements Consumable {
     public charges: number;
     public target: CONSUMABLE_TARGET_TYPE = "equipment";
 
-    constructor() {
-        super("Scroll of identify", SCROLL_IDENTIFY_IMAGE, new Vector2D(1, 1), [INV_SLOT_ENUM.INV, INV_SLOT_ENUM.QUICK_BAR], ItemType.Scroll, ItemQuality.Magic, Terminology.Scroll)
-        this.charges = 1
+    public constructor() {
+        super("Scroll of Identify", SCROLL_IDENTIFY_IMAGE, new Vector2D(1, 1), [INV_SLOT_ENUM.INV, INV_SLOT_ENUM.QUICK_BAR], ItemType.Scroll, ItemQuality.Magic, Terminology.Scroll);
+        this.charges = 1;
     }
 
-    consume(target: any): boolean {
-        return identify(target, this)
+    public consume(target: any): boolean {
+        return identify(target, this);
     }
 }
 
@@ -31,10 +32,14 @@ export class TomeIdentify extends Item implements Consumable, Stackable {
     public maxCharges: number;
     public receivesFrom = [TomeIdentify, ScrollIdentify];
 
-    constructor(charges: number) {
-        super("Tome of Identify", TOME_IDENTIFY_IMAGE, new Vector2D(1, 2), [INV_SLOT_ENUM.INV], ItemType.Tome, ItemQuality.Magic, Terminology.Tome)
-        this.charges = charges
-        this.maxCharges = 20
+    public constructor(charges: number) {
+        super("Tome of Identify", TOME_IDENTIFY_IMAGE, new Vector2D(1, 2), [INV_SLOT_ENUM.INV], ItemType.Tome, ItemQuality.Magic, Terminology.Tome);
+        this.charges = charges;
+        this.maxCharges = 20;
+    }
+
+    public consume(target: Item): boolean {
+        return identify(target, this);
     }
 
     public merge(item: Consumable): boolean {
@@ -46,9 +51,9 @@ export class ScrollTownPortal extends Item implements Consumable {
     public charges: number;
     public target: CONSUMABLE_TARGET_TYPE = "area";
 
-    constructor() {
-        super("Scroll of town portal", POTION_IMAGE, new Vector2D(1, 1), [INV_SLOT_ENUM.INV, INV_SLOT_ENUM.QUICK_BAR], ItemType.Scroll, ItemQuality.Magic, Terminology.Scroll)
-        this.charges = 1
+    public constructor() {
+        super("Scroll of Town Portal", POTION_IMAGE, new Vector2D(1, 1), [INV_SLOT_ENUM.INV, INV_SLOT_ENUM.QUICK_BAR], ItemType.Scroll, ItemQuality.Magic, Terminology.Scroll);
+        this.charges = 1;
     }
 
     public consume(target: Area): boolean {
@@ -62,10 +67,10 @@ export class TomeTownPortal extends Item implements Consumable, Stackable {
     public maxCharges: number;
     public receivesFrom = [TomeIdentify, ScrollIdentify];
 
-    constructor(charges: number) {
-        super("Tome of Identify", POTION_IMAGE, new Vector2D(1, 2), [INV_SLOT_ENUM.INV], ItemType.Tome, ItemQuality.Magic, Terminology.Tome)
-        this.charges = charges
-        this.maxCharges = 20
+    public constructor(charges: number) {
+        super("Tome of Identify", POTION_IMAGE, new Vector2D(1, 2), [INV_SLOT_ENUM.INV], ItemType.Tome, ItemQuality.Magic, Terminology.Tome);
+        this.charges = charges;
+        this.maxCharges = 20;
     }
 
     public consume(target: Area): boolean {
