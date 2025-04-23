@@ -12,11 +12,10 @@ import { Druid } from '../../model/player/classes/druid';
 import { Necromancer } from '../../model/player/classes/necromancer';
 import { Paladin } from '../../model/player/classes/paladin';
 import { Sorcerer } from '../../model/player/classes/sorcerer';
-import { Inventory } from '../../model/player/inventory';
 import { Attributes, Character } from '../../model/player/player';
 import { Quests } from '../../model/player/quests';
 import { WaypointList } from '../../model/player/waypoint';
-import { CharacterService } from '../../services/character.service';
+import { CharacterService } from '../../services/character/character.service';
 import { ButtonComponent } from '../../ui/button/button.component';
 
 @Component({
@@ -27,17 +26,17 @@ import { ButtonComponent } from '../../ui/button/button.component';
 })
 export class CharacterCreationPageComponent implements OnInit {
 
-  public characterClasses: Class[] = [ new Amazon(), new Assassin(), new Barbarian(), new Druid(), new Necromancer(), new Paladin(), new Sorcerer() ];
+  public characterClasses: Class[] = [new Amazon(), new Assassin(), new Barbarian(), new Druid(), new Necromancer(), new Paladin(), new Sorcerer()];
   public form: FormGroup;
   public destroy$ = new Subject<boolean>();
-  
+
   private router = inject(Router);
   private characterService = inject(CharacterService)
 
   public constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      characterClass: [null, [ Validators.required ]],
-      characterName:  ['', [ Validators.required, Validators.maxLength(15) ]]
+      characterClass: [null, [Validators.required]],
+      characterName: ['', [Validators.required, Validators.maxLength(15)]]
     })
   }
 
@@ -69,7 +68,7 @@ export class CharacterCreationPageComponent implements OnInit {
     if (this.form.valid) {
       const selectedClass: Class = this.form.value.characterClass;
       const characterName: string = this.form.value.characterName;
-  
+
       const character: Character = new Character(
         characterName,
         selectedClass,
@@ -78,11 +77,10 @@ export class CharacterCreationPageComponent implements OnInit {
         undefined,
         new Quests(),
         new WaypointList(),
-        new Inventory(10, 4),
       )
 
       this.characterService.addCharacter(character);
-      
+
       this.router.navigate(['/']);
     }
   }

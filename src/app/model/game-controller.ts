@@ -1,6 +1,6 @@
 import { Act, ACT_ENUM } from "./areas/act"
 import { generate_act_1 } from "./areas/act1/act1"
-import { Item } from "./item/item"
+import { Cursor } from "./cursor"
 import { DIFFICULTY_ENUM } from "./player/difficulty"
 import { Character } from "./player/player"
 
@@ -8,7 +8,7 @@ export class GameController {
     character: Character
     current_act: ACT_ENUM | undefined
     current_area: string | undefined
-    cursor: Item|undefined
+    cursor: Cursor = new Cursor()
     acts: Act[] = []
     difficulty: DIFFICULTY_ENUM
 
@@ -69,5 +69,12 @@ export class GameController {
         } else {
             throw new Error("Error while trying to generate act:" + act_to_build)
         }
+    }
+
+    
+    // This method generates a duplicate of the current game state 
+    replicateGameState(){
+        // let character = new Character()
+        // let replica = new GameController()
     }
 }

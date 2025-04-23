@@ -4,7 +4,6 @@ import { attrPointsFromLvl, calcCharacterLevel, LevelEXP, skillPointsFromLvl } f
 import { Mercenary } from "./mercenary"
 import { Quests } from "./quests"
 import { WaypointList } from "./waypoint"
-import { Inventory } from "./inventory"
 
 export class Character {
     name: string
@@ -19,21 +18,19 @@ export class Character {
     freeAttributePoints: number
     freeSkillPoints: number
     resistances: Resistances
-    mercenary: Mercenary|undefined
+    mercenary: Mercenary | undefined
     quests: Quests
     waypoints: WaypointList
-    inventory:Inventory
 
     constructor(
         name: string,
         char_class: Class,
         distributedAttributes: Attributes,
         gearAttributeBonus: Attributes = new Attributes(),
-        mercenary: Mercenary|undefined = undefined,
+        mercenary: Mercenary | undefined = undefined,
         quests: Quests,
         waypoints: WaypointList,
-        inventory: Inventory,
-    ){
+    ) {
         this.name = name
         let lvl = calcCharacterLevel(this.exp, false)
         this.lvl = lvl[0]
@@ -49,7 +46,6 @@ export class Character {
         this.waypoints = waypoints
         this.freeAttributePoints = this.calcFreeAttributePoints()
         this.freeSkillPoints = this.calcFreeAttributePoints()
-        this.inventory = inventory
     }
 
     addExp(expToAdd: number) {
@@ -71,22 +67,22 @@ export class Character {
         this.levelAttributeBonus = this.calcLevelAttributeBonus()
     }
 
-    calcFreeAttributePoints(){
+    calcFreeAttributePoints() {
         let pointsFromLevels = attrPointsFromLvl(this.lvl.lvl)
         let pointsFromQuests = this.quests.attrPointsFromQuests()
         let totalSpent = this.distributedAttributes.getTotalSpent()
         return (pointsFromLevels + pointsFromQuests) - totalSpent
     }
 
-    calcFreeSkillPoints(){
+    calcFreeSkillPoints() {
         let pointsFromLevels = skillPointsFromLvl(this.lvl.lvl)
         let pointsFromQuests = this.quests.skillPointsFromQuests()
         let totalSpent = this.class.skills.calcTotalSpent()
         return (pointsFromLevels + pointsFromQuests) - totalSpent
     }
 
-    calcLevelAttributeBonus():Attributes{
-        let attr = new Attributes(0,0,0,0,0,0,0)
+    calcLevelAttributeBonus(): Attributes {
+        let attr = new Attributes(0, 0, 0, 0, 0, 0, 0)
         let gain = this.class.statusGain
         attr.hp = this.lvl.lvl * gain.lvl_hp
         attr.mp = this.lvl.lvl * gain.lvl_mp
@@ -94,7 +90,7 @@ export class Character {
         return attr
     }
 }
-export type Attribute = 
+export type Attribute =
     | "strength"
     | "dexterity"
     | "vitality"
@@ -140,7 +136,7 @@ export class Attributes {
         this.stamina = stamina
         this.mp = mp
     }
-  
+
     getTotalSpent() {
         return this.strength + this.dexterity + this.vitality + this.energy
     }
@@ -196,21 +192,21 @@ export class Resistances {
     }
 }
 
-export class Entity{
+export class Entity {
     effects: Effect[] = []
 
-    constructor(){}
+    constructor() { }
 
-    addEffect(newEffect: Effect){
+    addEffect(newEffect: Effect) {
         let effectIndex = this.effects.findIndex(effect => effect.name = newEffect.name)
-        if(effectIndex != -1){
-            if(newEffect.amount_additive){
+        if (effectIndex != -1) {
+            if (newEffect.amount_additive) {
                 this.effects[effectIndex].amount += newEffect.amount
-            } else 
-            if(newEffect.duration_set) {
-                this.effects[effectIndex].amount = newEffect.amount
-            }
-            if(newEffect.duration_additive){
+            } else
+                if (newEffect.duration_set) {
+                    this.effects[effectIndex].amount = newEffect.amount
+                }
+            if (newEffect.duration_additive) {
                 this.effects[effectIndex].duration += newEffect.duration
             }
         }

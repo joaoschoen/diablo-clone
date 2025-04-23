@@ -1,4 +1,5 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
+import { InventoryService } from '@services/inventory/inventory.service';
 import { GameController } from '../../../model/game-controller';
 
 @Component({
@@ -8,5 +9,9 @@ import { GameController } from '../../../model/game-controller';
   styleUrl: './player-hud.component.css'
 })
 export class PlayerHudComponent {
+  inventoryService = inject(InventoryService)
+  handleToggleInventory() {
+    this.inventoryService.toggleInventory()
+  }
   gameController = input.required<GameController>()
 }
