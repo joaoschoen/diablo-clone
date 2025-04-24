@@ -1,8 +1,14 @@
 {
     "cSpell.words": [
         "Akara",
+        "Minorhealing",
         "mlvl",
         "npcs",
+        "Polearms",
         "Stackable"
-    ]
+    ],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always"
+    }
 }

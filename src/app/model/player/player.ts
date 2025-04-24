@@ -22,7 +22,6 @@ export class Character {
     mercenary: Mercenary|undefined
     quests: Quests
     waypoints: WaypointList
-    inventory:Inventory
 
     constructor(
         name: string,
@@ -32,7 +31,6 @@ export class Character {
         mercenary: Mercenary|undefined = undefined,
         quests: Quests,
         waypoints: WaypointList,
-        inventory: Inventory,
     ){
         this.name = name
         let lvl = calcCharacterLevel(this.exp, false)
@@ -49,7 +47,6 @@ export class Character {
         this.waypoints = waypoints
         this.freeAttributePoints = this.calcFreeAttributePoints()
         this.freeSkillPoints = this.calcFreeAttributePoints()
-        this.inventory = inventory
     }
 
     addExp(expToAdd: number) {

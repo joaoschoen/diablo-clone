@@ -1,0 +1,68 @@
+<div class="flex flex-col h-full w-full items-center">
+    <div id="inventory-background" class="absolute w-[356px] h-[468px]" style="
+            background-image: url('background/stone.jpg'); 
+            background-size: auto 468px;
+            background-repeat: no-repeat;
+            filter: brightness(0.8);
+        ">
+    </div>
+    <div id="inventory-content" class="h-[468px] relative z-10 p-[8px]">
+        <div id="inventory-equipment">
+            <div class="flex flex-row">
+                <div class="flex flex-row mr-[47px] items-end">
+                    <app-equipment-slot [selected]="hand_one()"
+                        [slot]="[slot_type.WEAPON,slot_type.OFFHAND,slot_type.HAND_ONE_LEFT]" />
+                    <app-equipment-slot [selected]="hand_two()"
+                        [slot]="[slot_type.WEAPON,slot_type.OFFHAND,slot_type.HAND_TWO_LEFT]" />
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex flex-row items-end">
+                        <app-equipment-slot [slot]="[slot_type.HELMET]" />
+                        <app-equipment-slot [slot]="[slot_type.AMULET]" />
+                    </div>
+                    <div class="flex flex-row">
+                        <app-equipment-slot [slot]="[slot_type.ARMOR]" />
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                </div>
+                <div class="flex flex-row items-end">
+                    <app-equipment-slot [selected]="hand_one()"
+                        [slot]="[slot_type.WEAPON,slot_type.OFFHAND,slot_type.HAND_ONE_RIGHT]" />
+                    <app-equipment-slot [selected]="hand_two()"
+                        [slot]="[slot_type.WEAPON,slot_type.OFFHAND,slot_type.HAND_TWO_RIGHT]" />
+                </div>
+            </div>
+            <div class="flex flex-row">
+                <app-equipment-slot [slot]="[slot_type.GLOVES]" />
+                <app-equipment-slot [slot]="[slot_type.RING]" />
+                <app-equipment-slot [slot]="[slot_type.BELT]" />
+                <app-equipment-slot [slot]="[slot_type.RING]" />
+                <app-equipment-slot [slot]="[slot_type.BOOTS]" />
+            </div>
+        </div>
+        <div id="inventory-items">
+            <div class=" h-[128px] m-[8px] relative">
+                <!-- Inventory Slots -->
+                <div class="flex flex-row" *ngFor="let rows of inventoryService.inventory().inventory_rows">
+                    <app-inventory-slot (click)="this.cursorService.handleInventoryClick($event,inventory_slot)"
+                        (contextmenu)="this.cursorService.handleInventoryClick($event,inventory_slot)"
+                        [inventory_slot]="inventory_slot" *ngFor="let inventory_slot of rows.inventory_cols" />
+                </div>
+                <!-- Item images -->
+                <app-inventory-item (click)="this.cursorService.handleInventoryClick($event,item_location)"
+                    (contextmenu)="this.cursorService.handleInventoryClick($event,item_location)"
+                    [item_location]="item_location"
+                    *ngFor="let item_location of inventoryService.inventory().item_list" />
+            </div>
+        </div>
+
+        <div class="flex flex-row m-[8px]">
+            <button (click)="handleClose()" class="bg-amber-50 w-[32px] h-[32px] active:brightness-90" style="
+                    background-image: url(ui/close_button.bmp);
+                    background-size: 32px 32px;
+                ">
+            </button>
+        </div>
+    </div>
+</div>

@@ -3,9 +3,9 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Router, RouterModule } from '@angular/router';
+import { CharacterService } from '@services/character/character.service';
 import { Subject } from 'rxjs';
 import { Character } from '../../model/player/player';
-import { CharacterService } from '../../services/character.service';
 import { ButtonComponent } from '../../ui/button/button.component';
 
 @Component({
@@ -15,7 +15,7 @@ import { ButtonComponent } from '../../ui/button/button.component';
   styleUrl: './character-selection-page.component.css'
 })
 export class CharacterSelectionPageComponent implements OnInit, OnDestroy {
-  
+
   public characters: Character[] = [];
   public currentClass: string = 'none';
   public currentCharacter: Character | null = null;

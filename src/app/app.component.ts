@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CharacterService } from '@services/character/character.service';
 import { Character } from './model/player/player';
-import { CharacterService } from './services/character.service';
 import { HeaderComponent } from './ui/header/header.component';
 
 @Component({
