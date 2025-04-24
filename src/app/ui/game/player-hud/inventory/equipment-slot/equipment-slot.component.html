@@ -1,0 +1,9 @@
+<div [class]='"m-[6px]" + hidden()'>
+    <section *ngIf="this.isWeaponSlot()" (click)="handleSwapHand()" class="flex flex-row justify-between">
+        <div [class]='hand_one_bg() + hand_style'>1</div>
+        <div [class]='hand_two_bg() + hand_style'>2</div>
+    </section>
+    <section (click)="handleEquipmentSlotClick($event)" class="border-[2px] border-amber-500">
+        <div [style]=" bg_image()"></div>
+    </section>
+</div>

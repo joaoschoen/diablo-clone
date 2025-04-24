@@ -3,6 +3,7 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Router, RouterModule } from '@angular/router';
+import { CharacterService } from '@services/character/character.service';
 import { Subject, takeUntil } from 'rxjs';
 import { Amazon } from '../../model/player/classes/amazon';
 import { Assassin } from '../../model/player/classes/assassin';
@@ -12,11 +13,9 @@ import { Druid } from '../../model/player/classes/druid';
 import { Necromancer } from '../../model/player/classes/necromancer';
 import { Paladin } from '../../model/player/classes/paladin';
 import { Sorcerer } from '../../model/player/classes/sorcerer';
-import { Inventory } from '../../model/player/inventory';
 import { Attributes, Character } from '../../model/player/player';
 import { Quests } from '../../model/player/quests';
 import { WaypointList } from '../../model/player/waypoint';
-import { CharacterService } from '../../services/character.service';
 import { ButtonComponent } from '../../ui/button/button.component';
 
 @Component({
@@ -27,18 +26,18 @@ import { ButtonComponent } from '../../ui/button/button.component';
 })
 export class CharacterCreationPageComponent implements OnInit, OnDestroy {
 
-  public characterClasses: Class[] = [ new Amazon(), new Assassin(), new Barbarian(), new Druid(), new Necromancer(), new Paladin(), new Sorcerer() ];
+  public characterClasses: Class[] = [new Amazon(), new Assassin(), new Barbarian(), new Druid(), new Necromancer(), new Paladin(), new Sorcerer()];
   public currentClass: string = 'none';
   public form: FormGroup;
   public destroy$ = new Subject<boolean>();
-  
+
   private router = inject(Router);
   private characterService = inject(CharacterService)
 
   public constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      characterClass: [null, [ Validators.required ]],
-      characterName:  ['', [ Validators.required, Validators.maxLength(12) ]]
+      characterClass: [null, [Validators.required]],
+      characterName: ['', [Validators.required, Validators.maxLength(12)]]
     })
   }
 
@@ -49,7 +48,7 @@ export class CharacterCreationPageComponent implements OnInit, OnDestroy {
   public ngOnDestroy(): void {
     this.destroy$.next(true);
     this.destroy$.complete();
-  }  
+  }
 
   public formField(fieldName: string): AbstractControl | null {
     return this.form.get(fieldName);
@@ -76,7 +75,7 @@ export class CharacterCreationPageComponent implements OnInit, OnDestroy {
     if (this.form.valid) {
       const selectedClass: Class = this.form.value.characterClass;
       const characterName: string = this.form.value.characterName;
-  
+
       const character: Character = new Character(
         characterName,
         selectedClass,
@@ -85,11 +84,10 @@ export class CharacterCreationPageComponent implements OnInit, OnDestroy {
         undefined,
         new Quests(),
         new WaypointList(),
-        new Inventory(10, 4),
       )
 
       this.characterService.addCharacter(character);
-      
+
       this.router.navigate(['/']);
     }
   }
