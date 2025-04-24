@@ -1,9 +1,10 @@
 import { Injectable, signal } from '@angular/core';
 import { CURSOR_ACTION_ENUM } from '@model/cursor';
 import { Vector2D } from '@model/geometry';
-import { Equipment, INV_SLOT_ENUM, Item } from '@model/item/item';
+import { Equipment, Item } from '@model/item/item';
 import { InventorySlot, ItemLocation } from '@model/player/inventory';
 import { EquippedItemsService } from '@services/equipped-items/equipped-items.service';
+import { INV_SLOT_ENUM } from 'src/app/shared/types/slot.type';
 import { InventoryService } from '../inventory/inventory.service';
 
 @Injectable({

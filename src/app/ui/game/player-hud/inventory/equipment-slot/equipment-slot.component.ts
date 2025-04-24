@@ -1,15 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject, input } from '@angular/core';
-import { INV_SLOT_ENUM } from '@model/item/item';
 import { INV_SLOT_BG } from '@model/player/equipped_items';
 import { CursorService } from '@services/cursor/cursor.service';
 import { EquippedItemsService } from '@services/equipped-items/equipped-items.service';
+import { INV_SLOT_ENUM } from 'src/app/shared/types/slot.type';
 
 @Component({
   selector: 'app-equipment-slot',
   imports: [CommonModule],
   templateUrl: './equipment-slot.component.html',
-  styleUrl: './equipment-slot.component.css'
 })
 export class EquipmentSlotComponent {
   equippedItemsService = inject(EquippedItemsService)

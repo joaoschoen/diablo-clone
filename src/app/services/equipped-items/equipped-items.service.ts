@@ -1,5 +1,6 @@
 import { Injectable, signal } from '@angular/core';
-import { Equipment, INV_SLOT_ENUM } from '@model/item/item';
+import { Equipment } from '@model/item/item';
+import { INV_SLOT_ENUM } from 'src/app/shared/types/slot.type';
 
 @Injectable({
   providedIn: 'root'

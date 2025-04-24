@@ -1,3 +1,4 @@
+import { INV_SLOT_ENUM } from "src/app/shared/types/slot.type";
 import { ItemQuality } from "../../../shared/enum/item-quality.enum";
 import { ItemType } from "../../../shared/enum/item-type.enum";
 import { Terminology } from "../../../shared/enum/terminology.enum";
@@ -21,7 +22,7 @@ export class Potion extends Item implements Consumable {
         super(name,
             POTION_IMAGE,
             new Vector2D(1, 1),
-            ["inv", "quick_bar"],
+            [INV_SLOT_ENUM.INV, INV_SLOT_ENUM.QUICK_BAR],
             ItemType.Potion,
             ItemQuality.Normal,
             Terminology.Potion)
