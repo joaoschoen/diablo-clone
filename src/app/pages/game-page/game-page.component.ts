@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Signal, signal } from '@angular/core';
-import { ACT_ENUM } from '@model/areas/act';
 import { GameController } from '@model/game-controller';
 import { Vector2D } from '@model/geometry';
 import { ScrollIdentify, TomeIdentify } from '@model/item/consumables/scrolls_and_tomes';
@@ -13,6 +12,7 @@ import { WaypointList } from '@model/player/waypoint';
 import { CursorService } from '@services/cursor/cursor.service';
 import { EquippedItemsService } from '@services/equipped-items/equipped-items.service';
 import { InventoryService } from '@services/inventory/inventory.service';
+import { ACT_ENUM } from '@shared/enum/act.enum';
 import { InventoryComponent } from '@ui/game/player-hud/inventory/inventory.component';
 import { PlayerHudComponent } from '../../ui/game/player-hud/player-hud.component';
 

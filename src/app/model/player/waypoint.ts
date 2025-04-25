@@ -1,4 +1,4 @@
-import { ACT_ENUM } from "../areas/act"
+import { ACT_ENUM } from "../zones/act"
 import { DIFFICULTY_ENUM } from "./difficulty"
 
 export class WaypointList {
@@ -25,19 +25,19 @@ export class WaypointList {
     unlockWaypoint(difficulty: DIFFICULTY_ENUM, act: ACT_ENUM, area_id: string) {
         switch (act) {
             case ACT_ENUM.ACT1:
-                this.act1.unlockWaypoint(difficulty,area_id)
+                this.act1.unlockWaypoint(difficulty, area_id)
                 break;
             case ACT_ENUM.ACT2:
-                this.act2.unlockWaypoint(difficulty,area_id)
+                this.act2.unlockWaypoint(difficulty, area_id)
                 break;
             case ACT_ENUM.ACT3:
-                this.act3.unlockWaypoint(difficulty,area_id)
+                this.act3.unlockWaypoint(difficulty, area_id)
                 break;
             case ACT_ENUM.ACT4:
-                this.act4.unlockWaypoint(difficulty,area_id)
+                this.act4.unlockWaypoint(difficulty, area_id)
                 break;
             case ACT_ENUM.ACT5:
-                this.act5.unlockWaypoint(difficulty,area_id)
+                this.act5.unlockWaypoint(difficulty, area_id)
                 break;
             default:
                 alert(`Error while trying to unlock waypoint, act: ${act}`)

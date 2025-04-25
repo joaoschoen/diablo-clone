@@ -1,14 +1,14 @@
-import { Act, ACT_ENUM } from "./areas/act"
-import { generate_act_1 } from "./areas/act1/act1"
 import { Item } from "./item/item"
 import { DIFFICULTY_ENUM } from "./player/difficulty"
 import { Character } from "./player/player"
+import { Act, ACT_ENUM } from "./zones/act"
+import { generate_act_1 } from "./zones/act1/act1"
 
 export class GameController {
     character: Character
     current_act: ACT_ENUM | undefined
     current_area: string | undefined
-    cursor: Item|undefined
+    cursor: Item | undefined
     acts: Act[] = []
     difficulty: DIFFICULTY_ENUM
 
