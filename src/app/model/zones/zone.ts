@@ -1,10 +1,10 @@
 import { NPC } from "../npcs/npc"
 import { DIFFICULTY_ENUM } from "../player/difficulty"
 
-export class Area{
+export class Zone {
     id: string
     name: string
-    area_level: AreaLevel
+    area_level: ZoneLevel
     difficulty: DIFFICULTY_ENUM
     exits: string[]
     npcs: NPC[]
@@ -12,11 +12,11 @@ export class Area{
     constructor(
         id: string,
         name: string,
-        area_level: AreaLevel,
+        area_level: ZoneLevel,
         difficulty: DIFFICULTY_ENUM,
         exits: string[],
         npcs: NPC[],
-    ){
+    ) {
         this.id = id
         this.name = name
         this.area_level = area_level
@@ -26,16 +26,16 @@ export class Area{
     }
 }
 
-export class AreaLevel{
-    normal:number
-    nightmare:number
-    hell:number
+export class ZoneLevel {
+    normal: number
+    nightmare: number
+    hell: number
 
     constructor(
-        normal:number,
-        nightmare:number,
-        hell:number,
-    ){
+        normal: number,
+        nightmare: number,
+        hell: number,
+    ) {
         this.normal = normal
         this.nightmare = nightmare
         this.hell = hell

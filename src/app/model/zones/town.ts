@@ -1,17 +1,17 @@
 import { NPC } from "../npcs/npc";
 import { DIFFICULTY_ENUM } from "../player/difficulty";
-import { Area, AreaLevel } from "./area";
+import { Zone, ZoneLevel } from "./zone";
 
-export class Town extends Area{
+export class Town extends Zone {
     town_portal: string = ""
 
-    constructor(id:string,
-        name:string,
-        level:AreaLevel,
+    constructor(id: string,
+        name: string,
+        level: ZoneLevel,
         difficulty: DIFFICULTY_ENUM,
-        exits:string[],
+        exits: string[],
         npcs: NPC[],
-    ){
+    ) {
         super(
             id,
             name,
@@ -22,7 +22,7 @@ export class Town extends Area{
         )
     }
 
-    openTownPortal(target: string){
+    openTownPortal(target: string) {
         this.town_portal = target
     }
 }

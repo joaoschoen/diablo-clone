@@ -2,9 +2,9 @@ import { INV_SLOT_ENUM } from "src/app/shared/types/slot.type"
 import { ItemQuality } from "../../../shared/enum/item-quality.enum"
 import { ItemType } from "../../../shared/enum/item-type.enum"
 import { Terminology } from "../../../shared/enum/terminology.enum"
-import { Area } from "../../areas/area"
-import { Dungeon } from "../../areas/dungeon"
 import { Vector2D } from "../../geometry"
+import { Dungeon } from "../../zones/dungeon"
+import { Zone } from "../../zones/zone"
 import { addCharges, Consumable, CONSUMABLE_TARGET_TYPE, Stackable } from "../consumable"
 import { Equipment } from "../equipment"
 import { Item } from "../item"
@@ -57,7 +57,7 @@ export class ScrollTownPortal extends Item implements Consumable {
         this.charges = 1;
     }
 
-    public consume(target: Area): boolean {
+    public consume(target: Zone): boolean {
         return townPortal(target);
     }
 }
@@ -74,7 +74,7 @@ export class TomeTownPortal extends Item implements Consumable, Stackable {
         this.maxCharges = 20;
     }
 
-    public consume(target: Area): boolean {
+    public consume(target: Zone): boolean {
         return townPortal(target);
     }
 
@@ -83,7 +83,7 @@ export class TomeTownPortal extends Item implements Consumable, Stackable {
     }
 }
 
-export function townPortal(target: Area): boolean {
+export function townPortal(target: Zone): boolean {
     if (target instanceof Dungeon) {
         target.openTownPortal();
         return true;

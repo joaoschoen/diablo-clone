@@ -1,8 +1,8 @@
-import { ACT_ENUM } from "../../../areas/act";
 import { Difficulty } from "../../../player/difficulty";
 import { Quest } from "../../../player/quests";
 import { Shop } from "../../../shop/shop";
 import { DialogueTrigger, QuestTrigger } from "../../../trigger";
+import { ACT_ENUM } from "../../../zones/act";
 import { Dialogue } from "../../dialogue";
 import { NPC } from "../../npc";
 
@@ -41,11 +41,11 @@ const DenOfEvilAfterInitializationTrigger: QuestTrigger = {
     act_id: ACT_ENUM.ACT1,
     npc_id: AkaraId,
     target_id: DenOfEvil.id,
-    stage:"after_initiation",
+    stage: "after_initiation",
 }
 
 const AkaraDialogue: Dialogue[] = [
-    { name: "Introduction", text: "I am Akara", unlocked: true, trigger: [AkaraIntroductionTrigger,DenOfEvilInitiationTrigger] },
+    { name: "Introduction", text: "I am Akara", unlocked: true, trigger: [AkaraIntroductionTrigger, DenOfEvilInitiationTrigger] },
     { name: DenOfEvil.name, text: "There is a place of great evil", unlocked: false, trigger: [DenOfEvilAfterInitializationTrigger] }
 ]
 
