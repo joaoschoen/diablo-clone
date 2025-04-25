@@ -1,5 +1,5 @@
+import { ACT_ENUM } from "@shared/enum/act.enum"
 import { QuestStage } from "./player/quests"
-import { ACT_ENUM } from "./zones/act"
 
 export class QuestTrigger {
     act_id: ACT_ENUM

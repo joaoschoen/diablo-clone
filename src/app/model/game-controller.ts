@@ -1,7 +1,8 @@
+import { ACT_ENUM } from "@shared/enum/act.enum"
 import { Item } from "./item/item"
 import { DIFFICULTY_ENUM } from "./player/difficulty"
 import { Character } from "./player/player"
-import { Act, ACT_ENUM } from "./zones/act"
+import { Act } from "./zones/act"
 import { generate_act_1 } from "./zones/act1/act1"
 
 export class GameController {

@@ -1,8 +1,8 @@
-import { Difficulty } from "../../../player/difficulty";
-import { Quest } from "../../../player/quests";
-import { Shop } from "../../../shop/shop";
-import { DialogueTrigger, QuestTrigger } from "../../../trigger";
-import { ACT_ENUM } from "../../../zones/act";
+import { Difficulty } from "@model/player/difficulty";
+import { Quest } from "@model/player/quests";
+import { Shop } from "@model/shop/shop";
+import { DialogueTrigger, QuestTrigger } from "@model/trigger";
+import { ACT_ENUM } from "@shared/enum/act.enum";
 import { Dialogue } from "../../dialogue";
 import { NPC } from "../../npc";
 

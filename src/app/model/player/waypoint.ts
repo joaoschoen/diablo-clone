@@ -1,4 +1,4 @@
-import { ACT_ENUM } from "../zones/act"
+import { ACT_ENUM } from "@shared/enum/act.enum"
 import { DIFFICULTY_ENUM } from "./difficulty"
 
 export class WaypointList {
