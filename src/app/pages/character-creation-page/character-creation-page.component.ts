@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { Router, RouterModule } from '@angular/router';
 import { CharacterService } from '@services/character/character.service';
 import { Subject, takeUntil } from 'rxjs';
+import { v4 as uuid } from "uuid";
 import { Amazon } from '../../model/player/classes/amazon';
 import { Assassin } from '../../model/player/classes/assassin';
 import { Barbarian } from '../../model/player/classes/barbarian';
@@ -77,6 +78,7 @@ export class CharacterCreationPageComponent implements OnInit, OnDestroy {
       const characterName: string = this.form.value.characterName;
 
       const character: Character = new Character(
+        uuid(),
         characterName,
         selectedClass,
         selectedClass.startingAttributes,
