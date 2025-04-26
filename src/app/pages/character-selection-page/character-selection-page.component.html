@@ -30,6 +30,7 @@
         <app-button [content]="'Back'" (buttonClick)="handleBackToHome()" />
         <app-button [content]="'Delete Character'" [disabled]="!this.currentCharacter"
             (buttonClick)="deleteCharacter()" />
+        <app-button [content]="'New Character'" (buttonClick)="newCharacter()" />
         <app-button [content]="'Start Game'" [disabled]="!this.currentCharacter" (buttonClick)="startTheGame()" />
     </div>
 </form>
