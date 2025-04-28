@@ -1,11 +1,11 @@
-<button *ngIf="type === 'wide'" class="w-80 h-11 text-[#000] font-bold text-[20px] border-l border-2 bg-[url('/assets/shared/button/button_wide.png')]
-    bg-no-repeat bg-cover rounded cursor-pointer hover:bg-[#651A04] hover:border-[#D4D0C5]" [type]="type"
-    (click)="onClick($event)">
+<button *ngIf="type === 'wide'" class="w-[364px] h-[50px] text-[#000] font-bold text-[20px] border-l border-2 bg-[url('/assets/button/button_wide.png')]
+    bg-no-repeat bg-cover rounded cursor-pointer hover:border-[#D4D0C570]" [type]="type" (click)="onClick($event)"
+    style="cursor: url('/assets/cursor/cursor.cur'), auto;">
     {{ content }}
 </button>
 
-<button *ngIf="type === 'short'" class="w-44 h-8 text-[#000] font-bold text-[16px] border-l border-2 bg-[url('/assets/shared/button/button_medium.png')]
-    bg-no-repeat bg-cover rounded cursor-pointer hover:bg-[#651A04] hover:border-[#D4D0C5]" [type]="type"
-    (click)="onClick($event)">
+<button *ngIf="type === 'short'" class="w-[170px] h-[50px] text-[#000] font-bold text-[16px] border-l border-2 bg-[url('/assets/button/button_medium.png')]
+    bg-no-repeat bg-cover rounded cursor-pointer hover:border-[#D4D0C570]" [type]="type" (click)="onClick($event)"
+    style="cursor: url('/assets/cursor/cursor.cur'), auto;">
     {{ content }}
 </button>
