@@ -38,55 +38,62 @@ export class Axes extends Weapon {
 }
 
 // NORMAL - ONE HANDED AXES
-export const handAxe = new Axes(
-    'Hand Axe',
-    "",
-    new Vector2D(1, 3),
-    [],
-    ItemType.Axe,
-    ItemQuality.Normal,
-    Terminology.MeleeWeapon,
-    1,
-    true,
-    {
-        minDamage: 3,
-        maxDamage: 6,
-        meleeRange: 1,
-        attackSpeed: [0],
-        durability: 28,
-        maxSockets: 2,
-        qualityLevel: 3
-    },
-    WEAPON_WIELDING_ENUM.ONE_HANDED
-);
-
-export const axe = new Axes(
-    'Axe',
-    "",
-    new Vector2D(1, 3),
-    [],
-    ItemType.Axe,
-    ItemQuality.Normal,
-    Terminology.MeleeWeapon,
-    1,
-    true,
-    {
-        minDamage: 4,
-        maxDamage: 11,
-        meleeRange: 2,
-        attackSpeed: [10],
-        minimumStrength: 32,
-        durability: 24,
-        maxSockets: 4,
-        qualityLevel: 7
-    },
-    WEAPON_WIELDING_ENUM.ONE_HANDED
-);
+export class HandAxe extends Axes {
+    constructor() {
+        super(
+            'Hand Axe',
+            "items/Weapons/Axe/01_Hand_Axe.bmp",
+            new Vector2D(1, 3),
+            [],
+            ItemType.Axe,
+            ItemQuality.Normal,
+            Terminology.MeleeWeapon,
+            1,
+            true,
+            {
+                minDamage: 3,
+                maxDamage: 6,
+                meleeRange: 1,
+                attackSpeed: [0],
+                durability: 28,
+                maxSockets: 2,
+                qualityLevel: 3
+            },
+            WEAPON_WIELDING_ENUM.ONE_HANDED
+        )
+    }
+}
+export class Axe extends Axes {
+    constructor() {
+        super(
+            'Axe',
+            "items/Weapons/Axe/02_Axe.bmp",
+            new Vector2D(2, 3),
+            [],
+            ItemType.Axe,
+            ItemQuality.Normal,
+            Terminology.MeleeWeapon,
+            1,
+            true,
+            {
+                minDamage: 4,
+                maxDamage: 11,
+                meleeRange: 2,
+                attackSpeed: [10],
+                minimumStrength: 32,
+                durability: 24,
+                maxSockets: 4,
+                qualityLevel: 7
+            },
+            WEAPON_WIELDING_ENUM.ONE_HANDED
+        )
+    }
+}
 
 export const doubleAxe = new Axes(
     'Double Axe',
     "",
-    new Vector2D(2, 2),
+    new Vector2D(2, 3),
     [],
     ItemType.Axe,
     ItemQuality.Normal,

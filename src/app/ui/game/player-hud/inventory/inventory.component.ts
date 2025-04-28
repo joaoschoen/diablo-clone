@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { CursorService } from '@services/cursor/cursor.service';
-import { EquippedItemsService, SELECTED_HAND } from '@services/equipped-items/equipped-items.service';
-import { InventoryService } from '@services/inventory/inventory.service';
+import { InventoryService, SELECTED_HAND } from '@services/inventory/inventory.service';
 import { INV_SLOT_ENUM } from 'src/app/shared/types/slot.type';
 import { EquipmentSlotComponent } from "./equipment-slot/equipment-slot.component";
 import { InventoryItemComponent } from "./inventory-item/inventory-item.component";
@@ -15,7 +14,6 @@ import { InventorySlotComponent } from './inventory-slot/inventory-slot.componen
 })
 export class InventoryComponent {
   inventoryService = inject(InventoryService)
-  equippedItemsService = inject(EquippedItemsService)
   cursorService = inject(CursorService)
 
   handleClose() {
@@ -23,14 +21,14 @@ export class InventoryComponent {
   }
 
   hand_one = computed(() => {
-    if (this.equippedItemsService.selectedHand() === SELECTED_HAND.HAND_ONE) {
+    if (this.inventoryService.selectedHand() === SELECTED_HAND.HAND_ONE) {
       return true
     }
     return false
   })
 
   hand_two = computed(() => {
-    if (this.equippedItemsService.selectedHand() === SELECTED_HAND.HAND_TWO) {
+    if (this.inventoryService.selectedHand() === SELECTED_HAND.HAND_TWO) {
       return true
     }
     return false
