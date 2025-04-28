@@ -1,14 +1,13 @@
 import { Vector2D } from "@model/geometry";
+import { WEAPON_WIELDING_ENUM } from "@shared/enum/weapon.enum";
+import { WeaponAttributes } from "@shared/types/weapon_attributes.type";
 import { ItemQuality } from "../../../shared/enum/item-quality.enum";
 import { ItemType } from "../../../shared/enum/item-type.enum";
 import { Terminology } from "../../../shared/enum/terminology.enum";
 import { INV_SLOT_ENUM } from "../../../shared/types/slot.type";
-import { Equipment } from "../item";
+import { Weapon } from "../weapon";
 
-export class AssassinKatars extends Equipment {
-    public attributes: string;
-    // TODO: work and fix attributes
-
+export class AssassinKatars extends Weapon {
     public constructor(
         name: string,
         image: string,
@@ -19,7 +18,9 @@ export class AssassinKatars extends Equipment {
         terminology: Terminology,
         level: number,
         isIdentified: boolean,
-        attributes: string) {
+        attributes: WeaponAttributes,
+        wielding: WEAPON_WIELDING_ENUM
+    ) {
         super(
             name,
             image,
@@ -29,8 +30,9 @@ export class AssassinKatars extends Equipment {
             quality,
             terminology,
             level,
-            isIdentified
+            isIdentified,
+            attributes,
+            wielding,
         );
-        this.attributes = attributes
     }
 }
