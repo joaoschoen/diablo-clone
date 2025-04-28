@@ -1,23 +1,27 @@
-<div class="flex flex-col h-full w-full p-2 bg-blue-300 ">
+<div class="flex flex-col h-full w-full- p-2 items-center justify-center">
 
-    <a href="/character-creation">New Character</a>
-    <a href="/character-selection">Select Character</a>
+    <div>
+        Logo Here
+    </div>
 
-    <section class="w-full">
-        <h2 class="text-2xl">Character List</h2>
-    </section>
-    <div></div>
-    <ul>
-        <li class="border-amber-800 border-2 p-4 bg-amber-50">
-            <div class="flex flex-row w-full">
-                <div class="w-3/4 flex flex-col">
-                    <p>Hero1</p>
-                    <p>LVL 1</p>
-                </div>
-                <div class="w-1/4 flex flex-row-reverse">
-                    <button (click)="handlePlayButton()" class="hover:bg-orange-400 cursor-pointer bg-white w-10 h-10 border-2 border-black rounded-3xl">Play</button>
-                </div>
-            </div>
-        </li>
-    </ul>
+    <div class="flex flex-col h-full w-full- p-2 items-center justify-center gap-1.5">
+        <app-button [content]="'SINGLE PLAYER'" (buttonClick)="singlePlayer()" />
+        <app-button [content]="'-'" [disabled]="true" />
+        <span class="w-80 h-11"></span>
+        <app-button [content]="'-'" [disabled]="true" />
+        <app-button [content]="'-'" [disabled]="true" />
+    </div>
+
+    <div>
+        <div>
+            <app-button [content]="'CREDITS'" [disabled]="true" [type]="'short'" />
+            <app-button [content]="'CINEMATICS'" [disabled]="true" [type]="'short'" />
+        </div>
+        <app-button [content]="'EXIT DIABLO II'" [disabled]="true" />
+    </div>
+
+    <footer>
+        Footer
+    </footer>
+
 </div>
