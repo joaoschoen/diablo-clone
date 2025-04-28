@@ -58,6 +58,10 @@ export class CharacterSelectionPageComponent implements OnInit, OnDestroy {
     this.currentClass = 'none';
   }
 
+  public newCharacter() {
+    this.router.navigate(['/character-creation']);
+  }
+
   public startTheGame() {
     if (this.currentCharacter) this.router.navigate(['/game']);
   }

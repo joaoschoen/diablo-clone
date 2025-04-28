@@ -14,6 +14,7 @@ import { EquippedItemsService } from '@services/equipped-items/equipped-items.se
 import { InventoryService } from '@services/inventory/inventory.service';
 import { ACT_ENUM } from '@shared/enum/act.enum';
 import { InventoryComponent } from '@ui/game/player-hud/inventory/inventory.component';
+import { v4 as uuid } from "uuid";
 import { PlayerHudComponent } from '../../ui/game/player-hud/player-hud.component';
 
 @Component({
@@ -43,6 +44,7 @@ export class GamePageComponent {
 
   constructor() {
     let character = new Character(
+      uuid(),
       "Character Name",
       new Amazon(),
       new Attributes(),

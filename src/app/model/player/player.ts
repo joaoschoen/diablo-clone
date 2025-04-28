@@ -1,12 +1,12 @@
 import { Effect } from "../effects"
 import { Class } from "./classes/class"
-import { Inventory } from "./inventory"
 import { attrPointsFromLvl, calcCharacterLevel, LevelEXP, skillPointsFromLvl } from "./level"
 import { Mercenary } from "./mercenary"
 import { Quests } from "./quests"
 import { WaypointList } from "./waypoint"
 
 export class Character {
+    id: string
     name: string
     exp: number = 0
     lvl: LevelEXP
@@ -24,6 +24,7 @@ export class Character {
     waypoints: WaypointList
 
     constructor(
+        id: string,
         name: string,
         char_class: Class,
         distributedAttributes: Attributes,
@@ -32,21 +33,22 @@ export class Character {
         quests: Quests,
         waypoints: WaypointList,
     ){
-        this.name = name
-        let lvl = calcCharacterLevel(this.exp, false)
-        this.lvl = lvl[0]
-        this.nextLvl = lvl[1]
-        this.class = char_class
-        this.attributes = char_class.startingAttributes
-        this.distributedAttributes = distributedAttributes
-        this.levelAttributeBonus = this.calcLevelAttributeBonus()
-        this.gearAttributeBonus = gearAttributeBonus
-        this.resistances = new Resistances(0, 0, 0, 0, 0, 0)
-        this.mercenary = mercenary
-        this.quests = quests
-        this.waypoints = waypoints
-        this.freeAttributePoints = this.calcFreeAttributePoints()
-        this.freeSkillPoints = this.calcFreeAttributePoints()
+        this.id = id;
+        this.name = name;
+        let lvl = calcCharacterLevel(this.exp, false);
+        this.lvl = lvl[0];
+        this.nextLvl = lvl[1];
+        this.class = char_class;
+        this.attributes = char_class.startingAttributes;
+        this.distributedAttributes = distributedAttributes;
+        this.levelAttributeBonus = this.calcLevelAttributeBonus();
+        this.gearAttributeBonus = gearAttributeBonus;
+        this.resistances = new Resistances(0, 0, 0, 0, 0, 0);
+        this.mercenary = mercenary;
+        this.quests = quests;
+        this.waypoints = waypoints;
+        this.freeAttributePoints = this.calcFreeAttributePoints();
+        this.freeSkillPoints = this.calcFreeAttributePoints();
     }
 
     addExp(expToAdd: number) {

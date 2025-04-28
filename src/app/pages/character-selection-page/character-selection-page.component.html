@@ -7,8 +7,9 @@
         <div class="hero-class-container">
             <button *ngFor="let character of characters" (click)="selectCharacter($event, character)"
                 [ngClass]="character.class.className == 'Paladin' ? 'paladin-height' : 'class-height'">
-        
-                <img [src]="character.class.classImage" [alt]="character.class.className" [title]="character.class.className" />
+
+                <img [src]="character.class.classImage" [alt]="character.class.className"
+                    [title]="character.class.className" />
 
                 <div>
                     <p>{{ character.name }}</p>
@@ -27,7 +28,9 @@
 
     <div class="footer-buttons">
         <app-button [content]="'Back'" (buttonClick)="handleBackToHome()" />
-        <app-button [content]="'Delete Character'" [disabled]="!this.currentCharacter" (buttonClick)="deleteCharacter()" />
+        <app-button [content]="'Delete Character'" [disabled]="!this.currentCharacter"
+            (buttonClick)="deleteCharacter()" />
+        <app-button [content]="'New Character'" (buttonClick)="newCharacter()" />
         <app-button [content]="'Start Game'" [disabled]="!this.currentCharacter" (buttonClick)="startTheGame()" />
     </div>
 </form>
