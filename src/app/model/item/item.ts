@@ -36,3 +36,14 @@ export class Item {
         this.terminology = terminology;
     }
 }
+
+// ONLY USED AS A FALLBACK IN FUNCTIONS TO DENOTE AN ERROR HAS OCCURRED
+export const ERROR_ITEM = new Item(
+    "error",
+    "",
+    new Vector2D(0, 0),
+    [],
+    ItemType.Arrow,
+    ItemQuality.LowQuality,
+    Terminology.Armor,
+)

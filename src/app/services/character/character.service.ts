@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LOCALSTORAGE_CHARACTERS } from '@model/constants';
+import { Equipment } from '@model/item/equipment';
 import { Character } from '@model/player/player';
 import { BehaviorSubject } from 'rxjs';
 
@@ -15,6 +16,16 @@ export class CharacterService {
     const updated = [...current, character];
     this.charactersSource.next(updated);
     this.saveCharacters(updated);
+  }
+
+  public canEquip(item: Equipment) {
+    // TODO
+    return true
+  }
+
+  public canDualWield(item: Equipment) {
+    // TODO
+    return false
   }
 
   public deleteCharacter(characterToDelete: Character): Character[] {

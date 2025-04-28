@@ -10,35 +10,35 @@
         <div id="inventory-equipment">
             <div class="flex flex-row">
                 <div class="flex flex-row mr-[47px] items-end">
-                    <app-equipment-slot [selected]="hand_one()"
-                        [slot]="[slot_type.WEAPON,slot_type.OFFHAND,slot_type.HAND_ONE_LEFT]" />
-                    <app-equipment-slot [selected]="hand_two()"
-                        [slot]="[slot_type.WEAPON,slot_type.OFFHAND,slot_type.HAND_TWO_LEFT]" />
+                    <app-equipment-slot [item]="this.inventoryService.hand_one_left" [selected]="hand_one()"
+                        [slot]="slot_type.WEAPON" [hand]="slot_type.HAND_ONE_LEFT" />
+                    <app-equipment-slot [item]="this.inventoryService.hand_two_left" [selected]="hand_two()"
+                        [slot]="slot_type.WEAPON" [hand]="slot_type.HAND_TWO_LEFT" />
                 </div>
                 <div class="flex flex-col">
                     <div class="flex flex-row items-end">
-                        <app-equipment-slot [slot]="[slot_type.HELMET]" />
-                        <app-equipment-slot [slot]="[slot_type.AMULET]" />
+                        <app-equipment-slot [item]="this.inventoryService.helmet" [slot]="slot_type.HELMET" />
+                        <app-equipment-slot [item]="this.inventoryService.amulet" [slot]="slot_type.AMULET" />
                     </div>
                     <div class="flex flex-row">
-                        <app-equipment-slot [slot]="[slot_type.ARMOR]" />
+                        <app-equipment-slot [item]="this.inventoryService.body_armor" [slot]="slot_type.ARMOR" />
                     </div>
                 </div>
                 <div class="flex flex-col">
                 </div>
                 <div class="flex flex-row items-end">
-                    <app-equipment-slot [selected]="hand_one()"
-                        [slot]="[slot_type.WEAPON,slot_type.OFFHAND,slot_type.HAND_ONE_RIGHT]" />
-                    <app-equipment-slot [selected]="hand_two()"
-                        [slot]="[slot_type.WEAPON,slot_type.OFFHAND,slot_type.HAND_TWO_RIGHT]" />
+                    <app-equipment-slot [item]="this.inventoryService.hand_one_right" [selected]="hand_one()"
+                        [slot]="slot_type.WEAPON" [hand]="slot_type.HAND_ONE_RIGHT" />
+                    <app-equipment-slot [item]="this.inventoryService.hand_two_right" [selected]="hand_two()"
+                        [slot]="slot_type.WEAPON" [hand]="slot_type.HAND_TWO_RIGHT" />
                 </div>
             </div>
             <div class="flex flex-row">
-                <app-equipment-slot [slot]="[slot_type.GLOVES]" />
-                <app-equipment-slot [slot]="[slot_type.RING]" />
-                <app-equipment-slot [slot]="[slot_type.BELT]" />
-                <app-equipment-slot [slot]="[slot_type.RING]" />
-                <app-equipment-slot [slot]="[slot_type.BOOTS]" />
+                <app-equipment-slot [item]="this.inventoryService.gloves" [slot]="slot_type.GLOVES" />
+                <app-equipment-slot [item]="this.inventoryService.ring_left" [slot]="slot_type.RING_LEFT" />
+                <app-equipment-slot [item]="this.inventoryService.belt" [slot]="slot_type.BELT" />
+                <app-equipment-slot [item]="this.inventoryService.ring_right" [slot]="slot_type.RING_RIGHT" />
+                <app-equipment-slot [item]="this.inventoryService.boots" [slot]="slot_type.BOOTS" />
             </div>
         </div>
         <div id="inventory-items">

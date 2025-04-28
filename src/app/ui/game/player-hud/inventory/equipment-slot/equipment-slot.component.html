@@ -4,6 +4,8 @@
         <div [class]='hand_two_bg() + hand_style'>2</div>
     </section>
     <section (click)="handleEquipmentSlotClick($event)" class="border-[2px] border-amber-500">
-        <div [style]=" bg_image()"></div>
+        <div [style]=" bg_image()" class="flex flex-col items-center justify-center">
+            <img [style]="image_style()" [src]="item()()?.image" alt="">
+        </div>
     </section>
 </div>

@@ -4,14 +4,11 @@ export enum INV_SLOT_ENUM {
     QUICK_BAR = "quick_bar",
 
     // Weapon slots
-    ONE_HANDED = "1h",
-    TWO_HANDED = "2h",
     HAND_ONE_LEFT = "hand_one_left",
     HAND_ONE_RIGHT = "hand_one_right",
     HAND_TWO_LEFT = "hand_two_left",
     HAND_TWO_RIGHT = "hand_two_right",
     WEAPON = "weapon",
-    OFFHAND = "offhand",
 
     // Armor slots
     HELMET = "helmet",
@@ -22,5 +19,7 @@ export enum INV_SLOT_ENUM {
 
     // Accessory slots
     RING = "ring",
+    RING_LEFT = "ring_left",
+    RING_RIGHT = "ring_right",
     AMULET = "amulet",
 }

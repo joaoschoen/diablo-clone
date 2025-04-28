@@ -6,7 +6,6 @@ import { GameController } from '../../../model/game-controller';
   selector: 'app-player-hud',
   imports: [],
   templateUrl: './player-hud.component.html',
-  styleUrl: './player-hud.component.css'
 })
 export class PlayerHudComponent {
   inventoryService = inject(InventoryService)

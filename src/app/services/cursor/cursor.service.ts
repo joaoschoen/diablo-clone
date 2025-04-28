@@ -3,10 +3,12 @@ import { CURSOR_ACTION_ENUM } from '@model/cursor';
 import { Vector2D } from '@model/geometry';
 import { Equipment } from '@model/item/equipment';
 import { Item } from '@model/item/item';
+import { Weapon } from '@model/item/weapon';
 import { InventorySlot, ItemLocation } from '@model/player/inventory';
-import { EquippedItemsService } from '@services/equipped-items/equipped-items.service';
+import { AttributeService } from '@services/attribute/attribute.service';
+import { CharacterService } from '@services/character/character.service';
 import { INV_SLOT_ENUM } from 'src/app/shared/types/slot.type';
-import { InventoryService } from '../inventory/inventory.service';
+import { InventoryService, SwapResult, WEAPON_SLOTS } from '../inventory/inventory.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,10 +19,21 @@ export class CursorService {
 
   public constructor(
     private inventoryService: InventoryService,
-    private equippedItemsService: EquippedItemsService
+    private attributeService: AttributeService,
+    private characterService: CharacterService,
   ) { }
 
-  handleInventoryClick(event: MouseEvent, clickTarget: InventorySlot | ItemLocation) {
+  public emptyCursor() {
+    this.item.set(undefined)
+    this.action.set(CURSOR_ACTION_ENUM.EMPTY)
+  }
+
+  public holdItem(item: Item) {
+    this.item.set(item)
+    this.action.set(CURSOR_ACTION_ENUM.HOLD)
+  }
+
+  public handleInventoryClick(event: MouseEvent, clickTarget: InventorySlot | ItemLocation) {
     // console.log("handleInventoryClick")
     event.preventDefault()
     event.stopPropagation()
@@ -45,25 +58,57 @@ export class CursorService {
       }
   }
 
-  handleEquipmentClick(event: MouseEvent, slot: INV_SLOT_ENUM[], item_id: string) {
-    event.preventDefault()
-    event.stopPropagation()
-    console.log("handleEquipmentClick")
-    // IF INVENTORY SLOT IS EMPTY
-    if (item_id === "") {
-      // IF CURSOR HAS ITEM
-      if (this.item() !== undefined && this.item() instanceof Equipment) {
-        this.equippedItemsService
-        console.log(this.item()?.slots)
+  public handleEquipmentSlotClick(slot: INV_SLOT_ENUM) {
+    // console.log("handleEquipmentSlotClick")
+    // console.log(slot)
+    // console.log(this.item())
+    // CURSOR EMPTY
+    if (this.item() === undefined) {
+      let item_in_slot = this.inventoryService.takeFromSlot(slot)
+      if (item_in_slot !== undefined) {
+        this.holdItem(item_in_slot)
+      } else {
+        this.emptyCursor()
       }
+      return
     }
-    // IF INVENTORY SLOT IS NOT EMPTY
-    if (item_id !== "") {
-      console.log("slot is empty")
+    let item = this.item() as Item
+    // IS EQUIPMENT
+    if (!(this.item() instanceof Equipment)) {
+      // console.log("held item is not an equipment")
+      return
+    }
+    // ATTRIBUTE REQUIREMENTS
+    if (!this.attributeService.canEquip(item as Equipment)) {
+      return
+    }
+    // CLASS ITEM TYPE REQUIREMENTS
+    if (!this.characterService.canEquip(item as Equipment)) {
+      return
+    }
+    let swapResult: SwapResult
+    // WEAPON
+    // console.log("it's a weapon")
+    if (WEAPON_SLOTS.includes(slot) && (item instanceof Weapon)) {
+      let dualWield = this.characterService.canDualWield(item as Weapon)
+      swapResult = this.inventoryService.swapWeapon(item as Weapon, slot, dualWield)
+    } else
+    // NOT A WEAPON
+    {
+      swapResult = this.inventoryService.swapEquipment(item as Equipment, slot)
+    }
+    if (swapResult.hasSwapped) {
+      // console.log(swapResult)
+      this.attributeService.calcFinalAttributes()
+      if (swapResult.item === undefined) {
+        this.emptyCursor()
+      } else {
+        this.holdItem(swapResult.item)
+      }
     }
   }
 
-  handleLeftClick(item_id: string, location: Vector2D) {
+  private handleLeftClick(item_id: string, location: Vector2D) {
     // If clicked an item
     if (item_id !== "") {
       // console.log("clicked item")
@@ -105,7 +150,7 @@ export class CursorService {
     // */
   }
 
-  handleRightClick(item_id: string, location: Vector2D) {
+  private handleRightClick(item_id: string, location: Vector2D) {
 
 
   }
