@@ -2,9 +2,9 @@ export class LevelEXP {
     lvl: number
     exp: number
 
-    constructor(lvl: number, exp: number){
+    constructor(lvl: number, exp: number) {
         this.lvl = lvl
-        this.exp  = exp
+        this.exp = exp
     }
 }
 
@@ -110,36 +110,36 @@ const LEVEL_REQ_EXP: LevelEXP[] = [
     { lvl: 99, exp: 3520485254 },
 ]
 
-export function calcCharacterLevel(exp: number, mercenary: boolean):LevelEXP[]{   
+export function calcCharacterLevel(exp: number, mercenary: boolean): LevelEXP[] {
     let maxLevel
-    if(mercenary){
+    if (mercenary) {
         maxLevel = 98
     } else {
         maxLevel = 99
     }
     let level: LevelEXP = LEVEL_REQ_EXP[0]
-    let nextLevel:LevelEXP = LEVEL_REQ_EXP[1]
+    let nextLevel: LevelEXP = LEVEL_REQ_EXP[1]
     for (let i = 0; i < LEVEL_REQ_EXP.length; i++) {
         level = LEVEL_REQ_EXP[i]
-        nextLevel = LEVEL_REQ_EXP[i+1]
-        if(nextLevel.lvl === maxLevel && exp >= nextLevel.exp){
+        nextLevel = LEVEL_REQ_EXP[i + 1]
+        if (nextLevel.lvl === maxLevel && exp >= nextLevel.exp) {
             level = nextLevel
             break
         }
-        if(exp >= nextLevel.exp){
+        if (exp >= nextLevel.exp) {
             continue
         }
-        if(exp < nextLevel.exp){
+        if (exp < nextLevel.exp) {
             break
         }
     }
-    return [level,nextLevel]
+    return [level, nextLevel]
 }
 
-export function attrPointsFromLvl(lvl:number ){
+export function attrPointsFromLvl(lvl: number) {
     return lvl * 5
 }
 
-export function skillPointsFromLvl(lvl:number ){
-    return lvl -1
+export function skillPointsFromLvl(lvl: number) {
+    return lvl - 1
 }

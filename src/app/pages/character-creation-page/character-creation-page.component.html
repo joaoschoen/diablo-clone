@@ -7,8 +7,9 @@
         <div class="hero-class-container">
             <button *ngFor="let characterClass of characterClasses" (click)="selectClass(characterClass.className)"
                 [ngClass]="characterClass.className == 'Paladin' ? 'paladin-height' : 'class-height'">
-        
-                <img [src]="characterClass.classImage" [alt]="characterClass.className" [title]="characterClass.className" />
+
+                <img [src]="characterClass.classImage" [alt]="characterClass.className"
+                    [title]="characterClass.className" />
 
                 <div>
                     <p>{{ characterClass.className }}</p>
@@ -24,12 +25,11 @@
         <div class="character-data" *ngIf="this.formField('characterClass')?.value">
             <label for="characterName">
                 <p>Character Name</p>
-    
+
                 <div>
                     <div>
                         <input id="characterName" formControlName="characterName" type="text" maxlength="15"
-                            autocomplete="inline"
-                            [value]="this.formField('characterName')?.value" />
+                            autocomplete="inline" [value]="this.formField('characterName')?.value" />
                     </div>
                 </div>
             </label>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="footer-buttons">
-        <app-button [content]="'Back'" (buttonClick)="handleBackToHome()" />
-        <app-button [content]="'Create'" [type]="'submit'" [disabled]="this.form.invalid" (buttonClick)="onSubmit()" />
+        <app-button (buttonClick)="handleBackToHome()">Back</app-button>
+        <app-button [type]="'submit'" [disabled]="this.form.invalid" (buttonClick)="onSubmit()">Create</app-button>
     </div>
 </form>

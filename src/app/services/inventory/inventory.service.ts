@@ -19,7 +19,7 @@ import { INV_SLOT_ENUM } from '@shared/types/slot.type';
 })
 export class InventoryService {
   public inventory = signal<Inventory>(new Inventory(PLAYER_INVENTORY_DIMENSIONS, []))
-  public isInventoryOpen = signal<boolean>(true)
+  public isInventoryOpen = signal<boolean>(false)
   public hand_one_left = signal<Weapon | undefined>(undefined)
   public hand_two_left = signal<Weapon | undefined>(undefined)
   public gloves = signal<Gloves | undefined>(undefined)
@@ -108,6 +108,10 @@ export class InventoryService {
       this.inventory.update(() => new_inventory)
     }
     return removed_item
+  }
+
+  clear() {
+    this.inventory.set(new Inventory(PLAYER_INVENTORY_DIMENSIONS, []))
   }
 
   getItemImageById(item_id: string) {

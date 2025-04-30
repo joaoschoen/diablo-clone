@@ -62,7 +62,8 @@
     overflow-y: auto;
 }
 
-.class-height, .paladin-height {
+.class-height,
+.paladin-height {
     width: 25%;
     height: 40%;
     display: flex;

@@ -7,21 +7,16 @@
     </div>
 
     <div class="flex flex-col p-2 items-center justify-center gap-1.5">
-        <app-button [content]="'SINGLE PLAYER'" (buttonClick)="singlePlayer()" />
-        <app-button [content]="'-'" [disabled]="true" />
+        <app-button (buttonClick)="singlePlayer()">SINGLE PLAYER</app-button>
+        <app-button [disabled]="true">-</app-button>
         <span class="h-[30px]"></span>
-        <app-button [content]="'-'" [disabled]="true" />
-        <app-button [content]="'-'" [disabled]="true" />
+        <app-button [disabled]="true">-</app-button>
+        <app-button [disabled]="true">-</app-button>
         <span class="h-[30px]"></span>
         <div class="flex gap-[25px]">
-            <app-button [content]="'-'" [disabled]="true" [type]="'short'" />
-            <app-button [content]="'-'" [disabled]="true" [type]="'short'" />
+            <app-button [disabled]="true" [type]="'short'">-</app-button>
+            <app-button [disabled]="true" [type]="'short'">-</app-button>
         </div>
-        <app-button [content]="'EXIT DIABLO II'" [disabled]="true" />
+        <app-button [disabled]="true">EXIT GAME</app-button>
     </div>
-
-    <footer>
-        Footer
-    </footer>
-
 </div>

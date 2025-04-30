@@ -1,11 +1,12 @@
-<button *ngIf="type === 'wide'" class="w-[364px] h-[50px] text-[#000] font-bold text-[20px] border-l border-2 bg-[url('/assets/button/button_wide.png')]
-    bg-no-repeat bg-cover rounded cursor-pointer hover:border-[#D4D0C570]" [type]="type" (click)="onClick($event)"
-    style="cursor: url('/assets/cursor/cursor.cur'), auto;">
-    {{ content }}
-</button>
-
-<button *ngIf="type === 'short'" class="w-[170px] h-[50px] text-[#000] font-bold text-[16px] border-l border-2 bg-[url('/assets/button/button_medium.png')]
-    bg-no-repeat bg-cover rounded cursor-pointer hover:border-[#D4D0C570]" [type]="type" (click)="onClick($event)"
-    style="cursor: url('/assets/cursor/cursor.cur'), auto;">
-    {{ content }}
+<!-- <button [class]="buttonClass()" [type]="type()" (click)="onClick($event)" [style]="buttonStyle()">
+    <app-background-image 
+        [background_width]="this.type() === 'wide' ? this.width_wide : this.width_medium" background_height="50px"
+        [url]="this.type() === 'wide' ? this.bg_url_wide : this.bg_url_medium" repeat="no-repeat"
+        additionalClasses="border-l border-2 bg-cover rounded" />
+    <div class="z-10">
+        <ng-content />
+    </div>
+</button> -->
+<button [class]="buttonClass()" [type]="type()" (click)="onClick($event)" [style]="buttonStyle()">
+    <ng-content />
 </button>
