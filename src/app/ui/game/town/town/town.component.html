@@ -1,1 +1,19 @@
-<p>town works!</p>
+<div>
+    <div class="w-1/5 p-[8px]">
+        <div class="bg-amber-50 ">
+            <h1>NPCs</h1>
+            <app-button *ngFor="let npc of this.npcs()">
+                <span class="text-2xl text-white font-bold">
+                    {{npc.name}}
+                </span>
+                <span *ngIf="npc.activeTrigger !== undefined" class="text-2xl text-amber-200 
+                        text-shadow-slate-400 text-shadow-md
+                        font-bold">
+                    !
+                </span>
+            </app-button>
+        </div>
+    </div>
+    <div class="w-3/5"></div>
+    <div class="w-1/5"></div>
+</div>

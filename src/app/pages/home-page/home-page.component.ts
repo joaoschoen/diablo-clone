@@ -12,9 +12,9 @@ import { ButtonComponent } from '../../ui/button/button.component';
 export class HomePageComponent implements OnDestroy {
 
   public destroy$ = new Subject<boolean>();
-    
+
   public constructor(private router: Router) { }
-  
+
   public ngOnDestroy(): void {
     this.destroy$.next(true);
     this.destroy$.complete();

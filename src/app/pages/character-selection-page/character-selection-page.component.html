@@ -5,12 +5,12 @@
         <img [src]="`./assets/backgrounds/${this.currentClass.toLowerCase()}_background.png`" />
 
         <div class="hero-class-container">
-            <button *ngFor="let character of characters" (click)="selectCharacter($event, character)"
+            <button *ngFor="let character of this.characterService.characters()"
+                (click)="selectCharacter($event, character)"
                 [ngClass]="character.class.className == 'Paladin' ? 'paladin-height' : 'class-height'">
 
                 <img [src]="character.class.classImage" [alt]="character.class.className"
                     [title]="character.class.className" />
-
                 <div>
                     <p>{{ character.name }}</p>
                     <p class="description">{{character.class.className}}</p>
@@ -19,18 +19,18 @@
             </button>
         </div>
 
-        <div class="character-data" *ngIf="this.currentCharacter">
-            <p>{{ this.currentCharacter.name }}</p>
-            <p class="description">{{ this.currentCharacter.class.className }}</p>
-            <p class="description">{{ 'Level: ' + this.currentCharacter.lvl.lvl }}</p>
+        <div class="character-data" *ngIf="this.characterService.selectedCharacter() !== undefined">
+            <p>{{ this.characterService.selectedCharacter()!.name }}</p>
+            <p class="description">{{ this.characterService.selectedCharacter()!.class.className }}</p>
+            <p class="description">{{ 'Level: ' + this.characterService.selectedCharacter()!.lvl.lvl }}</p>
         </div>
     </div>
 
     <div class="footer-buttons">
-        <app-button [content]="'Back'" (buttonClick)="handleBackToHome()" />
-        <app-button [content]="'Delete Character'" [disabled]="!this.currentCharacter"
-            (buttonClick)="deleteCharacter()" />
-        <app-button [content]="'New Character'" (buttonClick)="newCharacter()" />
-        <app-button [content]="'Start Game'" [disabled]="!this.currentCharacter" (buttonClick)="startTheGame()" />
+        <app-button (buttonClick)="handleBackToHome()">Back</app-button>
+        <app-button [disabled]="!this.characterSelected()" (buttonClick)="deleteCharacter()">Delete
+            Character</app-button>
+        <app-button (buttonClick)="newCharacter()">New Character</app-button>
+        <app-button [disabled]="!this.characterSelected()" (buttonClick)="startTheGame()">Start Game</app-button>
     </div>
 </form>

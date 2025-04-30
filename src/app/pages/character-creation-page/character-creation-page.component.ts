@@ -15,7 +15,6 @@ import { Necromancer } from '../../model/player/classes/necromancer';
 import { Paladin } from '../../model/player/classes/paladin';
 import { Sorcerer } from '../../model/player/classes/sorcerer';
 import { Attributes, Character } from '../../model/player/player';
-import { Quests } from '../../model/player/quests';
 import { WaypointList } from '../../model/player/waypoint';
 import { ButtonComponent } from '../../ui/button/button.component';
 
@@ -69,7 +68,7 @@ export class CharacterCreationPageComponent implements OnInit, OnDestroy {
   }
 
   public handleBackToHome() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/character-selection']);
   }
 
   public onSubmit() {
@@ -84,13 +83,12 @@ export class CharacterCreationPageComponent implements OnInit, OnDestroy {
         selectedClass.startingAttributes,
         new Attributes(),
         undefined,
-        new Quests(),
         new WaypointList(),
       )
 
       this.characterService.addCharacter(character);
 
-      this.router.navigate(['/']);
+      this.router.navigate(['/character-selection']);
     }
   }
 

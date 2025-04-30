@@ -1,11 +1,19 @@
 <div id="GameContainer" class="h-full w-full" [style]="cursorImage()">
     <div class="flex flex-row h-full w-full">
+        <!-- LEFT SIDE BAR  -->
         <div id="stats" class="w-3/4 lg:w-1/2 max-w-[500px] bg-blue-100 hidden"></div>
         <div id="mercenary" class="w-3/4 lg:w-1/2 max-w-[500px] bg-blue-100 hidden"></div>
-        <div class="flex flex-col flex-1 overflow-auto  bg-blue-100">
-            <app-player-hud class="absolute bottom-0 self-center" [gameController]="gameController()" />
+        <div id="quest" class="w-3/4 lg:w-1/2 max-w-[500px] bg-blue-100 hidden"></div>
+        <!-- GAME AREA -->
+        <div id="game-area" class="flex flex-col flex-1 h-full overflow-auto  bg-slate-900">
+            <app-game-header [currentZoneName]="this.currentZoneName()" />
+            <div class="flex flex-col h-full w-full bg-amber-200">
+                <app-town *ngIf="this.isTown()" />
+            </div>
+            <app-player-hud class="absolute bottom-0 self-center" />
         </div>
-        <div *ngIf="isInventoryOpen()" class="w-[356px] absolute right-0 top-1/4">
+        <!-- RIGHT SIDE BAR -->
+        <div id="inventory" *ngIf="isInventoryOpen()" class="w-[356px] absolute right-0 top-1/4">
             <app-inventory></app-inventory>
         </div>
     </div>

@@ -1,6 +1,6 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CharacterService } from '@services/character/character.service';
 import { InventoryService } from '@services/inventory/inventory.service';
-import { GameController } from '../../../model/game-controller';
 
 @Component({
   selector: 'app-player-hud',
@@ -9,8 +9,8 @@ import { GameController } from '../../../model/game-controller';
 })
 export class PlayerHudComponent {
   inventoryService = inject(InventoryService)
+  characterService = inject(CharacterService)
   handleToggleInventory() {
     this.inventoryService.toggleInventory()
   }
-  gameController = input.required<GameController>()
 }

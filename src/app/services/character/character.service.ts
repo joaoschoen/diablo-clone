@@ -1,21 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { LOCALSTORAGE_CHARACTERS } from '@model/constants';
 import { Equipment } from '@model/item/equipment';
 import { Character } from '@model/player/player';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterService {
-  private charactersSource = new BehaviorSubject<Character[]>(this.loadCharacters());
-  public characters$ = this.charactersSource.asObservable();
+  public characters = signal<Character[]>([])
+  public selectedCharacter = signal<Character | undefined>(undefined)
 
-  public constructor() { }
+  public constructor() {
+    this.loadCharacters()
+  }
 
   public addCharacter(character: Character) {
-    const current = this.charactersSource.getValue();
-    const updated = [...current, character];
-    this.charactersSource.next(updated);
-    this.saveCharacters(updated);
+    this.characters.update((old) => {
+      return [...old, character]
+    })
+    this.saveCharacters();
+  }
+
+  public selectCharacter(character: Character | undefined) {
+    this.selectedCharacter.set(character)
   }
 
   public canEquip(item: Equipment) {
@@ -28,26 +33,35 @@ export class CharacterService {
     return false
   }
 
-  public deleteCharacter(characterToDelete: Character): Character[] {
-    const current = this.charactersSource.getValue();
-    const newCharactersArray = current.filter(character => character !== characterToDelete);
-    this.charactersSource.next(newCharactersArray);
-    this.saveCharacters(newCharactersArray);
-    return newCharactersArray;
+  public deleteCharacter() {
+    if (this.selectedCharacter() !== undefined) {
+      this.characters.update((old_list) => {
+        let character_id = this.selectedCharacter()!.id
+        console.log(character_id)
+        let updated_list = [...old_list]
+        let index = updated_list.findIndex((character) => {
+          if (character.id === character_id) {
+            return true
+          } else {
+            return false
+          }
+        })
+        updated_list.splice(index, 1)
+        return updated_list
+      })
+      this.selectCharacter(undefined)
+    }
+
   }
 
-  private saveCharacters(characters: Character[]) {
-    localStorage.setItem(LOCALSTORAGE_CHARACTERS, JSON.stringify(characters));
+  private saveCharacters() {
+    localStorage.setItem(LOCALSTORAGE_CHARACTERS, JSON.stringify(this.characters()));
   }
 
-  public loadCharacters(): Character[] {
+  public loadCharacters() {
     const stored = localStorage.getItem(LOCALSTORAGE_CHARACTERS);
-    if (stored) return JSON.parse(stored);
-    return [];
-  }
-
-  public clearCharacters() {
-    this.charactersSource.next([]);
-    localStorage.removeItem(LOCALSTORAGE_CHARACTERS);
+    if (stored) {
+      this.characters.set(JSON.parse(stored) as Character[])
+    }
   }
 }

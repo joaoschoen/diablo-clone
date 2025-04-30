@@ -1,43 +1,53 @@
 import { ACT_ENUM } from "@shared/enum/act.enum";
 import { Dungeon } from "./dungeon";
 import { Town } from "./town";
+import { Zone } from "./zone";
 
 export class Act {
     town: Town
-    dungeons: Dungeon[]
+    zones: Dungeon[]
     id: ACT_ENUM
 
     constructor(
         town: Town,
-        dungeons: Dungeon[],
+        zones: Dungeon[],
         id: ACT_ENUM,
     ) {
         this.town = town
-        this.dungeons = dungeons
+        this.zones = zones
         this.id = id
     }
 
-    openTownPortal(areaId: string) {
-        this.dungeons.forEach((dungeon) => {
-            if (dungeon.id === areaId) {
+    openTownPortal(zoneId: string) {
+        this.zones.forEach((dungeon) => {
+            if (dungeon.id === zoneId) {
                 dungeon.openTownPortal()
             } else {
                 dungeon.closeTownPortal()
             }
         })
-        this.town.openTownPortal(areaId)
+        this.town.openTownPortal(zoneId)
     }
 
-    findArea(areaId: string): boolean {
-        if (this.town.id === areaId) {
-            return true
+    findZone(zoneId: string): Zone | undefined {
+        if (this.town.id === zoneId) {
+            return this.town
         } else {
-            for (let i = 0; i < this.dungeons.length; i++) {
-                if (this.dungeons[i].id === areaId) {
-                    return true
+            for (let i = 0; i < this.zones.length; i++) {
+                if (this.zones[i].id === zoneId) {
+                    return this.zones[i]
                 }
             }
         }
-        return false
+        return undefined
+    }
+
+    cloneAct(): Act {
+        let act = new Act(
+            this.town,
+            this.zones,
+            this.id
+        )
+        return act
     }
 }
