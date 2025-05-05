@@ -1,19 +1,57 @@
-<div class="flex flex-row gap-2 overflow-clip bg-amber-50">
-    <div>
-        <p>hp</p>
-        <p>TODO: GAME CONTROLLER SERVICE</p>
+<div class="flex flex-row overflow-clip items-end">
+    <div class="flex flex-col justify-end h-[150px]">
+        <div class="flex relative z-10
+            h-[50px] w-[135px] 
+            border-2 border-unique
+            overflow-visible">
+            <app-background-image background_width="46px" background_height="46px" [url]="bg_stone"
+                additionalClasses="brightness-80" />
+            <app-hp-mp [color]="color_enum.HP" />
+        </div>
     </div>
-    <p>skill bar</p>
-    <div class="flex flex-row">
-        <div>pot</div>
-        <div>pot</div>
-        <div>pot</div>
-        <div>pot</div>
-    </div>
-    <p>mp</p>
-    <button (click)="handleToggleInventory()" class="bg-amber-50 w-[32px] h-[32px] active:brightness-90" style="
-            background-image: url(ui/close_button.bmp);
-            background-size: 32px 32px;
+    <div class="flex relative z-10
+        h-[50px] w-[50px] 
+        border-2 border-unique
         ">
-    </button>
+        <app-background-image background_width="46px" background_height="46px" [url]="bg_stone"
+            additionalClasses="brightness-80" />
+    </div>
+    <div class="flex flex-row z-10 relative h-[50px] w-[320px] items-center justify-center border-2 border-unique p-1">
+        <app-background-image background_width="320px" background_height="46px" [url]="bg_stone"
+            additionalClasses="brightness-80" />
+        <div class="w-2/5">
+            <button (click)="handleToggleInventory()" class="bg-amber-50 w-[32px] h-[32px] active:brightness-90" style="
+            background-image: url(ui/close_button.bmp);
+            background-size: 32px 32px;">
+            </button>
+        </div>
+        <div class="w-1/5">
+            <button class="h-[24px] w-[16px] 
+                text-black text-sm 
+                bg-rare border-unique border-2">▲</button>
+        </div>
+        <div class="w-2/5">
+            <div class="flex flex-row">
+                <div class="w-[32px] h-[32px]" [style]="bg_quick_bar()"></div>
+                <div class="w-[32px] h-[32px]" [style]="bg_quick_bar()"></div>
+                <div class="w-[32px] h-[32px]" [style]="bg_quick_bar()"></div>
+                <div class="w-[32px] h-[32px]" [style]="bg_quick_bar()"></div>
+            </div>
+        </div>
+    </div>
+    <div class="flex relative z-10
+        h-[50px] w-[50px] 
+        border-2 border-unique
+        ">
+        <app-background-image background_width="46px" background_height="46px" [url]="bg_stone"
+            additionalClasses="brightness-80" />
+    </div>
+    <div class="flex relative z-10
+            h-[50px] w-[135px] 
+            border-2 border-unique
+            overflow-visible">
+        <app-background-image background_width="46px" background_height="46px" [url]="bg_stone"
+            additionalClasses="brightness-80" />
+        <app-hp-mp [color]="color_enum.MP" />
+    </div>
 </div>

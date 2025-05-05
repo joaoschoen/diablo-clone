@@ -10,6 +10,10 @@ import { ButtonComponent } from "../../../button/button.component";
   selector: 'app-town',
   imports: [ButtonComponent, CommonModule],
   templateUrl: './town.component.html',
+  host: {
+    "class": "w-full h-full flex flex-row",
+    "id": "town",
+  }
 })
 export class TownComponent {
   inventoryService = inject(InventoryService)

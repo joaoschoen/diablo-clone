@@ -37,7 +37,7 @@ export class CharacterService {
     if (this.selectedCharacter() !== undefined) {
       this.characters.update((old_list) => {
         let character_id = this.selectedCharacter()!.id
-        console.log(character_id)
+        // console.log(character_id)
         let updated_list = [...old_list]
         let index = updated_list.findIndex((character) => {
           if (character.id === character_id) {

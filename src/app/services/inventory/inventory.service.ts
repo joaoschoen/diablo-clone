@@ -85,7 +85,7 @@ export class InventoryService {
 
   addItem(item: Item, location: Vector2D): boolean {
     // TODO MODIFY TO RETURN STACKABLE LOCATION IF FOUND
-    console.log("addItem")
+    // console.log("addItem")
 
     let available = this.inventory().isTargetAvailable(location, item.size)
     if (available) {
@@ -95,7 +95,7 @@ export class InventoryService {
         this.inventory.update(() => new_inventory)
         return true
       }
-      console.log("something went wrong")
+      // console.log("something went wrong")
       return false
     }
     return false

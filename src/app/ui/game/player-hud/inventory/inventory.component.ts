@@ -3,13 +3,14 @@ import { Component, computed, inject } from '@angular/core';
 import { CursorService } from '@services/cursor/cursor.service';
 import { InventoryService, SELECTED_HAND } from '@services/inventory/inventory.service';
 import { INV_SLOT_ENUM } from 'src/app/shared/types/slot.type';
+import { BackgroundImageComponent } from "../../../../components/background-image/background-image.component";
 import { EquipmentSlotComponent } from "./equipment-slot/equipment-slot.component";
 import { InventoryItemComponent } from "./inventory-item/inventory-item.component";
 import { InventorySlotComponent } from './inventory-slot/inventory-slot.component';
 
 @Component({
   selector: 'app-inventory',
-  imports: [CommonModule, InventoryItemComponent, InventorySlotComponent, EquipmentSlotComponent],
+  imports: [CommonModule, InventoryItemComponent, InventorySlotComponent, EquipmentSlotComponent, BackgroundImageComponent],
   templateUrl: './inventory.component.html',
 })
 export class InventoryComponent {

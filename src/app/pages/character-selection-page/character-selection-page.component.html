@@ -1,36 +1,67 @@
-<form class="page">
-    <h1 class="title">Select Your Character</h1>
+<form class="flex flex-col 
+    w-full h-full
+    select-none
+    focus:outline-0
+    ">
+    <h1 class="
+        flex w-full h-1/10 
+        items-center justify-center
+        font-bold text-3xl text-rare
+    ">
+        Select Your Character
+    </h1>
+    <div class="flex p-[10px] h-8/10 w-full ">
+        <div class="flex flex-row relative
+            w-full h-full
+            bg-black
+            border-rare border-[2px] rounded-[2px] border-solid
+        ">
+            <img [src]="`./assets/backgrounds/${this.currentClass()}_background.png`" />
 
-    <div class="class-image">
-        <img [src]="`./assets/backgrounds/${this.currentClass.toLowerCase()}_background.png`" />
-
-        <div class="hero-class-container">
-            <button *ngFor="let character of this.characterService.characters()"
-                (click)="selectCharacter($event, character)"
-                [ngClass]="character.class.className == 'Paladin' ? 'paladin-height' : 'class-height'">
-
-                <img [src]="character.class.classImage" [alt]="character.class.className"
-                    [title]="character.class.className" />
-                <div>
-                    <p>{{ character.name }}</p>
-                    <p class="description">{{character.class.className}}</p>
-                    <p class="description">{{'Level: ' + character.lvl.lvl }}</p>
+            <div class="flex flex-wrap
+                items-center justify-start 
+                h-full w-3/5 pl-2
+                absolute overflow-y-auto
+                bg-[linear-gradient(to right, #ffffff10 0%, #ffffff05 70%, #ffffff00 100%)]
+                ">
+                <div [class]="isSelected(character) ? 'border-rare border-2 rounded-sm':'border-2'"
+                    style="padding: 4px;" *ngFor="let character of this.characterService.characters()">
+                    <button class="flex flex-col h-[150px] w-[200px] items-center justify-center"
+                        (click)="selectCharacter($event, character)">
+                        <div class="flex flex-col relative w-full h-8/10">
+                            <img [class]="characterImageClass(character.class.className)"
+                                [src]="character.class.classImage" [alt]="character.class.className"
+                                [title]="character.class.className" />
+                        </div>
+                        <div class="h-2/10 w-auto bottom-1/10 text-sm">
+                            <p class="text-unique">{{ character.name }}</p>
+                            <p class="text-white">{{'Level ' + character.lvl.lvl + " " + character.class.className }}
+                            </p>
+                        </div>
+                    </button>
                 </div>
-            </button>
-        </div>
-
-        <div class="character-data" *ngIf="this.characterService.selectedCharacter() !== undefined">
-            <p>{{ this.characterService.selectedCharacter()!.name }}</p>
-            <p class="description">{{ this.characterService.selectedCharacter()!.class.className }}</p>
-            <p class="description">{{ 'Level: ' + this.characterService.selectedCharacter()!.lvl.lvl }}</p>
+            </div>
         </div>
     </div>
 
-    <div class="footer-buttons">
-        <app-button (buttonClick)="handleBackToHome()">Back</app-button>
-        <app-button [disabled]="!this.characterSelected()" (buttonClick)="deleteCharacter()">Delete
-            Character</app-button>
-        <app-button (buttonClick)="newCharacter()">New Character</app-button>
-        <app-button [disabled]="!this.characterSelected()" (buttonClick)="startTheGame()">Start Game</app-button>
+    <div class="flex flex-row items-center justify-between h-1/10">
+        <app-button (buttonClick)="handleBackToHome()">
+            <span class="text-white text-xl">Back</span>
+        </app-button>
+        <app-button [disabled]="!this.characterSelected()" (buttonClick)="deleteCharacter()">
+            <span class="text-white text-xl">
+                Delete Character
+            </span>
+        </app-button>
+        <app-button (buttonClick)="newCharacter()">
+            <span class="text-white text-xl">
+                New Character
+            </span>
+        </app-button>
+        <app-button [disabled]="!this.characterSelected()" (buttonClick)="startTheGame()">
+            <span class="text-white text-xl">
+                Start Game
+            </span>
+        </app-button>
     </div>
 </form>

@@ -1,12 +1,11 @@
 import { Component, computed, input } from '@angular/core';
-import { INV_SLOT_BG } from '@model/player/equipped_items';
 import { InventorySlot } from '@model/player/inventory';
+import { INV_SLOT_BG } from '@shared/enum/image-url.enum';
 
 @Component({
   selector: 'app-inventory-slot',
   imports: [],
   templateUrl: './inventory-slot.component.html',
-  styleUrl: './inventory-slot.component.css',
 })
 export class InventorySlotComponent {
   inventory_slot = input.required<InventorySlot>()
