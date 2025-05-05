@@ -1,14 +1,14 @@
 <div id="zone-header" class="relative flex flex-col h-[96px] w-full bg-slate-900  items-center justify-center">
-
     <app-background-image background_width="600px" background_height="96px" url="background/stone.jpg" repeat="repeat-x"
-        filters="brightness(0.3)" />
+        z_index="10" filters="brightness(0.3)" />
     <div class="flex flex-row w-full h-full z-10 items-center">
-        <div class="w-1/5">
+        <div class="w-1/5 z-10">
             <app-button (buttonClick)="this.exitGame()" type="medium">
                 <span class="text-xl text-white">Exit game</span>
             </app-button>
         </div>
-        <div class="w-4/5 flex flex-row items-center justify-center text-4xl text-white">
+        <div
+            class="absolute flex items-center md:justify-center ml-[166px] pointer-events-auto md:ml-0 w-full h-full text-4xl text-white">
             {{this.currentZoneName()}}
         </div>
     </div>

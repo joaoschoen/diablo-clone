@@ -1,19 +1,43 @@
-<div>
-    <div class="w-1/5 p-[8px]">
-        <div class="bg-amber-50 ">
-            <h1>NPCs</h1>
-            <app-button *ngFor="let npc of this.npcs()">
-                <span class="text-2xl text-white font-bold">
-                    {{npc.name}}
-                </span>
-                <span *ngIf="npc.activeTrigger !== undefined" class="text-2xl text-amber-200 
+<div id="npcs" class="w-2/9 h-full flex flex-col items-center p-[8px]">
+    <span class="text-2xl text-white font-bold">
+        <h1 class="self-center">NPCs</h1>
+    </span>
+    <app-button *ngFor="let npc of this.npcs()">
+        <span class="text-2xl text-white font-bold">
+            {{npc.name}}
+        </span>
+        <span *ngIf="npc.activeTrigger !== undefined" class="text-2xl text-amber-200 
                         text-shadow-slate-400 text-shadow-md
                         font-bold">
-                    !
-                </span>
-            </app-button>
-        </div>
+            !
+        </span>
+    </app-button>
+</div>
+<div class="w-5/9 relative h-full flex flex-col bg-black">
+    <img class="absolute self-center top-[150px] w-[400px] h-[600px] brightness-90 contrast-125 overflow-y-hidden"
+        src="/background/bonfire.avif">
+</div>
+<div class="w-2/9 h-full flex flex-col p-[8px]">
+    <div class="flex flex-col items-center h-1/3">
+        <span class="text-2xl text-white font-bold">
+            <h1>Town</h1>
+        </span>
+        <app-button>
+            <span class="text-2xl text-white font-bold">
+                Waypoints
+            </span>
+        </app-button>
+        <app-button>
+            <span class="text-2xl text-white font-bold">
+                Stash
+            </span>
+        </app-button>
     </div>
-    <div class="w-3/5"></div>
-    <div class="w-1/5"></div>
+    <div class="flex flex-col h-2/3">
+        <app-button>
+            <p class="text-2xl text-white font-bold">
+                Leave town
+            </p>
+        </app-button>
+    </div>
 </div>

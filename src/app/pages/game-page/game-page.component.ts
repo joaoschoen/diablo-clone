@@ -69,5 +69,6 @@ export class GamePageComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.inventoryService.clear()
+    this.inventoryService.isInventoryOpen.set(false)
   }
 }

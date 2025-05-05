@@ -1,12 +1,11 @@
-<!-- <button [class]="buttonClass()" [type]="type()" (click)="onClick($event)" [style]="buttonStyle()">
-    <app-background-image 
-        [background_width]="this.type() === 'wide' ? this.width_wide : this.width_medium" background_height="50px"
-        [url]="this.type() === 'wide' ? this.bg_url_wide : this.bg_url_medium" repeat="no-repeat"
-        additionalClasses="border-l border-2 bg-cover rounded" />
+<button [class]="buttonClass()" [type]="type()" (click)="onClick($event)" [style]="buttonStyle()">
+    <app-background-image [background_width]="this.type() === 'wide' ? this.bg_width_wide : this.bg_width_medium"
+        background_height="46px" [url]="this.type() === 'wide' ? this.bg_url_wide : this.bg_url_medium"
+        repeat="no-repeat" additionalClasses="bg-cover" z_index="5" />
     <div class="z-10">
         <ng-content />
     </div>
-</button> -->
-<button [class]="buttonClass()" [type]="type()" (click)="onClick($event)" [style]="buttonStyle()">
-    <ng-content />
 </button>
+<!-- <button [class]="buttonClass()" [type]="type()" (click)="onClick($event)" [style]="buttonStyle()">
+    <ng-content />
+</button> -->

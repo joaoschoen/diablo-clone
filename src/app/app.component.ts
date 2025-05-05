@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Character } from './model/player/player';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +8,5 @@ import { Character } from './model/player/player';
 })
 export class AppComponent {
   public title = 'diablo-clone';
-  public characters: Character[] | null = [];
-
   public constructor() { }
-
 }

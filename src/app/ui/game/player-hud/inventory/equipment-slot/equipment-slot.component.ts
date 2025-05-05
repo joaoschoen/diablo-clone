@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject, input, Signal } from '@angular/core';
 import { Item } from '@model/item/item';
-import { INV_SLOT_BG } from '@model/player/equipped_items';
 import { CursorService } from '@services/cursor/cursor.service';
 import { InventoryService } from '@services/inventory/inventory.service';
+import { INV_SLOT_BG } from '@shared/enum/image-url.enum';
 import { INV_SLOT_ENUM } from 'src/app/shared/types/slot.type';
 
 @Component({

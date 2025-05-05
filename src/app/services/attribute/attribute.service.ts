@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { Equipment } from '@model/item/equipment';
 import { Attributes } from '@model/player/player';
 
@@ -11,6 +11,15 @@ export class AttributeService {
   equipment_attributes = signal<Attributes>(new Attributes())
   effect_attributes = signal<Attributes>(new Attributes())
   final_attributes = signal<Attributes>(new Attributes())
+
+
+  current_health = computed(() => {
+    return 55
+  })
+
+  max_health = computed(() => {
+    return 100
+  })
   constructor() { }
 
   /**

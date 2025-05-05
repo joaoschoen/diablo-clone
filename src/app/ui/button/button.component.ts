@@ -1,17 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, input, output } from '@angular/core';
+import { BackgroundImageComponent } from "../../components/background-image/background-image.component";
 
 @Component({
   selector: 'app-button',
-  imports: [CommonModule],
+  imports: [CommonModule, BackgroundImageComponent],
   templateUrl: './button.component.html',
 })
 export class ButtonComponent {
   type = input<string>('wide')
   disabled = input<boolean>(false)
   buttonClick = output()
-  width_wide = "364px"
-  width_medium = "170px"
+  bg_width_wide = "360px"
+  button_width_wide = "364px"
+  bg_width_medium = "166px"
+  button_width_medium = "170px"
   bg_url_wide = "/assets/button/button_wide.png"
   bg_url_medium = "/assets/button/button_wide.png"
 
@@ -40,13 +43,8 @@ export class ButtonComponent {
       bg-[#282421]
       hover:border-[#E9C964] 
       disabled:hover:border-[#D4D0C5]
-      disabled:hover:bg-[#757172]
+      disabled:hover:bg-[#757172] 
       `
-    if (this.type() === "wide") {
-      classes += ` w-[${this.width_wide}] bg-[url('/assets/button/button_wide.png')]`
-    } else {
-      classes += ` w-[${this.width_medium}] bg-[url('/assets/button/button_medium.png')]`
-    }
     if (this.disabled()) {
       classes += " brightness-70"
     }
@@ -55,6 +53,12 @@ export class ButtonComponent {
 
   buttonStyle = computed(() => {
     let style = "cursor: url('/assets/cursor/cursor.cur'), auto;"
+
+    if (this.type() === "wide") {
+      style += ` width:${this.button_width_wide};`
+    } else {
+      style += ` width:${this.button_width_medium};`
+    }
     return style
   })
 

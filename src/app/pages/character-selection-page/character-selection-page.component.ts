@@ -11,12 +11,10 @@ import { ButtonComponent } from '../../ui/button/button.component';
   selector: 'app-character-selection-page',
   imports: [CommonModule, ButtonComponent, ReactiveFormsModule, MatFormFieldModule, RouterModule],
   templateUrl: './character-selection-page.component.html',
-  styleUrl: './character-selection-page.component.css'
 })
 export class CharacterSelectionPageComponent implements OnDestroy {
   public characterService = inject(CharacterService)
 
-  public currentClass: string = 'none';
   public characterSelected = computed(() => {
     if (this.characterService.selectedCharacter() !== undefined) {
       return true
@@ -25,6 +23,35 @@ export class CharacterSelectionPageComponent implements OnDestroy {
   })
 
   private router = inject(Router);
+
+  public currentClass = computed(() => {
+    let selectedCharacter = this.characterService.selectedCharacter()
+    if (selectedCharacter === undefined) {
+      return "none"
+    } else {
+      return selectedCharacter.class.className.toLowerCase()
+    }
+  })
+
+  isSelected(character: Character) {
+    let selectedCharacter = this.characterService.selectedCharacter()
+    if (selectedCharacter !== undefined) {
+      if (selectedCharacter.id === character.id) {
+        return true
+      }
+    }
+    return false
+  }
+
+  public characterImageClass(characterClass: string) {
+    let classes = "absolute w-auto bottom-0 self-center"
+    if (characterClass === "paladin") {
+      classes += " h-[25%]"
+    } else {
+      classes += " h-[85%]"
+    }
+    return classes
+  }
 
   public constructor() { }
 

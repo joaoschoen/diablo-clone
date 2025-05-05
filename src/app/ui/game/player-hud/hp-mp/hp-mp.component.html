@@ -1,1 +1,14 @@
-<p>hp-mp works!</p>
+<div class="absolute bottom-0 flex flex-col" [style]="position()">
+    <div class="text-white text-2xl overflow-visible self-center mb-4">
+        {{this.attributeService.current_health()}}/{{this.attributeService.max_health()}}
+    </div>
+    <div class="h-[108px] w-[108px] border-2 border-amber-200  rounded-full overflow-clip" [style]="orbOffset()">
+        <div class="w-full -z-10 bg-transparent" [style]="bg_empty()"></div>
+        <div class="w-full -z-10" [style]="bg_color()"></div>
+        <img class="absolute h-[120px] bottom-0 left-0 w-auto" src="ui/hp_orb_hugger.png" alt=""
+            *ngIf="this.color() === 'hp'">
+        <img class="absolute h-[120px] bottom-0 right-0 w-auto" src="ui/mp_orb_hugger.png" alt=""
+            *ngIf="this.color() === 'mp'">
+    </div>
+
+</div>
